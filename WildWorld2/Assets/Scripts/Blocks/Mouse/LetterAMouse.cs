@@ -5,12 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LetterAMouse : MonoBehaviour
 {
+    Transform[] cat = new Transform[3];
 
-    private Transform letterAPlace;
-
-    private Transform letterCPlace;
-
-    private Transform letterTPlace;
+    Transform[] dog = new Transform[3];
 
     private Vector2 initialPosition;
 
@@ -40,9 +37,16 @@ public class LetterAMouse : MonoBehaviour
         string sceneName = currentScene.name;
         if (sceneName == "CatExercise")
         {
-            letterAPlace = GameObject.Find("cat_target_block-a").transform;
-            letterCPlace = GameObject.Find("cat_target_block-c").transform;
-            letterTPlace = GameObject.Find("cat_target_block-t").transform;
+            cat[0] = GameObject.Find("cat_target_block-a").transform;
+            cat[1] = GameObject.Find("cat_target_block-c").transform;
+            cat[2] = GameObject.Find("cat_target_block-t").transform;
+        }
+
+        if (sceneName == "DogExercise")
+        {
+            dog[0] = GameObject.Find("dog_target_block-d").transform;
+            dog[1] = GameObject.Find("dog_target_block-g").transform;
+            dog[2] = GameObject.Find("dog_target_block-o").transform;
         }
 
     }
@@ -75,23 +79,43 @@ public class LetterAMouse : MonoBehaviour
         if (sceneName == "CatExercise")
         {
             // if put in incorrect posistion
-            if (Mathf.Abs(transform.position.x - letterCPlace.position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - letterCPlace.position.y) <= 0.5f ||
-                     Mathf.Abs(transform.position.x - letterTPlace.position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
+            if (Mathf.Abs(transform.position.x - cat[1].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - cat[1].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - cat[2].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - cat[2].position.y) <= 0.5f)
             {
                 Destroy(this.gameObject);
                 SoundManagerScript.playErrorSound();
             }
+            else
 
-            // if put in incorrect posistion
-            if (Mathf.Abs(transform.position.x - letterAPlace.position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - letterAPlace.position.y) <= 0.5f)
+            if (Mathf.Abs(transform.position.x - cat[0].position.x) <= 0.5f &&
+                 Mathf.Abs(transform.position.y - cat[0].position.y) <= 0.5f)
             {
-                transform.position = new Vector2(letterAPlace.position.x, letterAPlace.position.y);
+                transform.position = new Vector2(cat[0].position.x, cat[0].position.y);
                 pressed = false;
                 locked = true;
                 SoundManagerScript.playCorrectSound();
+            }
+            else
+            {
+                transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            }
+
+        }
+        // DOG 
+        else if (sceneName == "DogExercise")
+        {
+            // if put in incorrect posistion
+            if (Mathf.Abs(transform.position.x - dog[0].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - dog[0].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - dog[1].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - dog[1].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - dog[2].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - dog[2].position.y) <= 0.5f)
+            {
+                Destroy(this.gameObject);
+                SoundManagerScript.playErrorSound();
             }
             else
             {
