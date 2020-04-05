@@ -63,6 +63,7 @@ public class LetterHMouse : MonoBehaviour
                  Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
         {
             Destroy(this.gameObject);
+            SoundManagerScript.playErrorSound();
         }
         else
         {

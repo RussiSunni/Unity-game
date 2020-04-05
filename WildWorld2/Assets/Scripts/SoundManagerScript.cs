@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    
-    public static AudioClip jumpSound;
+
+    public static AudioClip errorSound;
+
+    public static AudioClip correctSound;
+
     static AudioSource audioSrc;
-    
-    
-    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        jumpSound = Resources.Load<AudioClip>("pop");
+        errorSound = Resources.Load<AudioClip>("pop");
+        correctSound = Resources.Load<AudioClip>("success");
         audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    public static void playSound()
+
+    public static void playCorrectSound()
     {
-        audioSrc.PlayOneShot(jumpSound);
+        audioSrc.PlayOneShot(correctSound);
+    }
+    public static void playErrorSound()
+    {
+        audioSrc.PlayOneShot(errorSound);
     }
 }

@@ -8,9 +8,9 @@ public class LetterAMouse : MonoBehaviour
     [SerializeField]
     private Transform letterAPlace;
 
-    public Transform letterCPlace;
+    private Transform letterCPlace;
 
-    public Transform letterTPlace;
+    private Transform letterTPlace;
 
     private Vector2 initialPosition;
 
@@ -24,9 +24,6 @@ public class LetterAMouse : MonoBehaviour
 
     private string sceneName;
 
-    AudioSource audioData;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +34,6 @@ public class LetterAMouse : MonoBehaviour
         {
 
         }
-
-        audioData = GetComponent<AudioSource>();
 
         letterCPlace = GameObject.Find("cat_target_block-c").transform;
         letterTPlace = GameObject.Find("cat_target_block-t").transform;
@@ -76,6 +71,7 @@ public class LetterAMouse : MonoBehaviour
                  Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
         {
             Destroy(this.gameObject);
+            SoundManagerScript.playErrorSound();
         }
 
         if (sceneName == "CatExercise" || sceneName == "BearExercise")
@@ -87,7 +83,7 @@ public class LetterAMouse : MonoBehaviour
                 transform.position = new Vector2(letterAPlace.position.x, letterAPlace.position.y);
                 pressed = false;
                 locked = true;
-                audioData.Play();
+                SoundManagerScript.playCorrectSound();
             }
             else
             {

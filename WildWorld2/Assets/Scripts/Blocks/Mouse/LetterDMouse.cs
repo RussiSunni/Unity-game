@@ -26,8 +26,6 @@ public class LetterDMouse : MonoBehaviour
 
     private string sceneName;
 
-    AudioSource audioData;
-
     void Start()
     {
         initialPosition = transform.position;
@@ -35,8 +33,6 @@ public class LetterDMouse : MonoBehaviour
         {
             //Destroy(this.gameObject);
         }
-
-        audioData = GetComponent<AudioSource>();
 
         letterAPlace = GameObject.Find("cat_target_block-a").transform;
         letterCPlace = GameObject.Find("cat_target_block-c").transform;
@@ -77,6 +73,7 @@ public class LetterDMouse : MonoBehaviour
                  Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
         {
             Destroy(this.gameObject);
+            SoundManagerScript.playErrorSound();
         }
 
         if (sceneName == "DogExercise")
@@ -87,7 +84,7 @@ public class LetterDMouse : MonoBehaviour
                 transform.position = new Vector2(letterDPlace.position.x, letterDPlace.position.y);
                 pressed = false;
                 locked = true;
-                audioData.Play();
+                SoundManagerScript.playCorrectSound();
             }
             else
             {
