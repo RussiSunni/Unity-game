@@ -79,8 +79,7 @@ public class ExerciseNextScene : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
-            dogFlag = true;
-            catFlag = true;
+
         }
     }
 }

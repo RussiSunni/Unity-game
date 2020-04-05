@@ -8,11 +8,11 @@ public class LetterBMouse : MonoBehaviour
     [SerializeField]
     private Transform letterBPlace;
 
-    public Transform letterAPlace;
+    private Transform letterAPlace;
 
-    public Transform letterCPlace;
+    private Transform letterCPlace;
 
-    public Transform letterTPlace;
+    private Transform letterTPlace;
 
     private Vector2 initialPosition;
 
@@ -35,9 +35,15 @@ public class LetterBMouse : MonoBehaviour
             //Destroy(this.gameObject);
         }
 
-        letterAPlace = GameObject.Find("cat_target_block-a").transform;
-        letterCPlace = GameObject.Find("cat_target_block-c").transform;
-        letterTPlace = GameObject.Find("cat_target_block-t").transform;
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "CatExercise")
+        {
+            letterAPlace = GameObject.Find("cat_target_block-a").transform;
+            letterCPlace = GameObject.Find("cat_target_block-c").transform;
+            letterTPlace = GameObject.Find("cat_target_block-t").transform;
+        }
+
     }
 
     private void OnMouseDown()
@@ -62,19 +68,20 @@ public class LetterBMouse : MonoBehaviour
     private void OnMouseUp()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-
         string sceneName = currentScene.name;
-
         // if put in incorrect posistion - CAT
-        if (Mathf.Abs(transform.position.x - letterAPlace.position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - letterAPlace.position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - letterCPlace.position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - letterCPlace.position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - letterTPlace.position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
+        if (sceneName == "CatExercise")
         {
-            Destroy(this.gameObject);
-            SoundManagerScript.playErrorSound();
+            if (Mathf.Abs(transform.position.x - letterAPlace.position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - letterAPlace.position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - letterCPlace.position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - letterCPlace.position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - letterTPlace.position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
+            {
+                Destroy(this.gameObject);
+                SoundManagerScript.playErrorSound();
+            }
         }
 
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LetterAMouse : MonoBehaviour
 {
-    [SerializeField]
+
     private Transform letterAPlace;
 
     private Transform letterCPlace;
@@ -34,9 +34,17 @@ public class LetterAMouse : MonoBehaviour
         {
 
         }
+        locked = false;
 
-        letterCPlace = GameObject.Find("cat_target_block-c").transform;
-        letterTPlace = GameObject.Find("cat_target_block-t").transform;
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "CatExercise")
+        {
+            letterAPlace = GameObject.Find("cat_target_block-a").transform;
+            letterCPlace = GameObject.Find("cat_target_block-c").transform;
+            letterTPlace = GameObject.Find("cat_target_block-t").transform;
+        }
+
     }
 
     private void OnMouseDown()
@@ -60,23 +68,23 @@ public class LetterAMouse : MonoBehaviour
 
     private void OnMouseUp()
     {
+
         Scene currentScene = SceneManager.GetActiveScene();
-
         string sceneName = currentScene.name;
-
-        // if put in incorrect posistion - CAT
-        if (Mathf.Abs(transform.position.x - letterCPlace.position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - letterCPlace.position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - letterTPlace.position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
+        // CAT 
+        if (sceneName == "CatExercise")
         {
-            Destroy(this.gameObject);
-            SoundManagerScript.playErrorSound();
-        }
+            // if put in incorrect posistion
+            if (Mathf.Abs(transform.position.x - letterCPlace.position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - letterCPlace.position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - letterTPlace.position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - letterTPlace.position.y) <= 0.5f)
+            {
+                Destroy(this.gameObject);
+                SoundManagerScript.playErrorSound();
+            }
 
-        if (sceneName == "CatExercise" || sceneName == "BearExercise")
-        {
-
+            // if put in incorrect posistion
             if (Mathf.Abs(transform.position.x - letterAPlace.position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - letterAPlace.position.y) <= 0.5f)
             {
