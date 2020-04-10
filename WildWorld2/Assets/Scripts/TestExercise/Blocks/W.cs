@@ -17,6 +17,7 @@ public class W : MonoBehaviour
     public static bool pressed;
 
 
+    public static bool destroyed;
 
     void Start()
     {
@@ -49,24 +50,51 @@ public class W : MonoBehaviour
 
     private void OnMouseUp()
     {
-
-
-        if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+        if (TestExerciseNext.dogFlag)
         {
-            Destroy(this.gameObject);
-            SoundManagerScript.playErrorSound();
+            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+            {
+                this.gameObject.SetActive(false);
+                destroyed = true;
+                SoundManagerScript.playErrorSound();
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
+                pressed = false;
+                locked = true;
+                SoundManagerScript.playCorrectSound();
+            }
+            else
+            {
+                transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            }
         }
         else
+        if (TestExerciseNext.dogFlag == false)
         {
-            transform.position = new Vector2(initialPosition.x, initialPosition.y);
+
+            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+            {
+                this.gameObject.SetActive(false);
+                destroyed = true;
+                SoundManagerScript.playErrorSound();
+            }
+            else
+            {
+                transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            }
+
         }
-
-
 
 
     }

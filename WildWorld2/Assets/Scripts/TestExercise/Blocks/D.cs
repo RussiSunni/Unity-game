@@ -19,6 +19,8 @@ public class D : MonoBehaviour
 
     public static bool reset;
 
+    public static bool destroyed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +65,8 @@ public class D : MonoBehaviour
                                  Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                                  Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                destroyed = true;
                 SoundManagerScript.playErrorSound();
             }
             else
@@ -79,7 +82,8 @@ public class D : MonoBehaviour
                      Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                      Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                destroyed = true;
                 SoundManagerScript.playErrorSound();
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&

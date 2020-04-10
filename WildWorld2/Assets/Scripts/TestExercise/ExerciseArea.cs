@@ -11,9 +11,8 @@ public class ExerciseArea : MonoBehaviour
 
     public GameObject exerciseArea;
 
-    public GameObject spawnee1;
-
-    public GameObject spawnee2;
+    public Camera camera1;
+    public Camera camera2;
 
     // Start is called before the first frame update
     private void Start()
@@ -23,6 +22,13 @@ public class ExerciseArea : MonoBehaviour
         bg2 = Resources.Load<Sprite>("dog_bg");
         bg3 = Resources.Load<Sprite>("owl_bg");
         rend.sprite = bg1;
+
+
+        GameObject.Find("CAT").SetActive(false);
+        GameObject.Find("DOG").SetActive(false);
+
+        camera1.enabled = true;
+        camera2.enabled = false;
     }
 
     // Update is called once per frame
@@ -31,25 +37,26 @@ public class ExerciseArea : MonoBehaviour
         if (TestExerciseNext.catFlag)
         {
             rend.sprite = bg2;
-            if (!GameObject.Find("CAT(Clone)"))
-            {
-                GameObject childObject1 = Instantiate(spawnee1) as GameObject;
-                exerciseArea = GameObject.Find("ExerciseArea");
-                childObject1.transform.SetParent(exerciseArea.transform, false);
-            }
+            // if (!GameObject.Find("CAT(Clone)"))
+            // {
+            //     GameObject CAT = Instantiate(spawnee1) as GameObject;
+            //     exerciseArea = GameObject.Find("ExerciseArea");
+            //     CAT.transform.SetParent(exerciseArea.transform, false);
+            //     CAT.SetActive(false);
+            // }
 
         }
 
         if (TestExerciseNext.dogFlag)
         {
             rend.sprite = bg3;
-            if (!GameObject.Find("DOG(Clone)"))
-            {
-                GameObject childObject2 = Instantiate(spawnee2) as GameObject;
-                exerciseArea = GameObject.Find("ExerciseArea");
-                childObject2.transform.SetParent(exerciseArea.transform, false);
-
-            }
+            // if (!GameObject.Find("DOG(Clone)"))
+            // {
+            //     GameObject DOG = Instantiate(spawnee2) as GameObject;
+            //     exerciseArea = GameObject.Find("ExerciseArea");
+            //     DOG.transform.SetParent(exerciseArea.transform, false);
+            //     DOG.SetActive(false);
+            // }
 
         }
     }

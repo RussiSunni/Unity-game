@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class WordCatMouse : MonoBehaviour
 {
@@ -12,25 +12,24 @@ public class WordCatMouse : MonoBehaviour
 
     private float deltaX, deltaY;
 
+    public static bool locked;
+
     void Start()
     {
         initialPosition = transform.position;
+        locked = false;
     }
 
     private void OnMouseDown()
     {
-
         deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
         deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
-
     }
 
     private void OnMouseDrag()
     {
-
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
-
     }
 
     private void OnMouseUp()

@@ -19,6 +19,8 @@ public class A : MonoBehaviour
 
     public static bool reset;
 
+    public static bool destroyed;
+
 
 
     // Start is called before the first frame update
@@ -26,6 +28,7 @@ public class A : MonoBehaviour
     {
         initialPosition = transform.position;
 
+        destroyed = false;
         locked = false;
 
         targetBlock[0] = GameObject.Find("target_block-1").transform;
@@ -40,7 +43,7 @@ public class A : MonoBehaviour
             deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
             deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
         }
-        Debug.Log(TestExerciseNext.catFlag);
+
     }
 
     private void OnMouseDrag()
@@ -63,7 +66,8 @@ public class A : MonoBehaviour
                      Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                      Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                destroyed = true;
                 SoundManagerScript.playErrorSound();
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
@@ -89,7 +93,9 @@ public class A : MonoBehaviour
                                  Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                                  Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                destroyed = true;
+
                 SoundManagerScript.playErrorSound();
             }
             else

@@ -10,10 +10,9 @@ public class TestExerciseNext : MonoBehaviour
     public static bool catFlag = false;
     public static bool dogFlag = false;
 
-    public GameObject spawnee1;
-    public GameObject spawnee2;
-
     public GameObject exerciseArea;
+
+    public GameObject CAT, DOG;
 
     public static int numberPresses = 0;
 
@@ -29,8 +28,6 @@ public class TestExerciseNext : MonoBehaviour
 
     public void ChangeQuestion()
     {
-        Debug.Log(catFlag);
-
         if (C.locked && A.locked && T.locked)
         {
             catFlag = true;
@@ -40,6 +37,8 @@ public class TestExerciseNext : MonoBehaviour
             A.reset = true;
             T.locked = false;
             T.reset = true;
+            //ExerciseArea.camera2.enabled = true;
+
         }
 
         if (D.locked && O.locked && G.locked)

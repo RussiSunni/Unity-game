@@ -16,7 +16,7 @@ public class Y : MonoBehaviour
 
     public static bool pressed;
 
-
+    public static bool destroyed;
 
     void Start()
     {
@@ -58,7 +58,8 @@ public class Y : MonoBehaviour
                  Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+            destroyed = true;
             SoundManagerScript.playErrorSound();
         }
         else

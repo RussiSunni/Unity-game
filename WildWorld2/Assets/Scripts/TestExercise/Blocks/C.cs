@@ -19,6 +19,8 @@ public class C : MonoBehaviour
 
     public static bool reset;
 
+    public static bool destroyed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,14 +56,15 @@ public class C : MonoBehaviour
     private void OnMouseUp()
     {
 
-        if (TestExerciseNext.numberPresses == 0)
+        if (TestExerciseNext.catFlag == false)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                      Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
                      Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                      Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                destroyed = true;
                 SoundManagerScript.playErrorSound();
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
@@ -78,7 +81,7 @@ public class C : MonoBehaviour
             }
         }
 
-        else if (TestExerciseNext.numberPresses == 1)
+        else if (TestExerciseNext.catFlag == true)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
                                  Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
@@ -87,7 +90,8 @@ public class C : MonoBehaviour
                                  Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                                  Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                destroyed = true;
                 SoundManagerScript.playErrorSound();
             }
             else
