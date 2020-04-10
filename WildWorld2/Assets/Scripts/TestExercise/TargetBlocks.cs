@@ -20,7 +20,7 @@ public class TargetBlocks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TestExerciseNext.numberPresses == 1)
+        if (TestExerciseNext.catFlag)
         {
             rend.sprite = question2;
         }
