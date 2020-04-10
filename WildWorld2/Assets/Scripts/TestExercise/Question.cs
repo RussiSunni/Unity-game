@@ -7,7 +7,7 @@ public class Question : MonoBehaviour
 {
     private SpriteRenderer rend;
 
-    private Sprite question1, question2, question3;
+    private Sprite question1, question2, question3, question4;
 
     // Start is called before the first frame update
     private void Start()
@@ -16,6 +16,7 @@ public class Question : MonoBehaviour
         question1 = Resources.Load<Sprite>("cat");
         question2 = Resources.Load<Sprite>("dog");
         question3 = Resources.Load<Sprite>("owl");
+        question4 = Resources.Load<Sprite>("bear");
         rend.sprite = question1;
     }
 
@@ -30,6 +31,11 @@ public class Question : MonoBehaviour
         if (TestExerciseNext.dogFlag)
         {
             rend.sprite = question3;
+        }
+
+        if (TestExerciseNext.owlFlag)
+        {
+            rend.sprite = question4;
         }
     }
 }

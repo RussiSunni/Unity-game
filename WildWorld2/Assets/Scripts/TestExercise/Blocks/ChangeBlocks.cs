@@ -57,107 +57,107 @@ public class ChangeBlocks : MonoBehaviour
         {
             book = false;
 
-            if (A.destroyed == false)
+            if (A.destroyed == false && A.locked == false)
             {
                 a.SetActive(false);
             }
-            if (B.destroyed == false)
+            if (B.destroyed == false && B.locked == false)
             {
                 b.SetActive(false);
             }
-            if (C.destroyed == false)
+            if (C.destroyed == false && C.locked == false)
             {
                 c.SetActive(false);
             }
-            if (D.destroyed == false)
+            if (D.destroyed == false && D.locked == false)
             {
                 d.SetActive(false);
             }
-            if (E.destroyed == false)
+            if (E.destroyed == false && E.locked == false)
             {
                 e.SetActive(false);
             }
-            if (F.destroyed == false)
+            if (F.destroyed == false && F.locked == false)
             {
                 f.SetActive(false);
             }
-            if (G.destroyed == false)
+            if (G.destroyed == false && G.locked == false)
             {
                 g.SetActive(false);
             }
-            if (H.destroyed == false)
+            if (H.destroyed == false && H.locked == false)
             {
                 h.SetActive(false);
             }
-            if (I.destroyed == false)
+            if (I.destroyed == false && I.locked == false)
             {
                 i.SetActive(false);
             }
-            if (J.destroyed == false)
+            if (J.destroyed == false && J.locked == false)
             {
                 j.SetActive(false);
             }
-            if (K.destroyed == false)
+            if (K.destroyed == false && K.locked == false)
             {
                 k.SetActive(false);
             }
-            if (L.destroyed == false)
+            if (L.destroyed == false && L.locked == false)
             {
                 l.SetActive(false);
             }
-            if (M.destroyed == false)
+            if (M.destroyed == false && M.locked == false)
             {
                 m.SetActive(false);
             }
-            if (N.destroyed == false)
+            if (N.destroyed == false && N.locked == false)
             {
                 n.SetActive(false);
             }
-            if (O.destroyed == false)
+            if (O.destroyed == false && O.locked == false)
             {
                 o.SetActive(false);
             }
-            if (P.destroyed == false)
+            if (P.destroyed == false && P.locked == false)
             {
                 p.SetActive(false);
             }
-            if (Q.destroyed == false)
+            if (Q.destroyed == false && Q.locked == false)
             {
                 q.SetActive(false);
             }
-            if (R.destroyed == false)
+            if (R.destroyed == false && R.locked == false)
             {
                 r.SetActive(false);
             }
-            if (S.destroyed == false)
+            if (S.destroyed == false && S.locked == false)
             {
                 s.SetActive(false);
             }
-            if (T.destroyed == false)
+            if (T.destroyed == false && T.locked == false)
             {
                 t.SetActive(false);
             }
-            if (U.destroyed == false)
+            if (U.destroyed == false && U.locked == false)
             {
                 u.SetActive(false);
             }
-            if (V.destroyed == false)
+            if (V.destroyed == false && V.locked == false)
             {
                 v.SetActive(false);
             }
-            if (W.destroyed == false)
+            if (W.destroyed == false && W.locked == false)
             {
                 w.SetActive(false);
             }
-            if (X.destroyed == false)
+            if (X.destroyed == false && X.locked == false)
             {
                 x.SetActive(false);
             }
-            if (Y.destroyed == false)
+            if (Y.destroyed == false && Y.locked == false)
             {
                 y.SetActive(false);
             }
-            if (Z.destroyed == false)
+            if (Z.destroyed == false && X.locked == false)
             {
                 z.SetActive(false);
             }

@@ -55,7 +55,7 @@ public class D : MonoBehaviour
 
     private void OnMouseUp()
     {
-
+        pressed = false;
         if (TestExerciseNext.catFlag == false)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&

@@ -55,7 +55,7 @@ public class T : MonoBehaviour
 
     private void OnMouseUp()
     {
-
+        pressed = false;
         if (TestExerciseNext.catFlag == false)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
@@ -73,7 +73,7 @@ public class T : MonoBehaviour
                  Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
-                pressed = false;
+
                 locked = true;
                 SoundManagerScript.playCorrectSound();
             }

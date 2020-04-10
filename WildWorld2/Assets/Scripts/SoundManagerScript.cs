@@ -7,7 +7,7 @@ public class SoundManagerScript : MonoBehaviour
 
     public static AudioClip errorSound;
 
-    public static AudioClip correctSound;
+    public static AudioClip correctSound, newWordSound;
 
     static AudioSource audioSrc;
 
@@ -18,6 +18,7 @@ public class SoundManagerScript : MonoBehaviour
     {
         errorSound = Resources.Load<AudioClip>("pop");
         correctSound = Resources.Load<AudioClip>("success");
+        newWordSound = Resources.Load<AudioClip>("success_long");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -30,5 +31,10 @@ public class SoundManagerScript : MonoBehaviour
     public static void playErrorSound()
     {
         audioSrc.PlayOneShot(errorSound);
+    }
+
+    public static void playNewWordSound()
+    {
+        audioSrc.PlayOneShot(newWordSound);
     }
 }

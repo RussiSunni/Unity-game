@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ArtemisIntro.unity
     guid: 01e4622053c6d96f68956907f1ac266d
   - enabled: 1
+    path: Assets/Scenes/ArtemisExercise.unity
+    guid: a5b94acd8b41c96999ce202786a87f52
+  - enabled: 1
     path: Assets/Scenes/Cat/CatIntro.unity
     guid: 63fba5efd333da4ee9e03a872ae75090
   - enabled: 1

@@ -9,16 +9,19 @@ public class TestExerciseNext : MonoBehaviour
 
     public static bool catFlag = false;
     public static bool dogFlag = false;
+    public static bool owlFlag = false;
 
-    public GameObject exerciseArea;
+    public GameObject exerciseArea, CAT, DOG;
 
-    public GameObject CAT, DOG;
+    GameObject fairy, fairyAnimation;
 
     public static int numberPresses = 0;
 
     void Start()
     {
 
+        fairy = GameObject.Find("Fairy");
+        fairyAnimation = GameObject.Find("Fairy animation");
     }
 
     void Update()
@@ -28,6 +31,10 @@ public class TestExerciseNext : MonoBehaviour
 
     public void ChangeQuestion()
     {
+        fairyAnimation.SetActive(false);
+        fairy.SetActive(true);
+
+
         if (C.locked && A.locked && T.locked)
         {
             catFlag = true;
@@ -37,8 +44,6 @@ public class TestExerciseNext : MonoBehaviour
             A.reset = true;
             T.locked = false;
             T.reset = true;
-            //ExerciseArea.camera2.enabled = true;
-
         }
 
         if (D.locked && O.locked && G.locked)
@@ -50,6 +55,17 @@ public class TestExerciseNext : MonoBehaviour
             O.reset = true;
             G.locked = false;
             G.reset = true;
+        }
+
+        if (O.locked && W.locked && L.locked)
+        {
+            owlFlag = true;
+            O.locked = false;
+            O.reset = true;
+            W.locked = false;
+            W.reset = true;
+            L.locked = false;
+            L.reset = true;
         }
     }
 }
