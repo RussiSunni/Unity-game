@@ -51,6 +51,10 @@ public class T : MonoBehaviour
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
+        if (TestExerciseNext.catFlag == false)
+        {
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
+        }
     }
 
     private void OnMouseUp()
@@ -66,6 +70,7 @@ public class T : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
             }
             else
 
@@ -73,13 +78,14 @@ public class T : MonoBehaviour
                  Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
-
                 locked = true;
                 SoundManagerScript.playCorrectSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
             }
             else
             {
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
         }
 
@@ -95,10 +101,12 @@ public class T : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
             }
             else
             {
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
         }
 

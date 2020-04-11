@@ -27,31 +27,5 @@ public class SpriteChangeTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (TestExerciseNext.catFlag == false)
-        {
-            // if (A.pressed || C.pressed || T.pressed)
-            // {
-            //     rend.sprite = fairy02;
-            // }
-
-            // else if (B.pressed || D.pressed || E.pressed || F.pressed || G.pressed || H.pressed || I.pressed || J.pressed || K.pressed || L.pressed || M.pressed || N.pressed || O.pressed || P.pressed || Q.pressed || R.pressed || S.pressed || U.pressed || V.pressed || W.pressed || X.pressed || Y.pressed || Z.pressed)
-            // {
-            //     rend.sprite = fairy01;
-            // }
-
-        }
-        if (TestExerciseNext.catFlag)
-        {
-            if (D.pressed || O.pressed || G.pressed)
-            {
-                rend.sprite = fairy02;
-            }
-
-            else
-            {
-                rend.sprite = fairy01;
-            }
-        }
     }
 }

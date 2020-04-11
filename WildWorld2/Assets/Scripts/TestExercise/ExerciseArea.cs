@@ -9,7 +9,9 @@ public class ExerciseArea : MonoBehaviour
 
     private Sprite bg1, bg2, bg3, bg4;
 
-    public GameObject exerciseArea;
+    public GameObject exerciseArea, tb1, tb2, tb3, tb4;
+
+    Vector3 tb1Position, tb2Position, tb3Position, tb4Position;
 
 
     // Start is called before the first frame update
@@ -24,9 +26,28 @@ public class ExerciseArea : MonoBehaviour
 
         GameObject.Find("CAT").SetActive(false);
         GameObject.Find("DOG").SetActive(false);
+        GameObject.Find("OWL").SetActive(false);
         GameObject.Find("Fairy animation").SetActive(false);
 
 
+        // set target block positions
+        tb1Position.x = -5.732f;
+        tb1Position.y = -2.503f;
+        tb1 = GameObject.Find("target_block-1");
+        tb1.transform.position = tb1Position;
+
+        tb2Position.x = -3.873f;
+        tb2Position.y = -2.503f;
+        tb2 = GameObject.Find("target_block-2");
+        tb2.transform.position = tb2Position;
+
+        tb3Position.x = -2.014f;
+        tb3Position.y = -2.503f;
+        tb3 = GameObject.Find("target_block-3");
+        tb3.transform.position = tb3Position;
+
+        tb4 = GameObject.Find("target_block-4");
+        tb4.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,6 +66,25 @@ public class ExerciseArea : MonoBehaviour
         if (TestExerciseNext.owlFlag)
         {
             rend.sprite = bg4;
+
+            // set target block positions
+            tb1Position.x = -6.3f;
+            tb1Position.y = -2.503f;
+            tb1.transform.position = tb1Position;
+
+            tb2Position.x = -4.7f;
+            tb2Position.y = -2.503f;
+            tb2.transform.position = tb2Position;
+
+            tb3Position.x = -3.1f;
+            tb3Position.y = -2.503f;
+            tb3.transform.position = tb3Position;
+
+            tb4.SetActive(true);
+            tb4Position.x = -1.5f;
+            tb4Position.y = -2.503f;
+            tb4.transform.position = tb4Position;
+
         }
     }
 }

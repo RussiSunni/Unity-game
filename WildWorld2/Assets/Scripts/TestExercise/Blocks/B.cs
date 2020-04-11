@@ -63,10 +63,12 @@ public class B : MonoBehaviour
             this.gameObject.SetActive(false);
             destroyed = true;
             SoundManagerScript.playErrorSound();
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
         }
         else
         {
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
         }
 
 

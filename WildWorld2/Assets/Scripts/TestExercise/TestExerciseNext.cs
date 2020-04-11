@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 public class TestExerciseNext : MonoBehaviour
 {
 
-    public static bool catFlag = false;
-    public static bool dogFlag = false;
-    public static bool owlFlag = false;
+    public static bool catFlag, dogFlag, owlFlag = false;
 
     public GameObject exerciseArea, CAT, DOG;
 
@@ -19,7 +17,6 @@ public class TestExerciseNext : MonoBehaviour
 
     void Start()
     {
-
         fairy = GameObject.Find("Fairy");
         fairyAnimation = GameObject.Find("Fairy animation");
     }
@@ -33,6 +30,7 @@ public class TestExerciseNext : MonoBehaviour
     {
         fairyAnimation.SetActive(false);
         fairy.SetActive(true);
+        SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
 
 
         if (C.locked && A.locked && T.locked)

@@ -47,6 +47,7 @@ public class E : MonoBehaviour
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
+        SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
     }
 
     private void OnMouseUp()
@@ -63,10 +64,12 @@ public class E : MonoBehaviour
             this.gameObject.SetActive(false);
             destroyed = true;
             SoundManagerScript.playErrorSound();
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
         }
         else
         {
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
         }
 
 

@@ -73,7 +73,6 @@ public class A : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
@@ -82,13 +81,11 @@ public class A : MonoBehaviour
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
-
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
             }
             else
             {
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
-
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
         }
@@ -105,11 +102,12 @@ public class A : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
             }
             else
             {
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
         }
     }

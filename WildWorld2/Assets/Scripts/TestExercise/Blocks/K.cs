@@ -47,12 +47,11 @@ public class K : MonoBehaviour
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
+        SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
     }
 
     private void OnMouseUp()
     {
-
-
         if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
                  Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
@@ -63,14 +62,12 @@ public class K : MonoBehaviour
             this.gameObject.SetActive(false);
             destroyed = true;
             SoundManagerScript.playErrorSound();
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
         }
         else
         {
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
         }
-
-
-
-
     }
 }

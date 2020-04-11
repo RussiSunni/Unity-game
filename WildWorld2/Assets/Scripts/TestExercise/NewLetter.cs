@@ -9,7 +9,7 @@ public class NewLetter : MonoBehaviour
 
     private Sprite letter01, letter02, letter03;
 
-    private bool soundPlaying;
+    //  private bool soundPlaying;
 
     GameObject fairy, fairyAnimation;
 
@@ -18,9 +18,11 @@ public class NewLetter : MonoBehaviour
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        letter01 = Resources.Load<Sprite>("CATNewLetter");
+        letter01 = Resources.Load<Sprite>("CATNewBlock");
+        letter02 = Resources.Load<Sprite>("DOGNewBlock");
+        letter03 = Resources.Load<Sprite>("OWLNewBlock");
 
-        soundPlaying = false;
+        // soundPlaying = false;
 
         fairy = GameObject.Find("Fairy");
         fairyAnimation = GameObject.Find("Fairy animation");
@@ -29,18 +31,44 @@ public class NewLetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(C.locked);
+
         if (C.locked && A.locked && T.locked)
         {
             rend.sprite = letter01;
             fairy.SetActive(false);
             fairyAnimation.SetActive(true);
 
-            if (soundPlaying == false)
-            {
-                SoundManagerScript.playNewWordSound();
-                soundPlaying = true;
-            }
+            // if (soundPlaying == false)
+            // {
+            //     SoundManagerScript.playNewWordSound();
+            //     soundPlaying = true;
+            // }
+        }
+
+        else if (D.locked && O.locked && G.locked)
+        {
+            rend.sprite = letter02;
+            fairy.SetActive(false);
+            fairyAnimation.SetActive(true);
+
+            // if (soundPlaying == false)
+            // {
+            //     SoundManagerScript.playNewWordSound();
+            //     soundPlaying = true;
+            // }
+        }
+
+        else if (O.locked && W.locked && L.locked)
+        {
+            rend.sprite = letter03;
+            fairy.SetActive(false);
+            fairyAnimation.SetActive(true);
+
+            // if (soundPlaying == false)
+            // {
+            //     SoundManagerScript.playNewWordSound();
+            //     soundPlaying = true;
+            // }
         }
         else
         {
