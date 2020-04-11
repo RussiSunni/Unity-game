@@ -8,7 +8,7 @@ public class ChangeBlocks : MonoBehaviour
 
     private float deltaX, deltaY;
 
-    GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, CAT, DOG, OWL;
+    GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, CAT, DOG, OWL, BEAR;
 
     private bool book;
 
@@ -49,6 +49,7 @@ public class ChangeBlocks : MonoBehaviour
         CAT = GameObject.Find("CAT");
         DOG = GameObject.Find("DOG");
         OWL = GameObject.Find("OWL");
+        BEAR = GameObject.Find("BEAR");
     }
 
     private void OnMouseDown()
@@ -179,6 +180,11 @@ public class ChangeBlocks : MonoBehaviour
                 OWL.SetActive(true);
             }
 
+            if (TestExerciseNext.bearFlag)
+            {
+                BEAR.SetActive(true);
+            }
+
         }
         else
         {
@@ -296,6 +302,7 @@ public class ChangeBlocks : MonoBehaviour
             CAT.SetActive(false);
             DOG.SetActive(false);
             OWL.SetActive(false);
+            BEAR.SetActive(false);
         }
     }
 

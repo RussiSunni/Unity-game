@@ -7,7 +7,7 @@ public class ExerciseArea : MonoBehaviour
 {
     private SpriteRenderer rend;
 
-    private Sprite bg1, bg2, bg3, bg4;
+    private Sprite bg1, bg2, bg3, bg4, bg5;
 
     public GameObject exerciseArea, tb1, tb2, tb3, tb4;
 
@@ -22,11 +22,13 @@ public class ExerciseArea : MonoBehaviour
         bg2 = Resources.Load<Sprite>("dog_bg");
         bg3 = Resources.Load<Sprite>("owl_bg");
         bg4 = Resources.Load<Sprite>("bear_bg");
+        bg5 = Resources.Load<Sprite>("wolf_bg");
         rend.sprite = bg1;
 
         GameObject.Find("CAT").SetActive(false);
         GameObject.Find("DOG").SetActive(false);
         GameObject.Find("OWL").SetActive(false);
+        GameObject.Find("BEAR").SetActive(false);
         GameObject.Find("Fairy animation").SetActive(false);
 
 
@@ -83,7 +85,28 @@ public class ExerciseArea : MonoBehaviour
             tb4Position.x = -1.5f;
             tb4Position.y = -2.503f;
             tb4.transform.position = tb4Position;
+        }
 
+        if (TestExerciseNext.bearFlag)
+        {
+            rend.sprite = bg5;
+
+            // set target block positions
+            tb1Position.x = -6.3f;
+            tb1Position.y = -2.503f;
+            tb1.transform.position = tb1Position;
+
+            tb2Position.x = -4.7f;
+            tb2Position.y = -2.503f;
+            tb2.transform.position = tb2Position;
+
+            tb3Position.x = -3.1f;
+            tb3Position.y = -2.503f;
+            tb3.transform.position = tb3Position;
+
+            tb4Position.x = -1.5f;
+            tb4Position.y = -2.503f;
+            tb4.transform.position = tb4Position;
         }
     }
 }

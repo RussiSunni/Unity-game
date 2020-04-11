@@ -45,7 +45,8 @@ public class W : MonoBehaviour
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
-        if (TestExerciseNext.catFlag && TestExerciseNext.owlFlag == false)
+
+        if (TestExerciseNext.catFlag && TestExerciseNext.owlFlag == false || TestExerciseNext.bearFlag && TestExerciseNext.wolfFlag == false)
         {
             SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
         }
@@ -58,6 +59,8 @@ public class W : MonoBehaviour
     private void OnMouseUp()
     {
         pressed = false;
+
+        // OWL
         if (TestExerciseNext.dogFlag && TestExerciseNext.owlFlag == false)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
@@ -74,6 +77,35 @@ public class W : MonoBehaviour
                  Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
+                locked = true;
+                SoundManagerScript.playCorrectSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
+            }
+            else
+            {
+                transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+            }
+        }
+        // WOLF
+        else if (TestExerciseNext.dogFlag && TestExerciseNext.wolfFlag == false)
+        {
+            if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
+                       Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+            {
+                this.gameObject.SetActive(false);
+                destroyed = true;
+                SoundManagerScript.playErrorSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                 Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;

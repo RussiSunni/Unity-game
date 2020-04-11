@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TestExerciseNext : MonoBehaviour
 {
 
-    public static bool catFlag, dogFlag, owlFlag, bearFlag = false;
+    public static bool catFlag, dogFlag, owlFlag, bearFlag, wolfFlag = false;
 
     public GameObject exerciseArea, CAT, DOG;
 
@@ -55,7 +55,7 @@ public class TestExerciseNext : MonoBehaviour
             G.reset = true;
         }
 
-        if (O.locked && W.locked && L.locked)
+        if (O.locked && W.locked && L.locked && !F.locked)
         {
             owlFlag = true;
             O.locked = false;
@@ -64,6 +64,32 @@ public class TestExerciseNext : MonoBehaviour
             W.reset = true;
             L.locked = false;
             L.reset = true;
+        }
+
+        if (B.locked && E.locked && A.locked && R.locked)
+        {
+            bearFlag = true;
+            B.locked = false;
+            B.reset = true;
+            E.locked = false;
+            E.reset = true;
+            A.locked = false;
+            A.reset = true;
+            R.locked = false;
+            R.reset = true;
+        }
+
+        if (W.locked && O.locked && L.locked && F.locked)
+        {
+            wolfFlag = true;
+            W.locked = false;
+            W.reset = true;
+            O.locked = false;
+            O.reset = true;
+            L.locked = false;
+            L.reset = true;
+            F.locked = false;
+            F.reset = true;
         }
     }
 }

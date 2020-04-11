@@ -7,7 +7,7 @@ public class NewLetter : MonoBehaviour
 {
     private SpriteRenderer rend;
 
-    private Sprite letter01, letter02, letter03;
+    private Sprite letter01, letter02, letter03, letter04, letter05;
 
     //  private bool soundPlaying;
 
@@ -21,6 +21,8 @@ public class NewLetter : MonoBehaviour
         letter01 = Resources.Load<Sprite>("CATNewBlock");
         letter02 = Resources.Load<Sprite>("DOGNewBlock");
         letter03 = Resources.Load<Sprite>("OWLNewBlock");
+        letter04 = Resources.Load<Sprite>("BEARNewBlock");
+        letter05 = Resources.Load<Sprite>("WOLFNewBlock");
 
         // soundPlaying = false;
 
@@ -51,24 +53,27 @@ public class NewLetter : MonoBehaviour
             fairy.SetActive(false);
             fairyAnimation.SetActive(true);
 
-            // if (soundPlaying == false)
-            // {
-            //     SoundManagerScript.playNewWordSound();
-            //     soundPlaying = true;
-            // }
         }
 
-        else if (O.locked && W.locked && L.locked)
+        else if (O.locked && W.locked && L.locked && !F.locked)
         {
             rend.sprite = letter03;
             fairy.SetActive(false);
             fairyAnimation.SetActive(true);
 
-            // if (soundPlaying == false)
-            // {
-            //     SoundManagerScript.playNewWordSound();
-            //     soundPlaying = true;
-            // }
+        }
+        else if (B.locked && E.locked && A.locked && R.locked)
+        {
+            rend.sprite = letter04;
+            fairy.SetActive(false);
+            fairyAnimation.SetActive(true);
+
+        }
+        else if (W.locked && O.locked && L.locked && F.locked)
+        {
+            rend.sprite = letter05;
+            fairy.SetActive(false);
+            fairyAnimation.SetActive(true);
         }
         else
         {

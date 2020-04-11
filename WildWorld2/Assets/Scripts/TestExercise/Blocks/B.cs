@@ -17,6 +17,7 @@ public class B : MonoBehaviour
     public static bool pressed;
 
     public static bool destroyed;
+    public static bool reset;
 
 
 
@@ -110,6 +111,14 @@ public class B : MonoBehaviour
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
+        }
+    }
+    void Update()
+    {
+        if (reset)
+        {
+            transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            reset = false;
         }
     }
 }
