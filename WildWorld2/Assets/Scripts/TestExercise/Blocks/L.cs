@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class L : MonoBehaviour
 {
-    Transform[] targetBlock = new Transform[3];
-
+    Transform[] targetBlock = new Transform[4];
     private Vector2 initialPosition;
 
     private Vector2 mousePosition;
@@ -29,6 +28,7 @@ public class L : MonoBehaviour
         targetBlock[0] = GameObject.Find("target_block-1").transform;
         targetBlock[1] = GameObject.Find("target_block-2").transform;
         targetBlock[2] = GameObject.Find("target_block-3").transform;
+        targetBlock[3] = GameObject.Find("target_block-4").transform;
 
     }
 
@@ -50,7 +50,7 @@ public class L : MonoBehaviour
             pressed = true;
         }
 
-        if (TestExerciseNext.dogFlag)
+        if (TestExerciseNext.dogFlag && TestExerciseNext.owlFlag == false)
         {
             SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
         }
@@ -63,7 +63,7 @@ public class L : MonoBehaviour
     private void OnMouseUp()
     {
         pressed = false;
-        if (TestExerciseNext.dogFlag)
+        if (TestExerciseNext.dogFlag && TestExerciseNext.owlFlag == false)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
                      Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
@@ -95,7 +95,9 @@ public class L : MonoBehaviour
                  Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
                  Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+                 Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
+                 Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+                 Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
         {
             this.gameObject.SetActive(false);
             destroyed = true;

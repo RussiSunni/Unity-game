@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TestExerciseNext : MonoBehaviour
 {
 
-    public static bool catFlag, dogFlag, owlFlag = false;
+    public static bool catFlag, dogFlag, owlFlag, bearFlag = false;
 
     public GameObject exerciseArea, CAT, DOG;
 

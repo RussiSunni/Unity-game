@@ -109,21 +109,7 @@ public class LetterBMouse : MonoBehaviour
         }
 
 
-        // if put in correct posistion
-        // if (sceneName == "BearExercise")
-        // {
-        //     if (Mathf.Abs(transform.position.x - letterBPlace.position.x) <= 0.5f &&
-        //          Mathf.Abs(transform.position.y - letterBPlace.position.y) <= 0.5f)
-        //     {
-        //         transform.position = new Vector2(letterBPlace.position.x, letterBPlace.position.y);
-        //         pressed = false;
-        //         locked = true;
-        //     }
-        //     else
-        //     {
-        //         transform.position = new Vector2(initialPosition.x, initialPosition.y);
-        //     }
-        // }
+
         else
         {
             transform.position = new Vector2(initialPosition.x, initialPosition.y);

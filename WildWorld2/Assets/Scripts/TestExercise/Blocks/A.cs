@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class A : MonoBehaviour
 {
-    Transform[] targetBlock = new Transform[3];
+    Transform[] targetBlock = new Transform[4];
 
     private Vector2 initialPosition;
 
@@ -34,6 +34,7 @@ public class A : MonoBehaviour
         targetBlock[0] = GameObject.Find("target_block-1").transform;
         targetBlock[1] = GameObject.Find("target_block-2").transform;
         targetBlock[2] = GameObject.Find("target_block-3").transform;
+        targetBlock[3] = GameObject.Find("target_block-4").transform;
     }
 
     private void OnMouseDown()
@@ -55,6 +56,16 @@ public class A : MonoBehaviour
             pressed = true;
         }
         if (TestExerciseNext.catFlag == false)
+        {
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
+        }
+
+        else if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag == false || TestExerciseNext.owlFlag == false)
+        {
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+        }
+
+        else if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag && TestExerciseNext.owlFlag)
         {
             SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
         }
@@ -90,7 +101,7 @@ public class A : MonoBehaviour
             }
         }
 
-        else if (TestExerciseNext.catFlag == true)
+        else if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag == false)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
                                  Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
@@ -103,6 +114,35 @@ public class A : MonoBehaviour
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
+            }
+            else
+            {
+                transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+            }
+        }
+
+        else if (TestExerciseNext.owlFlag == true)
+        {
+            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+            {
+                this.gameObject.SetActive(false);
+                destroyed = true;
+                SoundManagerScript.playErrorSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                 Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
+                locked = true;
+                SoundManagerScript.playCorrectSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
             }
             else
             {

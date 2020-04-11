@@ -47,7 +47,7 @@ public class ExerciseArea : MonoBehaviour
         tb3.transform.position = tb3Position;
 
         tb4 = GameObject.Find("target_block-4");
-        tb4.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -80,7 +80,6 @@ public class ExerciseArea : MonoBehaviour
             tb3Position.y = -2.503f;
             tb3.transform.position = tb3Position;
 
-            tb4.SetActive(true);
             tb4Position.x = -1.5f;
             tb4Position.y = -2.503f;
             tb4.transform.position = tb4Position;

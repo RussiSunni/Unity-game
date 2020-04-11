@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class G : MonoBehaviour
 {
-    Transform[] targetBlock = new Transform[3];
-
+    Transform[] targetBlock = new Transform[4];
     private Vector2 initialPosition;
 
     private Vector2 mousePosition;
@@ -32,6 +31,7 @@ public class G : MonoBehaviour
         targetBlock[0] = GameObject.Find("target_block-1").transform;
         targetBlock[1] = GameObject.Find("target_block-2").transform;
         targetBlock[2] = GameObject.Find("target_block-3").transform;
+        targetBlock[3] = GameObject.Find("target_block-4").transform;
     }
 
     private void OnMouseDown()
@@ -51,7 +51,7 @@ public class G : MonoBehaviour
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
-        if (TestExerciseNext.catFlag)
+        if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag == false)
         {
             SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
         }
@@ -63,28 +63,9 @@ public class G : MonoBehaviour
     private void OnMouseUp()
     {
         pressed = false;
-        if (TestExerciseNext.catFlag == false)
-        {
-            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
-                                 Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
-                                 Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
-                                 Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                                 Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
-            {
-                this.gameObject.SetActive(false);
-                destroyed = true;
-                SoundManagerScript.playErrorSound();
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
-            }
-            else
-            {
-                transform.position = new Vector2(initialPosition.x, initialPosition.y);
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
-            }
-        }
 
-        if (TestExerciseNext.catFlag)
+
+        if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag == false)
         {
             if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                      Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
@@ -104,6 +85,28 @@ public class G : MonoBehaviour
                 locked = true;
                 SoundManagerScript.playCorrectSound();
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
+            }
+            else
+            {
+                transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+            }
+        }
+        else
+        {
+            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                                 Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
+                                 Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+                                 Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                                 Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
+                                  Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+                                 Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+            {
+                this.gameObject.SetActive(false);
+                destroyed = true;
+                SoundManagerScript.playErrorSound();
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
             }
             else
             {
