@@ -55,7 +55,7 @@ public class NewLetter : MonoBehaviour
 
         }
 
-        else if (O.locked && W.locked && L.locked && !F.locked)
+        else if (O.locked && W.locked && L.locked && !TestExerciseNext.bearFlag)
         {
             rend.sprite = letter03;
             fairy.SetActive(false);
@@ -79,6 +79,5 @@ public class NewLetter : MonoBehaviour
         {
             rend.sprite = null;
         }
-
     }
 }

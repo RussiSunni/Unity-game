@@ -17,6 +17,9 @@ public class X : MonoBehaviour
 
     public static bool destroyed;
 
+    public GameObject fairy;
+    Animator fairyAnimator;
+
 
     void Start()
     {
@@ -26,6 +29,9 @@ public class X : MonoBehaviour
         targetBlock[1] = GameObject.Find("target_block-2").transform;
         targetBlock[2] = GameObject.Find("target_block-3").transform;
         targetBlock[3] = GameObject.Find("target_block-4").transform;
+
+        fairy = GameObject.Find("Fairy");
+        fairyAnimator = fairy.GetComponent<Animator>();
     }
 
     private void OnMouseDown()
@@ -39,6 +45,8 @@ public class X : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        fairyAnimator.runtimeAnimatorController = null;
+
         if (!locked)
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -62,7 +70,7 @@ public class X : MonoBehaviour
             this.gameObject.SetActive(false);
             destroyed = true;
             SoundManagerScript.playErrorSound();
-            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
+            fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
         }
         else
         {

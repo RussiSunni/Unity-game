@@ -19,6 +19,9 @@ public class R : MonoBehaviour
 
     public static bool reset;
 
+    public GameObject fairy;
+    Animator fairyAnimator;
+
 
     void Start()
     {
@@ -28,6 +31,9 @@ public class R : MonoBehaviour
         targetBlock[1] = GameObject.Find("target_block-2").transform;
         targetBlock[2] = GameObject.Find("target_block-3").transform;
         targetBlock[3] = GameObject.Find("target_block-4").transform;
+
+        fairy = GameObject.Find("Fairy");
+        fairyAnimator = fairy.GetComponent<Animator>();
     }
 
     private void OnMouseDown()
@@ -41,6 +47,8 @@ public class R : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        fairyAnimator.runtimeAnimatorController = null;
+
         if (!locked)
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -73,7 +81,7 @@ public class R : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
+                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
@@ -103,7 +111,7 @@ public class R : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
+                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
             }
             else
             {

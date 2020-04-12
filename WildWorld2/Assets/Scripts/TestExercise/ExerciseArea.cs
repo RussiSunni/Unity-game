@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ExerciseArea : MonoBehaviour
 {
@@ -13,10 +12,24 @@ public class ExerciseArea : MonoBehaviour
 
     Vector3 tb1Position, tb2Position, tb3Position, tb4Position;
 
+    public Camera ExerciseCamera;
+    public Camera ArtemisCamera;
+
+    private static Camera artCam;
+
+    public static bool artemis;
+
+
 
     // Start is called before the first frame update
     private void Start()
     {
+        artemis = false;
+
+        artCam = ArtemisCamera;
+
+        ArtemisCamera.gameObject.SetActive(false);
+
         rend = GetComponent<SpriteRenderer>();
         bg1 = Resources.Load<Sprite>("cat_bg");
         bg2 = Resources.Load<Sprite>("dog_bg");
@@ -29,6 +42,7 @@ public class ExerciseArea : MonoBehaviour
         GameObject.Find("DOG").SetActive(false);
         GameObject.Find("OWL").SetActive(false);
         GameObject.Find("BEAR").SetActive(false);
+        GameObject.Find("WOLF").SetActive(false);
         GameObject.Find("Fairy animation").SetActive(false);
 
 
@@ -107,6 +121,20 @@ public class ExerciseArea : MonoBehaviour
             tb4Position.x = -1.5f;
             tb4Position.y = -2.503f;
             tb4.transform.position = tb4Position;
+        }
+    }
+
+    public static void SwitchCamera()
+    {
+        if (artemis == false)
+        {
+            artCam.gameObject.SetActive(false);
+        }
+
+        if (artemis)
+        {
+            artCam.gameObject.SetActive(true);
+            artemis = false;
         }
     }
 }

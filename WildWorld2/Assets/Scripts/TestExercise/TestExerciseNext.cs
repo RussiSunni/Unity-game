@@ -42,6 +42,8 @@ public class TestExerciseNext : MonoBehaviour
             A.reset = true;
             T.locked = false;
             T.reset = true;
+            SpellBook.CATAttained = true;
+            ExerciseArea.artemis = true;
         }
 
         if (D.locked && O.locked && G.locked)
@@ -53,6 +55,8 @@ public class TestExerciseNext : MonoBehaviour
             O.reset = true;
             G.locked = false;
             G.reset = true;
+            SpellBook.DOGAttained = true;
+            ExerciseArea.artemis = true;
         }
 
         if (O.locked && W.locked && L.locked && !F.locked)
@@ -64,6 +68,7 @@ public class TestExerciseNext : MonoBehaviour
             W.reset = true;
             L.locked = false;
             L.reset = true;
+            ExerciseArea.artemis = true;
         }
 
         if (B.locked && E.locked && A.locked && R.locked)
@@ -77,6 +82,7 @@ public class TestExerciseNext : MonoBehaviour
             A.reset = true;
             R.locked = false;
             R.reset = true;
+            ExerciseArea.artemis = true;
         }
 
         if (W.locked && O.locked && L.locked && F.locked)
@@ -90,6 +96,9 @@ public class TestExerciseNext : MonoBehaviour
             L.reset = true;
             F.locked = false;
             F.reset = true;
+            ExerciseArea.artemis = true;
         }
+
+        ExerciseArea.SwitchCamera();
     }
 }

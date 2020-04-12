@@ -21,6 +21,9 @@ public class C : MonoBehaviour
 
     public static bool destroyed;
 
+    public GameObject fairy;
+    Animator fairyAnimator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,9 @@ public class C : MonoBehaviour
         targetBlock[1] = GameObject.Find("target_block-2").transform;
         targetBlock[2] = GameObject.Find("target_block-3").transform;
         targetBlock[3] = GameObject.Find("target_block-3").transform;
+
+        fairy = GameObject.Find("Fairy");
+        fairyAnimator = fairy.GetComponent<Animator>();
     }
 
     private void OnMouseDown()
@@ -46,6 +52,7 @@ public class C : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        fairyAnimator.runtimeAnimatorController = null;
         if (!locked)
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -75,8 +82,7 @@ public class C : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
-
+                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
           Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
@@ -85,7 +91,6 @@ public class C : MonoBehaviour
                 locked = true;
                 SoundManagerScript.playCorrectSound();
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
-
             }
             else
             {
@@ -108,17 +113,14 @@ public class C : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
-
+                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
             }
             else
             {
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
-
             }
         }
-
     }
     void Update()
     {
@@ -128,6 +130,4 @@ public class C : MonoBehaviour
             reset = false;
         }
     }
-
-
 }
