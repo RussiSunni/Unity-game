@@ -20,8 +20,6 @@ public class SpriteChangeTest : MonoBehaviour
         fairy03 = Resources.Load<Sprite>("fairy03");
         fairy04 = Resources.Load<Sprite>("fairy04");
         rend.sprite = fairy01;
-
-
     }
 
     // Update is called once per frame

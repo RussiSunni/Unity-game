@@ -9,11 +9,9 @@ public class TestExerciseNext : MonoBehaviour
 
     public static bool catFlag, dogFlag, owlFlag, bearFlag, wolfFlag = false;
 
-    public GameObject exerciseArea, CAT, DOG;
-
     GameObject fairy, fairyAnimation;
 
-    public static int numberPresses = 0;
+    public static int textNumber = 0;
 
     void Start()
     {
@@ -21,13 +19,13 @@ public class TestExerciseNext : MonoBehaviour
         fairyAnimation = GameObject.Find("Fairy animation");
     }
 
-    void Update()
-    {
-
-    }
-
     public void ChangeQuestion()
     {
+        if (TestExerciseNext.textNumber == 0 || TestExerciseNext.textNumber == 2 || TestExerciseNext.textNumber == 4)
+        {
+            TestExerciseNext.textNumber++;
+        }
+
         fairyAnimation.SetActive(false);
         fairy.SetActive(true);
         SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
@@ -44,6 +42,7 @@ public class TestExerciseNext : MonoBehaviour
             T.reset = true;
             SpellBook.CATAttained = true;
             ExerciseArea.artemis = true;
+            TestExerciseNext.textNumber = 2;
         }
 
         if (D.locked && O.locked && G.locked)
@@ -57,6 +56,7 @@ public class TestExerciseNext : MonoBehaviour
             G.reset = true;
             SpellBook.DOGAttained = true;
             ExerciseArea.artemis = true;
+            TestExerciseNext.textNumber = 4;
         }
 
         if (O.locked && W.locked && L.locked && !F.locked)

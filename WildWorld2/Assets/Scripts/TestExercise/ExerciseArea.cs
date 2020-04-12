@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ExerciseArea : MonoBehaviour
 {
     private SpriteRenderer rend;
@@ -12,10 +13,10 @@ public class ExerciseArea : MonoBehaviour
 
     Vector3 tb1Position, tb2Position, tb3Position, tb4Position;
 
-    public Camera ExerciseCamera;
     public Camera ArtemisCamera;
+    public Camera ExerciseCamera;
 
-    private static Camera artCam;
+    private static Camera artCam, exerCam;
 
     public static bool artemis;
 
@@ -24,11 +25,12 @@ public class ExerciseArea : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        artemis = false;
-
+        // camera
         artCam = ArtemisCamera;
+        exerCam = ExerciseCamera;
+        ArtemisCamera.gameObject.SetActive(true);
+        ExerciseCamera.gameObject.SetActive(false);
 
-        ArtemisCamera.gameObject.SetActive(false);
 
         rend = GetComponent<SpriteRenderer>();
         bg1 = Resources.Load<Sprite>("cat_bg");
@@ -69,9 +71,11 @@ public class ExerciseArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (TestExerciseNext.catFlag)
         {
             rend.sprite = bg2;
+
         }
 
         if (TestExerciseNext.dogFlag)
@@ -129,6 +133,7 @@ public class ExerciseArea : MonoBehaviour
         if (artemis == false)
         {
             artCam.gameObject.SetActive(false);
+            exerCam.gameObject.SetActive(true);
         }
 
         if (artemis)
