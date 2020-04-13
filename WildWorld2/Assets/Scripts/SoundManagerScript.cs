@@ -5,9 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip errorSound;
-
-    public static AudioClip correctSound, newWordSound;
+    public static AudioClip errorSound, correctSound, newWordSound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound;
 
     static AudioSource audioSrc;
 
@@ -19,6 +17,11 @@ public class SoundManagerScript : MonoBehaviour
         errorSound = Resources.Load<AudioClip>("pop");
         correctSound = Resources.Load<AudioClip>("success");
         newWordSound = Resources.Load<AudioClip>("success_long");
+        CATWordSound = Resources.Load<AudioClip>("sounds/CATSound");
+        DOGWordSound = Resources.Load<AudioClip>("sounds/DOGSound");
+        OWLWordSound = Resources.Load<AudioClip>("sounds/OWLSound");
+        BEARWordSound = Resources.Load<AudioClip>("sounds/BEARSound");
+        WOLFWordSound = Resources.Load<AudioClip>("sounds/WOLFSound");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -36,5 +39,32 @@ public class SoundManagerScript : MonoBehaviour
     public static void playNewWordSound()
     {
         audioSrc.PlayOneShot(newWordSound);
+    }
+
+
+    // words
+    public static void playCATWordSound()
+    {
+        audioSrc.PlayOneShot(CATWordSound);
+    }
+
+    public static void playDOGWordSound()
+    {
+        audioSrc.PlayOneShot(DOGWordSound);
+    }
+
+    public static void playOWLWordSound()
+    {
+        audioSrc.PlayOneShot(OWLWordSound);
+    }
+
+    public static void playBEARWordSound()
+    {
+        audioSrc.PlayOneShot(BEARWordSound);
+    }
+
+    public static void playWOLFWordSound()
+    {
+        audioSrc.PlayOneShot(WOLFWordSound);
     }
 }

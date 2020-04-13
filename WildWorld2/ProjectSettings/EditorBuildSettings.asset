@@ -27,47 +27,20 @@ EditorBuildSettings:
     path: Assets/Scenes/ArtemisExercise.unity
     guid: a5b94acd8b41c96999ce202786a87f52
   - enabled: 1
-    path: Assets/Scenes/Cat/CatIntro.unity
+    path: Assets/Scenes/animal intros/CatIntro.unity
     guid: 63fba5efd333da4ee9e03a872ae75090
   - enabled: 1
-    path: Assets/Scenes/Cat/CatIntro2.unity
-    guid: 34ac3d787dbb873a9a461d4e1f9a28ec
-  - enabled: 1
-    path: Assets/Scenes/Cat/CatExercise.unity
-    guid: 3dd19d22f7f26cc849aaac44e92d8f94
-  - enabled: 1
-    path: Assets/Scenes/Cat/CatSuccess.unity
-    guid: 7bfcffdd266aba778951b27119dbeba5
-  - enabled: 1
-    path: Assets/Scenes/Dog/DogIntro.unity
+    path: Assets/Scenes/animal intros/DogIntro.unity
     guid: 15bdc1a37ff8d261db469b1a94cf8c6e
   - enabled: 1
-    path: Assets/Scenes/Dog/DogExercise.unity
-    guid: 0e2042bdac255d54b8c8a035b12eb331
-  - enabled: 1
-    path: Assets/Scenes/Dog/DogSuccess.unity
-    guid: 07a93bafdfb77af8da73a10e57a4b826
-  - enabled: 1
-    path: Assets/Scenes/Bear/BearIntro.unity
+    path: Assets/Scenes/animal intros/BearIntro.unity
     guid: b610d87ed48e8c612a8592a9b708308e
   - enabled: 1
-    path: Assets/Scenes/Bear/BearExercise.unity
-    guid: 1409d2d8246761be2a46190fe3c4adf7
-  - enabled: 1
-    path: Assets/Scenes/Bear/BearSuccess.unity
-    guid: ff25d91405f343ee0b856f2219412584
-  - enabled: 1
-    path: Assets/Scenes/Horse/HorseExercise.unity
+    path: Assets/Scenes/animal intros/HorseExercise.unity
     guid: cfb7ab2b555bac61497177662abfdaab
   - enabled: 1
-    path: Assets/Scenes/Owl/OwlIntro.unity
+    path: Assets/Scenes/animal intros/OwlIntro.unity
     guid: f087cace8a3c04005bd6df37752de8bc
-  - enabled: 1
-    path: Assets/Scenes/Owl/OwlExercise.unity
-    guid: 261f2cd22405c92929525685afd0c518
-  - enabled: 1
-    path: Assets/Scenes/Owl/OwlSuccess.unity
-    guid: 901fd0b27acf83051bbec90df4539b8e
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: bb5865978f12cb4a39c21b1994e10846
