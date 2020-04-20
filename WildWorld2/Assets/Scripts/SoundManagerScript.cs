@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip errorSound, correctSound, newWordSound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound;
+    public static AudioClip errorSound, correctSound, newWordSound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, ALetterSound;
 
     static AudioSource audioSrc;
 
@@ -22,6 +22,7 @@ public class SoundManagerScript : MonoBehaviour
         OWLWordSound = Resources.Load<AudioClip>("sounds/OWLSound");
         BEARWordSound = Resources.Load<AudioClip>("sounds/BEARSound");
         WOLFWordSound = Resources.Load<AudioClip>("sounds/WOLFSound");
+        ALetterSound = Resources.Load<AudioClip>("sounds/ASound");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -66,5 +67,11 @@ public class SoundManagerScript : MonoBehaviour
     public static void playWOLFWordSound()
     {
         audioSrc.PlayOneShot(WOLFWordSound);
+    }
+
+    // letters
+    public static void playALetterSound()
+    {
+        audioSrc.PlayOneShot(ALetterSound);
     }
 }

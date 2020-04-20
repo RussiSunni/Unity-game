@@ -23,6 +23,8 @@ public class D : MonoBehaviour
     public GameObject fairy;
     Animator fairyAnimator;
 
+    private string sceneName;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +38,11 @@ public class D : MonoBehaviour
         targetBlock[2] = GameObject.Find("target_block-3").transform;
         targetBlock[3] = GameObject.Find("target_block-4").transform;
 
-        fairy = GameObject.Find("Fairy");
-        fairyAnimator = fairy.GetComponent<Animator>();
+        if (sceneName != "ArtemisIntro")
+        {
+            fairy = GameObject.Find("Fairy");
+            fairyAnimator = fairy.GetComponent<Animator>();
+        }
     }
 
     private void OnMouseDown()
@@ -84,7 +89,10 @@ public class D : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                if (sceneName != "ArtemisIntro")
+                {
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                }
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
@@ -115,7 +123,10 @@ public class D : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                if (sceneName != "ArtemisIntro")
+                {
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                }
             }
             else
             {

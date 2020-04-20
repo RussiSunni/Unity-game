@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Y : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Y : MonoBehaviour
     public GameObject fairy;
     Animator fairyAnimator;
 
+    private string sceneName;
+
     void Start()
     {
         initialPosition = transform.position;
@@ -29,8 +32,13 @@ public class Y : MonoBehaviour
         targetBlock[2] = GameObject.Find("target_block-3").transform;
         targetBlock[3] = GameObject.Find("target_block-4").transform;
 
-        fairy = GameObject.Find("Fairy");
-        fairyAnimator = fairy.GetComponent<Animator>();
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+        if (sceneName != "ArtemisIntro")
+        {
+            fairy = GameObject.Find("Fairy");
+            fairyAnimator = fairy.GetComponent<Animator>();
+        }
     }
 
     private void OnMouseDown()
@@ -44,7 +52,10 @@ public class Y : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        fairyAnimator.runtimeAnimatorController = null;
+        if (sceneName != "ArtemisIntro")
+        {
+            fairyAnimator.runtimeAnimatorController = null;
+        }
 
         if (!locked)
         {
@@ -69,7 +80,10 @@ public class Y : MonoBehaviour
             this.gameObject.SetActive(false);
             destroyed = true;
             SoundManagerScript.playErrorSound();
-            fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+            if (sceneName != "ArtemisIntro")
+            {
+                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+            }
         }
         else
         {

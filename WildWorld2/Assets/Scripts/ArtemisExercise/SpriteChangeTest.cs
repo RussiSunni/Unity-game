@@ -22,8 +22,4 @@ public class SpriteChangeTest : MonoBehaviour
         rend.sprite = fairy01;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 }

@@ -57,7 +57,6 @@ public class WordCatMouse : MonoBehaviour
 
 
         // doubleclick
-
         if (Input.GetMouseButtonUp(0))
             clickCounter += 1;
 

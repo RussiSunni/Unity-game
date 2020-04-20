@@ -6,23 +6,18 @@ using UnityEngine.SceneManagement;
 public class A : MonoBehaviour
 {
     Transform[] targetBlock = new Transform[4];
-
-    private Vector2 initialPosition;
-
-    private Vector2 mousePosition;
-
+    private Vector2 initialPosition, mousePosition;
     private float deltaX, deltaY;
-
-    public static bool locked;
-
-    public static bool pressed;
-
-    public static bool reset;
-
-    public static bool destroyed;
-
+    public static bool locked, pressed, reset, destroyed;
     public GameObject fairy;
     Animator fairyAnimator;
+
+    // doubleclick
+    private float firstClickTime, timeBetweenClicks;
+    private bool coroutineAllowed;
+    private int clickCounter;
+
+    private string sceneName;
 
 
 
@@ -39,8 +34,20 @@ public class A : MonoBehaviour
         targetBlock[2] = GameObject.Find("target_block-3").transform;
         targetBlock[3] = GameObject.Find("target_block-4").transform;
 
-        fairy = GameObject.Find("Fairy");
-        fairyAnimator = fairy.GetComponent<Animator>();
+
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+        if (sceneName != "ArtemisIntro")
+        {
+            fairy = GameObject.Find("Fairy");
+            fairyAnimator = fairy.GetComponent<Animator>();
+        }
+
+        // doubleclick
+        firstClickTime = 0f;
+        timeBetweenClicks = 0.3f;
+        clickCounter = 0;
+        coroutineAllowed = true;
     }
 
     private void OnMouseDown()
@@ -50,12 +57,20 @@ public class A : MonoBehaviour
             deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
             deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
         }
-        fairyAnimator.runtimeAnimatorController = null;
+
+        if (sceneName != "ArtemisIntro")
+        {
+            fairyAnimator.runtimeAnimatorController = null;
+        }
     }
 
     private void OnMouseDrag()
     {
-        fairyAnimator.runtimeAnimatorController = null;
+        if (sceneName != "ArtemisIntro")
+        {
+            fairyAnimator.runtimeAnimatorController = null;
+        }
+
 
         if (!locked)
         {
@@ -94,7 +109,11 @@ public class A : MonoBehaviour
                 SoundManagerScript.playErrorSound();
                 // SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy04;
 
-                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                if (sceneName != "ArtemisIntro")
+                {
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                }
+
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
@@ -123,7 +142,11 @@ public class A : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                if (sceneName != "ArtemisIntro")
+                {
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                }
+
             }
             else
             {
@@ -144,7 +167,10 @@ public class A : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                if (sceneName != "ArtemisIntro")
+                {
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                }
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
@@ -160,6 +186,35 @@ public class A : MonoBehaviour
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
         }
+
+        // doubleclick
+        if (Input.GetMouseButtonUp(0))
+            clickCounter += 1;
+
+        if (clickCounter == 1 && coroutineAllowed)
+        {
+            firstClickTime = Time.time;
+            StartCoroutine(DoubleClickDetection());
+        }
+    }
+
+    // doubleclick
+    private IEnumerator DoubleClickDetection()
+    {
+        coroutineAllowed = false;
+
+        while (Time.time < firstClickTime + timeBetweenClicks)
+        {
+            if (clickCounter == 2)
+            {
+                SoundManagerScript.playALetterSound();
+                break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        clickCounter = 0;
+        firstClickTime = 0f;
+        coroutineAllowed = true;
     }
 
     void Update()

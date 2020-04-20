@@ -85,6 +85,7 @@ public class WordDogMouse : MonoBehaviour
                 {
                     wordShowing = false;
                     rend.sprite = picture;
+                    SoundManagerScript.playDOGWordSound();
                 }
                 else
                 {

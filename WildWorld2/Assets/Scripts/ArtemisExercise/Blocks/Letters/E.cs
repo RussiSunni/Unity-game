@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class E : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class E : MonoBehaviour
     public GameObject fairy;
     Animator fairyAnimator;
 
+    private string sceneName;
+
 
 
     void Start()
@@ -32,8 +35,13 @@ public class E : MonoBehaviour
         targetBlock[2] = GameObject.Find("target_block-3").transform;
         targetBlock[3] = GameObject.Find("target_block-4").transform;
 
-        fairy = GameObject.Find("Fairy");
-        fairyAnimator = fairy.GetComponent<Animator>();
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+        if (sceneName != "ArtemisIntro")
+        {
+            fairy = GameObject.Find("Fairy");
+            fairyAnimator = fairy.GetComponent<Animator>();
+        }
     }
 
     private void OnMouseDown()
@@ -47,7 +55,10 @@ public class E : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        fairyAnimator.runtimeAnimatorController = null;
+        if (sceneName != "ArtemisIntro")
+        {
+            fairyAnimator.runtimeAnimatorController = null;
+        }
 
         if (!locked)
         {
@@ -79,7 +90,11 @@ public class E : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+
+                if (sceneName != "ArtemisIntro")
+                {
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                }
             }
             else
             {
@@ -100,7 +115,11 @@ public class E : MonoBehaviour
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+
+                if (sceneName != "ArtemisIntro")
+                {
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                }
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                  Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)

@@ -9,7 +9,7 @@ public class NewLetter : MonoBehaviour
 
     private Sprite letter01, letter02, letter03, letter04, letter05;
 
-    private bool soundPlaying;
+    public static bool soundPlaying;
 
     GameObject fairy, fairyAnimation;
 
@@ -57,8 +57,8 @@ public class NewLetter : MonoBehaviour
             if (soundPlaying == false)
             {
                 SoundManagerScript.playDOGWordSound();
-                soundPlaying = true;
                 FairyText.newBlock = true;
+                soundPlaying = true;
             }
         }
 

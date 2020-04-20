@@ -81,6 +81,7 @@ public class WordOwlMouse : MonoBehaviour
                 {
                     wordShowing = false;
                     rend.sprite = picture;
+                    SoundManagerScript.playOWLWordSound();
                 }
                 else
                 {

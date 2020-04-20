@@ -140,6 +140,7 @@ public class ExerciseArea : MonoBehaviour
         {
             artCam.gameObject.SetActive(true);
             artemis = false;
+            NewLetter.soundPlaying = false;
         }
     }
 }

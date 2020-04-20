@@ -41,7 +41,6 @@ public class FairyText : MonoBehaviour
         else if (TestExerciseNext.textNumber == 3)
         {
             fairyText.text = "Hmmm, she referred to him as 'Sir Barksalot'. Maybe that is a clue.";
-
             if (newBlock)
             {
                 fairyText.text = "You got a new block!";

@@ -85,6 +85,7 @@ public class WordBearMouse : MonoBehaviour
                 {
                     wordShowing = false;
                     rend.sprite = picture;
+                    SoundManagerScript.playBEARWordSound();
                 }
                 else
                 {

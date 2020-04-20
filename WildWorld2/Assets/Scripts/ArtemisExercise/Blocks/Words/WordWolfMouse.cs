@@ -83,6 +83,7 @@ public class WordWolfMouse : MonoBehaviour
                 {
                     wordShowing = false;
                     rend.sprite = picture;
+                    SoundManagerScript.playWOLFWordSound();
                 }
                 else
                 {
