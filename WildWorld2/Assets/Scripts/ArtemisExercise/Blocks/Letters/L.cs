@@ -6,23 +6,22 @@ using UnityEngine.SceneManagement;
 public class L : MonoBehaviour
 {
     Transform[] targetBlock = new Transform[4];
-    private Vector2 initialPosition;
-
-    private Vector2 mousePosition;
-
+    private Vector2 initialPosition, mousePosition;
     private float deltaX, deltaY;
-
-    public static bool locked;
-
-    public static bool pressed;
-
-    public static bool reset;
-
-    public static bool destroyed;
-
+    public static bool locked, pressed, reset, destroyed;
     public GameObject fairy;
     Animator fairyAnimator;
     private string sceneName;
+
+    // doubleclick
+    private float firstClickTime, timeBetweenClicks;
+    private bool coroutineAllowed;
+    private int clickCounter;
+
+    // rotation
+    public Vector3 RotateStep = new Vector3(0, 180, 0);
+    public float RotateSpeed = 5f;
+    private Quaternion _targetRot = Quaternion.identity;
 
     void Start()
     {
@@ -40,6 +39,12 @@ public class L : MonoBehaviour
             fairy = GameObject.Find("Fairy");
             fairyAnimator = fairy.GetComponent<Animator>();
         }
+
+        // doubleclick
+        firstClickTime = 0f;
+        timeBetweenClicks = 0.3f;
+        clickCounter = 0;
+        coroutineAllowed = true;
     }
 
     private void OnMouseDown()
@@ -138,18 +143,14 @@ public class L : MonoBehaviour
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
             }
         }
-
-
-        else
-
-        if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
-                 Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+        else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+          Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
+          Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+          Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+          Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+          Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
+          Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+          Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
         {
             this.gameObject.SetActive(false);
             destroyed = true;
@@ -164,6 +165,36 @@ public class L : MonoBehaviour
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
             SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
         }
+
+        // doubleclick
+        if (Input.GetMouseButtonUp(0))
+            clickCounter += 1;
+
+        if (clickCounter == 1 && coroutineAllowed)
+        {
+            firstClickTime = Time.time;
+            StartCoroutine(DoubleClickDetection());
+        }
+    }
+
+    // doubleclick
+    private IEnumerator DoubleClickDetection()
+    {
+        coroutineAllowed = false;
+
+        while (Time.time < firstClickTime + timeBetweenClicks)
+        {
+            if (clickCounter == 2)
+            {
+                SoundManagerScript.playALetterSound();
+                _targetRot *= Quaternion.Euler(RotateStep);
+                break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        clickCounter = 0;
+        firstClickTime = 0f;
+        coroutineAllowed = true;
     }
     void Update()
     {
@@ -172,5 +203,7 @@ public class L : MonoBehaviour
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
             reset = false;
         }
+        // rotate
+        transform.rotation = Quaternion.Lerp(transform.rotation, _targetRot, RotateSpeed * Time.deltaTime);
     }
 }

@@ -12,12 +12,18 @@ public class A : MonoBehaviour
     public GameObject fairy;
     Animator fairyAnimator;
 
+    private string sceneName;
+
+
     // doubleclick
     private float firstClickTime, timeBetweenClicks;
     private bool coroutineAllowed;
     private int clickCounter;
 
-    private string sceneName;
+    // rotation
+    public Vector3 RotateStep = new Vector3(0, 180, 0);
+    public float RotateSpeed = 5f;
+    private Quaternion _targetRot = Quaternion.identity;
 
 
 
@@ -208,6 +214,7 @@ public class A : MonoBehaviour
             if (clickCounter == 2)
             {
                 SoundManagerScript.playALetterSound();
+                _targetRot *= Quaternion.Euler(RotateStep);
                 break;
             }
             yield return new WaitForEndOfFrame();
@@ -224,5 +231,7 @@ public class A : MonoBehaviour
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
             reset = false;
         }
+        // rotate
+        transform.rotation = Quaternion.Lerp(transform.rotation, _targetRot, RotateSpeed * Time.deltaTime);
     }
 }
