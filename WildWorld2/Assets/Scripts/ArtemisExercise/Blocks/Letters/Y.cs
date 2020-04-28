@@ -120,7 +120,7 @@ public class Y : MonoBehaviour
         {
             if (clickCounter == 2)
             {
-                SoundManagerScript.playALetterSound();
+                SoundManagerScript.playYLetterSound();
                 _targetRot *= Quaternion.Euler(RotateStep);
                 break;
             }

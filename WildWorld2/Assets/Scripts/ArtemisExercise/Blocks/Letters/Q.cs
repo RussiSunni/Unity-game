@@ -118,7 +118,7 @@ public class Q : MonoBehaviour
         {
             if (clickCounter == 2)
             {
-                SoundManagerScript.playALetterSound();
+                SoundManagerScript.playQLetterSound();
                 _targetRot *= Quaternion.Euler(RotateStep);
                 break;
             }

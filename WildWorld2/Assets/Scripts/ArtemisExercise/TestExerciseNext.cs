@@ -6,17 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class TestExerciseNext : MonoBehaviour
 {
-
     public static bool catFlag, dogFlag, owlFlag, bearFlag, wolfFlag = false;
-
-    GameObject fairy, fairyAnimation;
-
+    GameObject fairy, fairyAnimation, cat;
     public static int textNumber = 0;
+
 
     void Start()
     {
         fairy = GameObject.Find("Fairy");
         fairyAnimation = GameObject.Find("Fairy animation");
+        cat = GameObject.Find("CAT");
+
+
     }
 
     public void ChangeQuestion()
@@ -44,6 +45,7 @@ public class TestExerciseNext : MonoBehaviour
             ExerciseArea.artemis = true;
             TestExerciseNext.textNumber = 2;
             FairyText.newBlock = false;
+            cat.SetActive(false);
         }
 
         if (D.locked && O.locked && G.locked)

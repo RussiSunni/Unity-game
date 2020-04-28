@@ -113,7 +113,7 @@ public class Z : MonoBehaviour
         {
             if (clickCounter == 2)
             {
-                SoundManagerScript.playALetterSound();
+                SoundManagerScript.playZLetterSound();
                 _targetRot *= Quaternion.Euler(RotateStep);
                 break;
             }

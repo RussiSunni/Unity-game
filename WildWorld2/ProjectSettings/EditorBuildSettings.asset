@@ -21,29 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Hub/Hub.unity
     guid: 54eeb77e9f493aaaf8a349ff228e0352
   - enabled: 1
+    path: Assets/Scenes/Hub/walking.unity
+    guid: 2e194303840cef026a0fd3767b85457c
+  - enabled: 1
     path: Assets/Scenes/ArtemisIntro.unity
     guid: 01e4622053c6d96f68956907f1ac266d
   - enabled: 1
     path: Assets/Scenes/ArtemisExercise.unity
     guid: a5b94acd8b41c96999ce202786a87f52
-  - enabled: 0
-    path: Assets/Scenes/animal intros/CatIntro.unity
-    guid: 63fba5efd333da4ee9e03a872ae75090
-  - enabled: 0
-    path: Assets/Scenes/animal intros/DogIntro.unity
-    guid: 15bdc1a37ff8d261db469b1a94cf8c6e
-  - enabled: 0
-    path: Assets/Scenes/animal intros/BearIntro.unity
-    guid: b610d87ed48e8c612a8592a9b708308e
-  - enabled: 0
-    path: Assets/Scenes/animal intros/HorseExercise.unity
-    guid: cfb7ab2b555bac61497177662abfdaab
-  - enabled: 0
-    path: Assets/Scenes/animal intros/OwlIntro.unity
-    guid: f087cace8a3c04005bd6df37752de8bc
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Hub/PlayerRoom.unity
     guid: 5a72cd0284bfb86efb36cccd59ca704c

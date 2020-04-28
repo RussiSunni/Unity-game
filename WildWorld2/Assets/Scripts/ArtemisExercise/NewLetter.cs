@@ -18,8 +18,8 @@ public class NewLetter : MonoBehaviour
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        letter01 = Resources.Load<Sprite>("CATWord");
-        letter02 = Resources.Load<Sprite>("DOGWord");
+        // letter01 = Resources.Load<Sprite>("CATWord");
+        // letter02 = Resources.Load<Sprite>("DOGWord");
         letter03 = Resources.Load<Sprite>("OWLWord");
         letter04 = Resources.Load<Sprite>("BEARWord");
         letter05 = Resources.Load<Sprite>("WOLFWord");

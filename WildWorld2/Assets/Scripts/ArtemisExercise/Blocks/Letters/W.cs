@@ -72,7 +72,7 @@ public class W : MonoBehaviour
             pressed = true;
         }
 
-        if (TestExerciseNext.catFlag && TestExerciseNext.owlFlag == false || TestExerciseNext.bearFlag && TestExerciseNext.wolfFlag == false)
+        if (TestExerciseNext.dogFlag && TestExerciseNext.owlFlag == false || TestExerciseNext.bearFlag && TestExerciseNext.wolfFlag == false)
         {
             SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
         }
@@ -194,7 +194,7 @@ public class W : MonoBehaviour
         {
             if (clickCounter == 2)
             {
-                SoundManagerScript.playALetterSound();
+                SoundManagerScript.playWLetterSound();
                 _targetRot *= Quaternion.Euler(RotateStep);
                 break;
             }

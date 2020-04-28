@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - ArtemisText
     - B
     - C
+    - Cat
     - ChangeBlocks
     - ChangeIntroScene
     - ChangeIntroText
@@ -50,7 +51,6 @@ ScriptsOnlyBuild:
     - V
     - W
     - WordBearMouse
-    - WordCatMouse
     - WordDogMouse
     - WordOwlMouse
     - WordWolfMouse
@@ -196,8 +196,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12596}
     - Class: 114
-      Script: {instanceID: 12626}
-    - Class: 114
       Script: {instanceID: 12676}
     - Class: 114
       Script: {instanceID: 12752}
@@ -221,6 +219,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13306}
     - Class: 114
       Script: {instanceID: 13346}
+    - Class: 114
+      Script: {instanceID: 30956}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -588,30 +588,90 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11152}
+    - Class: 114
+      Script: {instanceID: 11208}
+    - Class: 114
+      Script: {instanceID: 11262}
     - Class: 114
       Script: {instanceID: 11334}
     - Class: 114
       Script: {instanceID: 11374}
     - Class: 114
+      Script: {instanceID: 11424}
+    - Class: 114
+      Script: {instanceID: 11432}
+    - Class: 114
+      Script: {instanceID: 11490}
+    - Class: 114
+      Script: {instanceID: 11500}
+    - Class: 114
+      Script: {instanceID: 11534}
+    - Class: 114
+      Script: {instanceID: 11688}
+    - Class: 114
+      Script: {instanceID: 11766}
+    - Class: 114
       Script: {instanceID: 11830}
     - Class: 114
+      Script: {instanceID: 11850}
+    - Class: 114
+      Script: {instanceID: 11908}
+    - Class: 114
+      Script: {instanceID: 11942}
+    - Class: 114
+      Script: {instanceID: 11996}
+    - Class: 114
+      Script: {instanceID: 12064}
+    - Class: 114
+      Script: {instanceID: 12134}
+    - Class: 114
+      Script: {instanceID: 12162}
+    - Class: 114
       Script: {instanceID: 12302}
+    - Class: 114
+      Script: {instanceID: 12400}
+    - Class: 114
+      Script: {instanceID: 12436}
+    - Class: 114
+      Script: {instanceID: 12596}
+    - Class: 114
+      Script: {instanceID: 12676}
+    - Class: 114
+      Script: {instanceID: 12752}
     - Class: 114
       Script: {instanceID: 12866}
     - Class: 114
       Script: {instanceID: 12926}
     - Class: 114
+      Script: {instanceID: 12998}
+    - Class: 114
+      Script: {instanceID: 13124}
+    - Class: 114
+      Script: {instanceID: 13270}
+    - Class: 114
       Script: {instanceID: 13286}
+    - Class: 114
+      Script: {instanceID: 13306}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1278,7 +1338,7 @@ ScriptsOnlyBuild:
     className: Question
   - hash:
       serializedVersion: 2
-      Hash: d7fe89b4c84ba5778316dd4ac327b236
+      Hash: 563fd92dcde533a687b8d80472680a83
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExerciseArea
@@ -1398,22 +1458,10 @@ ScriptsOnlyBuild:
     className: M
   - hash:
       serializedVersion: 2
-      Hash: 6473b03c0550c120c104719befbd4a39
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RotateTest
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LetterRTouch
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WordCatMouse
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -1768,6 +1816,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6473b03c0550c120c104719befbd4a39
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Cat
   platform: 20
   scenePathNames:
   - Assets/Scenes/Menu.unity

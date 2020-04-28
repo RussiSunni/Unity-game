@@ -186,7 +186,7 @@ public class L : MonoBehaviour
         {
             if (clickCounter == 2)
             {
-                SoundManagerScript.playALetterSound();
+                SoundManagerScript.playLLetterSound();
                 _targetRot *= Quaternion.Euler(RotateStep);
                 break;
             }

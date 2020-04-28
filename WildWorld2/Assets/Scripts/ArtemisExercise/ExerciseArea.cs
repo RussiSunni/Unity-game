@@ -6,20 +6,16 @@ using UnityEngine;
 public class ExerciseArea : MonoBehaviour
 {
     private SpriteRenderer rend;
-
     private Sprite bg1, bg2, bg3, bg4, bg5;
-
-    public GameObject exerciseArea, tb1, tb2, tb3, tb4;
-
+    public GameObject exerciseArea, tb1, tb2, tb3, tb4, cat, dog;
     Vector3 tb1Position, tb2Position, tb3Position, tb4Position;
 
-    public Camera ArtemisCamera;
-    public Camera ExerciseCamera;
+    //Vector3 newCatPosition;
 
+    public Camera ArtemisCamera, ExerciseCamera;
     private static Camera artCam, exerCam;
-
     public static bool artemis;
-
+    private bool catEnabled = true, dogEnabled = true;
 
 
     // Start is called before the first frame update
@@ -40,8 +36,14 @@ public class ExerciseArea : MonoBehaviour
         bg5 = Resources.Load<Sprite>("wolf_bg");
         rend.sprite = bg1;
 
-        GameObject.Find("CAT").SetActive(false);
-        GameObject.Find("DOG").SetActive(false);
+
+        cat = GameObject.Find("CAT");
+        //        cat.transform.position = newCatPosition;
+        cat.SetActive(false);
+        dog = GameObject.Find("DOG");
+        dog.SetActive(false);
+
+
         GameObject.Find("OWL").SetActive(false);
         GameObject.Find("BEAR").SetActive(false);
         GameObject.Find("WOLF").SetActive(false);
@@ -65,17 +67,16 @@ public class ExerciseArea : MonoBehaviour
         tb3.transform.position = tb3Position;
 
         tb4 = GameObject.Find("target_block-4");
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
+
         if (TestExerciseNext.catFlag)
         {
             rend.sprite = bg2;
-
         }
 
         if (TestExerciseNext.dogFlag)
@@ -126,6 +127,24 @@ public class ExerciseArea : MonoBehaviour
             tb4Position.y = -2.503f;
             tb4.transform.position = tb4Position;
         }
+
+        if (C.locked && A.locked && T.locked && catEnabled)
+        {
+
+            cat.SetActive(true);
+            catEnabled = false;
+        }
+
+        if (D.locked && O.locked && G.locked)
+        {
+            if (dogEnabled)
+            {
+                dog.SetActive(true);
+                dogEnabled = false;
+            }
+        }
+
+
     }
 
     public static void SwitchCamera()
@@ -143,4 +162,5 @@ public class ExerciseArea : MonoBehaviour
             NewLetter.soundPlaying = false;
         }
     }
+
 }

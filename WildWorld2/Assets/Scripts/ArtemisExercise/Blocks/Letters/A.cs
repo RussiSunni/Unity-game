@@ -35,14 +35,17 @@ public class A : MonoBehaviour
         destroyed = false;
         locked = false;
 
-        targetBlock[0] = GameObject.Find("target_block-1").transform;
-        targetBlock[1] = GameObject.Find("target_block-2").transform;
-        targetBlock[2] = GameObject.Find("target_block-3").transform;
-        targetBlock[3] = GameObject.Find("target_block-4").transform;
-
-
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
+
+        if (sceneName != "Rules")
+        {
+            targetBlock[0] = GameObject.Find("target_block-1").transform;
+            targetBlock[1] = GameObject.Find("target_block-2").transform;
+            targetBlock[2] = GameObject.Find("target_block-3").transform;
+            targetBlock[3] = GameObject.Find("target_block-4").transform;
+        }
+
         if (sceneName != "ArtemisIntro")
         {
             fairy = GameObject.Find("Fairy");
