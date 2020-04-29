@@ -8,6 +8,6 @@ public class LoadArtemis : MonoBehaviour
 {
     public void ChangeScene()
     {
-        SceneManager.LoadScene("walking");
+        SceneManager.LoadScene("ArtemisWalking");
     }
 }
