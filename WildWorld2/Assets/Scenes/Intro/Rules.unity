@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aae4aa599e9207b78c51f64f9875d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &197895521
@@ -353,7 +352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abc383257f95db4f91ddc1b687a3087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &229684497
@@ -462,7 +460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fa86b2fb7975564b39e5fe4c929720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &255980206
@@ -571,7 +568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8eac35d3c6788b25bd0d82978f5bf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &257797055
@@ -680,7 +676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adf0e54b5ce922a8a691bd7fc13be81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &308389648
@@ -789,7 +784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b53931bde58f04ae8f6862cadb6ad86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &312655668
@@ -898,7 +892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1ff99bd0dc21391b36c84f7e37064f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &336944184
@@ -1007,7 +1000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82996359ccc2646468181d105720d4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &398781175
@@ -1116,7 +1108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b51c2266dc556d02bb9a96339aa4bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &447958608
@@ -1225,7 +1216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395b077574f1b1f59bd40d069c23f675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &453645325
@@ -1334,7 +1324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f741f921f42320278564c5d6f53daa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &508951225
@@ -1423,7 +1412,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 516428509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf71a0c622e07fedb68941974d7d249, type: 3}
+  m_Script: {fileID: 11500000, guid: abce269766a2a3421bc067d0c8b546aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &516428511
@@ -1438,7 +1427,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591660779
 GameObject:
@@ -1542,7 +1531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae98438a2689982b58ae8eef4971b49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &612360830
@@ -1651,7 +1639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21da805d2bcefcefb1b2a95aa6313ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &705223433
@@ -1760,7 +1747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3680162eb5559864d81beca7d0574c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &731620831
@@ -1869,7 +1855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80270670ce3651fa855c0d1aa20290f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &746623047
@@ -2022,7 +2007,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &878495066
 GameObject:
@@ -2149,7 +2134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a4ff1f86bd08f5580b39d1402ff665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &998627900
@@ -2258,7 +2242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5631ebe225d293e1e80c01bb821b778b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1210133198
@@ -2414,7 +2397,7 @@ RectTransform:
   - {fileID: 1926706260}
   - {fileID: 878495067}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2467,7 +2450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b6b180bb79d47b58b939f1eb91d27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1292598128
@@ -2594,7 +2576,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646779230
 GameObject:
@@ -2642,7 +2624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf46301bc08ec8c3869f594980a062f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1646779233
@@ -2832,7 +2813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395b077574f1b1f59bd40d069c23f675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1720208423
@@ -3024,7 +3004,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea48046f7f73db917a5e12af74701813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1781987052
@@ -3133,7 +3112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33795a79bcdc09dbb4b7d51e972a69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1853790220
@@ -3242,7 +3220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d878db42eec369ffaabde5c767dd123e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1922543853
@@ -3480,7 +3457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df12992a2537c7e99062f16a738605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1946115495
@@ -3589,7 +3565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5140c648d9735b5af7beea53457156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &1953186125
@@ -3742,7 +3717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2129630599
 GameObject:
@@ -3790,7 +3765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4076d3129a7a7819dd8a285e3fc81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairy: {fileID: 0}
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
 --- !u!65 &2129630602

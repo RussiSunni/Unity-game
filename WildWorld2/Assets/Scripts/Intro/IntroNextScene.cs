@@ -10,6 +10,7 @@ public class IntroNextScene : MonoBehaviour
     public void ChangeScene()
     {
         numberPresses++;
+        Debug.Log("test");
 
         if (numberPresses == 2)
         {

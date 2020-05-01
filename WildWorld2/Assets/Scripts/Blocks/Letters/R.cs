@@ -10,7 +10,7 @@ public class R : MonoBehaviour
     private float deltaX, deltaY;
     public static bool pressed;
     public static bool locked, destroyed, reset;
-    public GameObject fairy;
+    private GameObject fairy;
     Animator fairyAnimator;
 
     private string sceneName;

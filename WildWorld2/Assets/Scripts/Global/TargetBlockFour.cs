@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TargetBlockFour : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class TargetBlockFour : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+
         rend = GetComponent<SpriteRenderer>();
         redTargetBlock = Resources.Load<Sprite>("cat_target_block");
         blueTargetBlock = Resources.Load<Sprite>("dog_target_block");

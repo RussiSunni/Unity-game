@@ -9,7 +9,7 @@ public class S : MonoBehaviour
     private Vector2 initialPosition, mousePosition;
     private float deltaX, deltaY;
     public static bool locked, pressed, destroyed;
-    public GameObject fairy;
+    private GameObject fairy;
     Animator fairyAnimator;
 
     private string sceneName;
