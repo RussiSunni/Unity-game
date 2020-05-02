@@ -1,24 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangeBlocks : MonoBehaviour
 {
     private Vector2 mousePosition;
-
     private float deltaX, deltaY;
-
     GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, CAT, DOG, OWL, BEAR;
-
     private bool book;
+    private string sceneName;
 
-
-    // Start is called before the first frame update
     void Start()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+
         book = true;
-
-
         a = GameObject.Find("a");
         b = GameObject.Find("b");
         c = GameObject.Find("c");
@@ -46,10 +44,13 @@ public class ChangeBlocks : MonoBehaviour
         y = GameObject.Find("y");
         z = GameObject.Find("z");
 
-        CAT = GameObject.Find("CAT");
-        DOG = GameObject.Find("DOG");
-        OWL = GameObject.Find("OWL");
-        BEAR = GameObject.Find("BEAR");
+        if (sceneName == "ArtemisExercise")
+        {
+            CAT = GameObject.Find("CAT");
+            DOG = GameObject.Find("DOG");
+            OWL = GameObject.Find("OWL");
+            BEAR = GameObject.Find("BEAR");
+        }
     }
 
     private void OnMouseDown()
@@ -164,27 +165,28 @@ public class ChangeBlocks : MonoBehaviour
                 z.SetActive(false);
             }
 
-
-            if (TestExerciseNext.catFlag)
+            if (sceneName == "ArtemisExercise")
             {
-                CAT.SetActive(true);
-            }
+                if (TestExerciseNext.catFlag)
+                {
+                    CAT.SetActive(true);
+                }
 
-            if (TestExerciseNext.dogFlag)
-            {
-                DOG.SetActive(true);
-            }
+                if (TestExerciseNext.dogFlag)
+                {
+                    DOG.SetActive(true);
+                }
 
-            if (TestExerciseNext.owlFlag)
-            {
-                OWL.SetActive(true);
-            }
+                if (TestExerciseNext.owlFlag)
+                {
+                    OWL.SetActive(true);
+                }
 
-            if (TestExerciseNext.bearFlag)
-            {
-                BEAR.SetActive(true);
+                if (TestExerciseNext.bearFlag)
+                {
+                    BEAR.SetActive(true);
+                }
             }
-
         }
         else
         {
@@ -299,16 +301,13 @@ public class ChangeBlocks : MonoBehaviour
                 z.SetActive(true);
             }
 
-            CAT.SetActive(false);
-            DOG.SetActive(false);
-            OWL.SetActive(false);
-            BEAR.SetActive(false);
+            if (sceneName == "ArtemisExercise")
+            {
+                CAT.SetActive(false);
+                DOG.SetActive(false);
+                OWL.SetActive(false);
+                BEAR.SetActive(false);
+            }
         }
     }
-
-
-    private void OnMouseUp()
-    {
-    }
-
 }

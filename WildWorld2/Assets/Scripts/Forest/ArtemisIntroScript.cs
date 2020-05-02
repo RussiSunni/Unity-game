@@ -7,16 +7,13 @@ using UnityEngine.SceneManagement;
 public class ArtemisIntroScript : MonoBehaviour
 {
     public static int numClicks;
-
     GameObject artemisExerciseArea;
-
 
     void Start()
     {
         numClicks = 0;
         artemisExerciseArea = GameObject.Find("ArtemisExerciseArea");
     }
-
 
     public void ChangeScene()
     {

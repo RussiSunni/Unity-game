@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class Question : MonoBehaviour
 {
     private SpriteRenderer rend;
-
     private Sprite question1, question2, question3, question4, question5;
-
-    // Start is called before the first frame update
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
