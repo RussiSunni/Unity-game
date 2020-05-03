@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest/ArtemisExercise.unity
     guid: a5b94acd8b41c96999ce202786a87f52
   - enabled: 1
-    path: Assets/Scenes/Hub/PlayerRoom.unity
+    path: Assets/Scenes/Academy/PlayerRoom.unity
     guid: 5a72cd0284bfb86efb36cccd59ca704c
   - enabled: 1
     path: Assets/Scenes/BookOfSpells.unity
@@ -68,4 +68,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Village/VillageSpellBook.unity
     guid: 506c4adbbb3da640cb4ec8adbe62f944
+  - enabled: 1
+    path: Assets/Scenes/Academy/IntroducingExercise.unity
+    guid: 442fe2cfb0bc70589ac13181cffdf8cb
+  - enabled: 1
+    path: Assets/Scenes/Forest/Zebra.unity
+    guid: 141f4cff44e238334bde65df28d5303b
   m_configObjects: {}
