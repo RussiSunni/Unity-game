@@ -8,7 +8,7 @@ public class TempleQuestion : MonoBehaviour
     public static Sprite question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12;
     int questionNumber = 1;
 
-    public GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
+    private GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
 
     private void Start()
     {

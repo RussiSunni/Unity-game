@@ -38,15 +38,19 @@ public class ArtemisExerciseArea : MonoBehaviour
 
 
         cat = GameObject.Find("CAT");
-        //        cat.transform.position = newCatPosition;
         cat.SetActive(false);
         dog = GameObject.Find("DOG");
         dog.SetActive(false);
 
 
         GameObject.Find("OWL").SetActive(false);
-        GameObject.Find("BEAR").SetActive(false);
+
+        if (Progress.bear == false)
+            GameObject.Find("BEAR").SetActive(false);
+
+
         GameObject.Find("WOLF").SetActive(false);
+
         GameObject.Find("Fairy animation").SetActive(false);
 
 

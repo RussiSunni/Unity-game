@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip errorSound, correctSound, newWordSound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
+    public static AudioClip errorSound, correctSound, newWordSound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, MONKEYWordSound, DOORWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
     static AudioSource audioSrc;
 
 
@@ -19,6 +19,8 @@ public class SoundManagerScript : MonoBehaviour
         OWLWordSound = Resources.Load<AudioClip>("sounds/OWLSound");
         BEARWordSound = Resources.Load<AudioClip>("sounds/BEARSound");
         WOLFWordSound = Resources.Load<AudioClip>("sounds/WOLFSound");
+        MONKEYWordSound = Resources.Load<AudioClip>("sounds/MONKEYSound");
+        DOORWordSound = Resources.Load<AudioClip>("sounds/DOORSound");
         ALetterSound = Resources.Load<AudioClip>("sounds/ASound");
         BLetterSound = Resources.Load<AudioClip>("sounds/BSound");
         CLetterSound = Resources.Load<AudioClip>("sounds/CSound");
@@ -89,6 +91,15 @@ public class SoundManagerScript : MonoBehaviour
     public static void playWOLFWordSound()
     {
         audioSrc.PlayOneShot(WOLFWordSound);
+    }
+    public static void playMONKEYWordSound()
+    {
+        audioSrc.PlayOneShot(MONKEYWordSound);
+    }
+
+    public static void playDOORWordSound()
+    {
+        audioSrc.PlayOneShot(DOORWordSound);
     }
 
     // letters
