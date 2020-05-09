@@ -25,7 +25,7 @@ public class TempleQuestion : MonoBehaviour
         question10 = Resources.Load<Sprite>("temple/colours10");
         question11 = Resources.Load<Sprite>("temple/colours11");
         question12 = Resources.Load<Sprite>("temple/colours12");
-        rend.sprite = question1;
+        rend.sprite = question3;
 
         if (Progress.lettersExerciseComplete == false)
         {

@@ -37,7 +37,7 @@ public class B : MonoBehaviour
 
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
-        if (sceneName != "ArtemisIntro")
+        if (sceneName == "ArtemisExercise")
         {
             fairy = GameObject.Find("Fairy");
             fairyAnimator = fairy.GetComponent<Animator>();
@@ -61,7 +61,7 @@ public class B : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (sceneName != "ArtemisIntro")
+        if (sceneName == "ArtemisExercise")
         {
             fairyAnimator.runtimeAnimatorController = null;
         }
@@ -85,71 +85,118 @@ public class B : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (TestExerciseNext.owlFlag == false)
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+        if (sceneName == "SecretaryExercise")
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
-                     Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
-                     Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
-            {
-                this.gameObject.SetActive(false);
-                destroyed = true;
-                SoundManagerScript.playErrorSound();
-
-                if (sceneName != "ArtemisIntro")
-                {
-                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
-                }
-            }
-            else
-            {
-                transform.position = new Vector2(initialPosition.x, initialPosition.y);
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
-            }
-        }
-
-        else if (TestExerciseNext.owlFlag)
-        {
-            if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
-                     Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
-                     Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
-            {
-                this.gameObject.SetActive(false);
-                destroyed = true;
-                SoundManagerScript.playErrorSound();
-                if (sceneName != "ArtemisIntro")
-                {
-                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
-                }
-            }
-            else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
-                 Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
+                Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
+                locked = true;
+                SoundManagerScript.playCorrectSound();
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+              Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
+                locked = true;
+                SoundManagerScript.playCorrectSound();
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+              Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
+                locked = true;
+                SoundManagerScript.playCorrectSound();
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
+            Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
+                locked = true;
+                SoundManagerScript.playCorrectSound();
             }
             else
             {
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
-                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
         }
-
-        // doubleclick
-        if (Input.GetMouseButtonUp(0))
-            clickCounter += 1;
-
-        if (clickCounter == 1 && coroutineAllowed)
+        else
         {
-            firstClickTime = Time.time;
-            StartCoroutine(DoubleClickDetection());
+            if (TestExerciseNext.owlFlag == false)
+            {
+                if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
+                         Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+                         Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+                {
+                    this.gameObject.SetActive(false);
+                    destroyed = true;
+                    SoundManagerScript.playErrorSound();
+
+                    if (sceneName == "ArtemisExercise")
+                    {
+                        fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                    }
+                }
+                else
+                {
+                    transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                    SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+                }
+            }
+
+            else if (TestExerciseNext.owlFlag)
+            {
+                if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
+                         Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+                         Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+                {
+                    this.gameObject.SetActive(false);
+                    destroyed = true;
+                    SoundManagerScript.playErrorSound();
+                    if (sceneName == "ArtemisExercise")
+                    {
+                        fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
+                    }
+                }
+                else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
+                {
+                    transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+                    locked = true;
+                    SoundManagerScript.playCorrectSound();
+                    SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy03;
+                }
+                else
+                {
+                    transform.position = new Vector2(initialPosition.x, initialPosition.y);
+                    SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+                }
+            }
+
+            // doubleclick
+            if (Input.GetMouseButtonUp(0))
+                clickCounter += 1;
+
+            if (clickCounter == 1 && coroutineAllowed)
+            {
+                firstClickTime = Time.time;
+                StartCoroutine(DoubleClickDetection());
+            }
         }
     }
 

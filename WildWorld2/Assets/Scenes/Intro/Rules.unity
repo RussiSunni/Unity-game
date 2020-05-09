@@ -412,17 +412,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Try to find all the letter and word cards in the world.
+  m_Text: 'Find all the words in the world.
 
 
-    You can
-    see which you have by checking your spellbook.
+    You can see which you have by checking
+    your spellbook.
 
 
 
 
-    Speak to the characters
-    in the world to complete the exercises.'
+    Speak to all the characters in the world to complete
+    the exercises.'
 --- !u!222 &878495069
 CanvasRenderer:
   m_ObjectHideFlags: 0

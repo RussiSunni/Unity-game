@@ -13,6 +13,7 @@ public class Blue : MonoBehaviour
 
     void Start()
     {
+        locked = false;
         initialPosition = transform.position;
         targetBlock[0] = GameObject.Find("target_block-1").transform;
         targetBlock[1] = GameObject.Find("target_block-2").transform;
@@ -41,24 +42,26 @@ public class Blue : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
-                                              Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
-                                              Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                                              Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
-                                              Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                                              Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f ||
-                                               Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
-                                              Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+        if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f ||
+                     Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+                     Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
         {
             this.gameObject.SetActive(false);
             destroyed = true;
             SoundManagerScript.playErrorSound();
-
+        }
+        else if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+             Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
+        {
+            transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+            pressed = false;
+            locked = true;
+            SoundManagerScript.playCorrectSound();
         }
         else
         {
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
-
         }
     }
 
