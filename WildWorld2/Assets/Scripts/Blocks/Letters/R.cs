@@ -95,6 +95,7 @@ public class R : MonoBehaviour
                 transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
+                Progress.nameArray[0] = "r";
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
@@ -102,6 +103,7 @@ public class R : MonoBehaviour
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
+                Progress.nameArray[1] = "r";
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
@@ -109,6 +111,7 @@ public class R : MonoBehaviour
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
+                Progress.nameArray[2] = "r";
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
@@ -116,6 +119,7 @@ public class R : MonoBehaviour
                 transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
+                Progress.nameArray[3] = "r";
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
             Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
@@ -123,6 +127,7 @@ public class R : MonoBehaviour
                 transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
                 locked = true;
                 SoundManagerScript.playCorrectSound();
+                Progress.nameArray[4] = "r";
             }
             else
             {
