@@ -8,7 +8,7 @@ public class Z : MonoBehaviour
     Transform[] targetBlock = new Transform[5];
     private Vector2 initialPosition, mousePosition;
     private float deltaX, deltaY;
-    public static bool locked, pressed, destroyed;
+    public static bool locked, pressed, destroyed, placed;
     private GameObject fairy;
     Animator fairyAnimator;
 
@@ -24,6 +24,10 @@ public class Z : MonoBehaviour
     public float RotateSpeed = 5f;
     private Quaternion _targetRot = Quaternion.identity;
 
+    // instantiate copy
+    GameObject letterZ;
+    Transform parent;
+
     void Start()
     {
         initialPosition = transform.position;
@@ -34,6 +38,8 @@ public class Z : MonoBehaviour
         targetBlock[3] = GameObject.Find("target_block-4").transform;
         targetBlock[4] = GameObject.Find("target_block-5").transform;
 
+        parent = GameObject.Find("ExerciseArea").transform;
+        letterZ = (GameObject)Resources.Load("prefabs/z", typeof(GameObject));
 
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
@@ -84,41 +90,56 @@ public class Z : MonoBehaviour
                 Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[0] = "z";
+                placed = true;
+                Transform newZ = Instantiate(letterZ.transform) as Transform;
+                newZ.transform.parent = parent.transform;
+                newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[1] = "z";
+                placed = true;
+                Transform newZ = Instantiate(letterZ.transform) as Transform;
+                newZ.transform.parent = parent.transform;
+                newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[2] = "z";
+                placed = true;
+                Transform newZ = Instantiate(letterZ.transform) as Transform;
+                newZ.transform.parent = parent.transform;
+                newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[3] = "z";
+                placed = true;
+                Transform newZ = Instantiate(letterZ.transform) as Transform;
+                newZ.transform.parent = parent.transform;
+                newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
             Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[4] = "z";
+                placed = true;
+                Transform newZ = Instantiate(letterZ.transform) as Transform;
+                newZ.transform.parent = parent.transform;
+                newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
             }
             else
             {
