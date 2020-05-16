@@ -8,7 +8,7 @@ public class Z : MonoBehaviour
     Transform[] targetBlock = new Transform[5];
     private Vector2 initialPosition, mousePosition;
     private float deltaX, deltaY;
-    public static bool locked, pressed, destroyed, placed;
+    public static bool locked, pressed, destroyed;
     private GameObject fairy;
     Animator fairyAnimator;
 
@@ -43,7 +43,6 @@ public class Z : MonoBehaviour
 
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
-        Debug.Log(sceneName);
         if (sceneName == "ArtemisExercise")
         {
             fairy = GameObject.Find("Fairy");
@@ -74,6 +73,7 @@ public class Z : MonoBehaviour
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
+
         if (sceneName == "ArtemisExercise")
         {
             SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
@@ -92,7 +92,6 @@ public class Z : MonoBehaviour
                 transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[0] = "z";
-                placed = true;
                 Transform newZ = Instantiate(letterZ.transform) as Transform;
                 newZ.transform.parent = parent.transform;
                 newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
@@ -103,7 +102,6 @@ public class Z : MonoBehaviour
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[1] = "z";
-                placed = true;
                 Transform newZ = Instantiate(letterZ.transform) as Transform;
                 newZ.transform.parent = parent.transform;
                 newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
@@ -114,7 +112,6 @@ public class Z : MonoBehaviour
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[2] = "z";
-                placed = true;
                 Transform newZ = Instantiate(letterZ.transform) as Transform;
                 newZ.transform.parent = parent.transform;
                 newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
@@ -125,7 +122,6 @@ public class Z : MonoBehaviour
                 transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[3] = "z";
-                placed = true;
                 Transform newZ = Instantiate(letterZ.transform) as Transform;
                 newZ.transform.parent = parent.transform;
                 newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);
@@ -136,7 +132,6 @@ public class Z : MonoBehaviour
                 transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[4] = "z";
-                placed = true;
                 Transform newZ = Instantiate(letterZ.transform) as Transform;
                 newZ.transform.parent = parent.transform;
                 newZ.transform.localPosition = new Vector2(-4.368f, 1.88f);

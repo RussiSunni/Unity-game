@@ -14,18 +14,19 @@ public class X : MonoBehaviour
 
     private string sceneName;
 
-
     // doubleclick
     private float firstClickTime, timeBetweenClicks;
     private bool coroutineAllowed;
     private int clickCounter;
-
 
     // rotation
     public Vector3 RotateStep = new Vector3(0, 180, 0);
     public float RotateSpeed = 5f;
     private Quaternion _targetRot = Quaternion.identity;
 
+    // instantiate copy
+    GameObject letterX;
+    Transform parent;
 
     void Start()
     {
@@ -50,6 +51,10 @@ public class X : MonoBehaviour
         timeBetweenClicks = 0.3f;
         clickCounter = 0;
         coroutineAllowed = true;
+
+        //instantiate copy
+        parent = GameObject.Find("ExerciseArea").transform;
+        letterX = (GameObject)Resources.Load("prefabs/x", typeof(GameObject));
     }
 
     private void OnMouseDown()
@@ -63,18 +68,18 @@ public class X : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (sceneName == "ArtemisExercise")
-        {
-            fairyAnimator.runtimeAnimatorController = null;
-        }
-
         if (!locked)
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
-        SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+
+        if (sceneName == "ArtemisExercise")
+        {
+            fairyAnimator.runtimeAnimatorController = null;
+            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+        }
     }
 
     private void OnMouseUp()
@@ -82,46 +87,57 @@ public class X : MonoBehaviour
         pressed = false;
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
+        // with instantiate copies
         if (sceneName == "SecretaryExercise")
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f && Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[0] = "x";
+                Transform newX = Instantiate(letterX.transform) as Transform;
+                newX.transform.parent = parent.transform;
+                newX.transform.localPosition = new Vector2(-4.368f, -0.624f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[1] = "x";
+                Transform newX = Instantiate(letterX.transform) as Transform;
+                newX.transform.parent = parent.transform;
+                newX.transform.localPosition = new Vector2(-4.368f, -0.624f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[2] = "x";
+                Transform newX = Instantiate(letterX.transform) as Transform;
+                newX.transform.parent = parent.transform;
+                newX.transform.localPosition = new Vector2(-4.368f, -0.624f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[3] = "x";
+                Transform newX = Instantiate(letterX.transform) as Transform;
+                newX.transform.parent = parent.transform;
+                newX.transform.localPosition = new Vector2(-4.368f, -0.624f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
             Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[4] = "x";
+                Transform newX = Instantiate(letterX.transform) as Transform;
+                newX.transform.parent = parent.transform;
+                newX.transform.localPosition = new Vector2(-4.368f, -0.624f);
             }
             else
             {

@@ -9,7 +9,7 @@ public class SecretaryText : MonoBehaviour
     void Start()
     {
         secretaryText = GetComponent<Text>();
-        secretaryText.text = "Please write your name, then click 'next'.";
+        secretaryText.text = "";
     }
 
     public static void UpdateText()

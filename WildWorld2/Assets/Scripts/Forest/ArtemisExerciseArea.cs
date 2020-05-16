@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ArtemisExerciseArea : MonoBehaviour
 {
     private SpriteRenderer rend;
@@ -76,8 +75,6 @@ public class ArtemisExerciseArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if (TestExerciseNext.catFlag)
         {
             rend.sprite = bg2;
@@ -147,8 +144,6 @@ public class ArtemisExerciseArea : MonoBehaviour
                 dogEnabled = false;
             }
         }
-
-
     }
 
     public static void SwitchCamera()
@@ -166,5 +161,4 @@ public class ArtemisExerciseArea : MonoBehaviour
             NewLetter.soundPlaying = false;
         }
     }
-
 }

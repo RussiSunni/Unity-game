@@ -25,6 +25,10 @@ public class R : MonoBehaviour
     public float RotateSpeed = 5f;
     private Quaternion _targetRot = Quaternion.identity;
 
+    // instantiate copy
+    GameObject letter;
+    Transform parent;
+
 
     void Start()
     {
@@ -49,6 +53,10 @@ public class R : MonoBehaviour
         timeBetweenClicks = 0.3f;
         clickCounter = 0;
         coroutineAllowed = true;
+
+        //instantiate copy
+        parent = GameObject.Find("ExerciseArea").transform;
+        letter = (GameObject)Resources.Load("prefabs/r", typeof(GameObject));
     }
 
     private void OnMouseDown()
@@ -62,24 +70,25 @@ public class R : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (sceneName == "ArtemisExercise")
-        {
-            fairyAnimator.runtimeAnimatorController = null;
-        }
-
         if (!locked)
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
             pressed = true;
         }
-        if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag && TestExerciseNext.owlFlag)
+
+        if (sceneName == "ArtemisExercise")
         {
-            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
-        }
-        else
-        {
-            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+            fairyAnimator.runtimeAnimatorController = null;
+
+            if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag && TestExerciseNext.owlFlag)
+            {
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
+            }
+            else
+            {
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+            }
         }
     }
 
@@ -90,49 +99,7 @@ public class R : MonoBehaviour
         sceneName = scene.name;
         if (sceneName == "SecretaryExercise")
         {
-            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f && Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
-            {
-                transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
-                locked = true;
-                SoundManagerScript.playCorrectSound();
-                Progress.nameArray[0] = "r";
-            }
-            else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
-            {
-                transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
-                locked = true;
-                SoundManagerScript.playCorrectSound();
-                Progress.nameArray[1] = "r";
-            }
-            else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-              Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
-            {
-                transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
-                locked = true;
-                SoundManagerScript.playCorrectSound();
-                Progress.nameArray[2] = "r";
-            }
-            else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
-              Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
-            {
-                transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
-                locked = true;
-                SoundManagerScript.playCorrectSound();
-                Progress.nameArray[3] = "r";
-            }
-            else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
-            Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
-            {
-                transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
-                locked = true;
-                SoundManagerScript.playCorrectSound();
-                Progress.nameArray[4] = "r";
-            }
-            else
-            {
-                transform.position = new Vector2(initialPosition.x, initialPosition.y);
-            }
+            transform.position = ReplaceBlocks(transform.position.x, transform.position.y, initialPosition.x, initialPosition.y, -0.6139998f, -4.379f);
         }
         else
         {
@@ -236,5 +203,68 @@ public class R : MonoBehaviour
 
         // rotate
         transform.rotation = Quaternion.Lerp(transform.rotation, _targetRot, RotateSpeed * Time.deltaTime);
+    }
+
+    public Vector3 ReplaceBlocks(float transformPositionX, float transformPositionY, float initialX, float initialY, float localPosX, float localPosY)
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+        if (sceneName == "SecretaryExercise")
+        {
+            if (Mathf.Abs(transformPositionX - targetBlock[0].position.x) <= 0.5f && Mathf.Abs(transformPositionY - targetBlock[0].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+                SoundManagerScript.playCorrectSound();
+                Progress.nameArray[0] = "r";
+                Transform newObject = Instantiate(letter.transform) as Transform;
+                newObject.transform.parent = parent.transform;
+                newObject.transform.localPosition = new Vector2(localPosX, localPosY);
+            }
+            else if (Mathf.Abs(transformPositionX - targetBlock[1].position.x) <= 0.5f &&
+                Mathf.Abs(transformPositionY - targetBlock[1].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
+                SoundManagerScript.playCorrectSound();
+                Progress.nameArray[1] = "r";
+                Transform newObject = Instantiate(letter.transform) as Transform;
+                newObject.transform.parent = parent.transform;
+                newObject.transform.localPosition = new Vector2(localPosX, localPosY);
+            }
+            else if (Mathf.Abs(transformPositionX - targetBlock[2].position.x) <= 0.5f &&
+              Mathf.Abs(transformPositionY - targetBlock[2].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
+                SoundManagerScript.playCorrectSound();
+                Progress.nameArray[2] = "r";
+                Transform newObject = Instantiate(letter.transform) as Transform;
+                newObject.transform.parent = parent.transform;
+                newObject.transform.localPosition = new Vector2(localPosX, localPosY);
+            }
+            else if (Mathf.Abs(transformPositionX - targetBlock[3].position.x) <= 0.5f &&
+              Mathf.Abs(transformPositionY - targetBlock[3].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
+                SoundManagerScript.playCorrectSound();
+                Progress.nameArray[3] = "r";
+                Transform newObject = Instantiate(letter.transform) as Transform;
+                newObject.transform.parent = parent.transform;
+                newObject.transform.localPosition = new Vector2(localPosX, localPosY);
+            }
+            else if (Mathf.Abs(transformPositionX - targetBlock[4].position.x) <= 0.5f &&
+            Mathf.Abs(transformPositionY - targetBlock[4].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
+                SoundManagerScript.playCorrectSound();
+                Progress.nameArray[4] = "r";
+                Transform newObject = Instantiate(letter.transform) as Transform;
+                newObject.transform.parent = parent.transform;
+                newObject.transform.localPosition = new Vector2(localPosX, localPosY);
+            }
+            else
+            {
+                transform.position = new Vector2(initialX, initialY);
+            }
+        }
+        return transform.position;
     }
 }

@@ -19,11 +19,14 @@ public class W : MonoBehaviour
     private bool coroutineAllowed;
     private int clickCounter;
 
-
     // rotation
     public Vector3 RotateStep = new Vector3(0, 180, 0);
     public float RotateSpeed = 5f;
     private Quaternion _targetRot = Quaternion.identity;
+
+    // instantiate copy
+    GameObject letterW;
+    Transform parent;
 
     void Start()
     {
@@ -48,6 +51,10 @@ public class W : MonoBehaviour
         timeBetweenClicks = 0.3f;
         clickCounter = 0;
         coroutineAllowed = true;
+
+        //instantiate copy
+        parent = GameObject.Find("ExerciseArea").transform;
+        letterW = (GameObject)Resources.Load("prefabs/w", typeof(GameObject));
     }
 
     private void OnMouseDown()
@@ -61,11 +68,6 @@ public class W : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (sceneName == "ArtemisExercise")
-        {
-            fairyAnimator.runtimeAnimatorController = null;
-        }
-
         if (!locked)
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -73,13 +75,18 @@ public class W : MonoBehaviour
             pressed = true;
         }
 
-        if (TestExerciseNext.dogFlag && TestExerciseNext.owlFlag == false || TestExerciseNext.bearFlag && TestExerciseNext.wolfFlag == false)
+        if (sceneName == "ArtemisExercise")
         {
-            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
-        }
-        else
-        {
-            SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+            fairyAnimator.runtimeAnimatorController = null;
+
+            if (TestExerciseNext.dogFlag && TestExerciseNext.owlFlag == false || TestExerciseNext.bearFlag && TestExerciseNext.wolfFlag == false)
+            {
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy02;
+            }
+            else
+            {
+                SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
+            }
         }
     }
 
@@ -93,41 +100,51 @@ public class W : MonoBehaviour
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f && Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[0] = "w";
+                Transform newW = Instantiate(letterW.transform) as Transform;
+                newW.transform.parent = parent.transform;
+                newW.transform.localPosition = new Vector2(-4.368f, -1.874f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                 Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[1] = "w";
+                Transform newW = Instantiate(letterW.transform) as Transform;
+                newW.transform.parent = parent.transform;
+                newW.transform.localPosition = new Vector2(-4.368f, -1.874f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[2] = "w";
+                Transform newW = Instantiate(letterW.transform) as Transform;
+                newW.transform.parent = parent.transform;
+                newW.transform.localPosition = new Vector2(-4.368f, -1.874f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
               Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[3] = "w";
+                Transform newW = Instantiate(letterW.transform) as Transform;
+                newW.transform.parent = parent.transform;
+                newW.transform.localPosition = new Vector2(-4.368f, -1.874f);
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
             Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[4].position.x, targetBlock[4].position.y);
-                locked = true;
                 SoundManagerScript.playCorrectSound();
                 Progress.nameArray[4] = "w";
+                Transform newW = Instantiate(letterW.transform) as Transform;
+                newW.transform.parent = parent.transform;
+                newW.transform.localPosition = new Vector2(-4.368f, -1.874f);
             }
             else
             {
