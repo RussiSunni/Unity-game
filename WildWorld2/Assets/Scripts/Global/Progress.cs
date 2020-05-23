@@ -15,6 +15,7 @@ public class Progress : MonoBehaviour
     public static bool yellow = false;
     public static string[] nameArray = new string[5];
     public static string nameString;
+    public static string playerCharacter;
 
 
     void Start()

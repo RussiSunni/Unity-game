@@ -83,4 +83,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Temple/MageExercise.unity
     guid: da5cd2cbab8e01c21a37105efda3094b
+  - enabled: 1
+    path: Assets/Scenes/Academy/GreetingExercise.unity
+    guid: 9aba6e022c180383a893a09c1a1f016e
   m_configObjects: {}
