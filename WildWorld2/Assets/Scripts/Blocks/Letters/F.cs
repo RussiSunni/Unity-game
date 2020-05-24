@@ -99,7 +99,7 @@ public class F : MonoBehaviour
         {
             transform.position = ReplaceBlocks(transform.position.x, transform.position.y, initialPosition.x, initialPosition.y, 3.132f, 4.376f);
         }
-        else
+        else if (sceneName == "ArtemisExercise")
         {
             // WOLF
             if (TestExerciseNext.bearFlag && TestExerciseNext.wolfFlag == false)
@@ -156,16 +156,20 @@ public class F : MonoBehaviour
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
+        }
+        else
+        {
+            transform.position = new Vector2(initialPosition.x, initialPosition.y);
+        }
 
-            // doubleclick
-            if (Input.GetMouseButtonUp(0))
-                clickCounter += 1;
+        // doubleclick
+        if (Input.GetMouseButtonUp(0))
+            clickCounter += 1;
 
-            if (clickCounter == 1 && coroutineAllowed)
-            {
-                firstClickTime = Time.time;
-                StartCoroutine(DoubleClickDetection());
-            }
+        if (clickCounter == 1 && coroutineAllowed)
+        {
+            firstClickTime = Time.time;
+            StartCoroutine(DoubleClickDetection());
         }
     }
 

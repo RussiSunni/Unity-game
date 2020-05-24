@@ -3,34 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class X : MonoBehaviour
+public class X : Block
 {
     Transform[] targetBlock = new Transform[5];
-    private Vector2 initialPosition, mousePosition;
-    private float deltaX, deltaY;
-    public static bool locked, pressed, destroyed;
     private GameObject fairy;
     Animator fairyAnimator;
 
     private string sceneName;
 
-    // doubleclick
-    private float firstClickTime, timeBetweenClicks;
-    private bool coroutineAllowed;
-    private int clickCounter;
-
-    // rotation
-    public Vector3 RotateStep = new Vector3(0, 180, 0);
-    public float RotateSpeed = 5f;
-    private Quaternion _targetRot = Quaternion.identity;
 
     // instantiate copy
     GameObject letterX;
     Transform parent;
 
-    void Start()
+    protected override void Start()
     {
-        initialPosition = transform.position;
+        base.Start();
 
         targetBlock[0] = GameObject.Find("target_block-1").transform;
         targetBlock[1] = GameObject.Find("target_block-2").transform;
@@ -46,34 +34,14 @@ public class X : MonoBehaviour
             fairyAnimator = fairy.GetComponent<Animator>();
         }
 
-        // doubleclick
-        firstClickTime = 0f;
-        timeBetweenClicks = 0.3f;
-        clickCounter = 0;
-        coroutineAllowed = true;
-
         //instantiate copy
         parent = GameObject.Find("ExerciseArea").transform;
         letterX = (GameObject)Resources.Load("prefabs/x", typeof(GameObject));
     }
 
-    private void OnMouseDown()
+    protected override void OnMouseDrag()
     {
-        if (!locked)
-        {
-            deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
-            deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
-        }
-    }
-
-    private void OnMouseDrag()
-    {
-        if (!locked)
-        {
-            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
-            pressed = true;
-        }
+        base.OnMouseDrag();
 
         if (sceneName == "ArtemisExercise")
         {
@@ -82,7 +50,7 @@ public class X : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
+    protected override void OnMouseUp()
     {
         pressed = false;
         Scene scene = SceneManager.GetActiveScene();
@@ -168,21 +136,20 @@ public class X : MonoBehaviour
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
+        }
+        // doubleclick
+        if (Input.GetMouseButtonUp(0))
+            clickCounter += 1;
 
-            // doubleclick
-            if (Input.GetMouseButtonUp(0))
-                clickCounter += 1;
-
-            if (clickCounter == 1 && coroutineAllowed)
-            {
-                firstClickTime = Time.time;
-                StartCoroutine(DoubleClickDetection());
-            }
+        if (clickCounter == 1 && coroutineAllowed)
+        {
+            firstClickTime = Time.time;
+            StartCoroutine(DoubleClickDetection());
         }
     }
 
     // doubleclick
-    private IEnumerator DoubleClickDetection()
+    protected IEnumerator DoubleClickDetection()
     {
         coroutineAllowed = false;
 
@@ -199,10 +166,5 @@ public class X : MonoBehaviour
         clickCounter = 0;
         firstClickTime = 0f;
         coroutineAllowed = true;
-    }
-    void Update()
-    {
-        // rotate
-        transform.rotation = Quaternion.Lerp(transform.rotation, _targetRot, RotateSpeed * Time.deltaTime);
     }
 }

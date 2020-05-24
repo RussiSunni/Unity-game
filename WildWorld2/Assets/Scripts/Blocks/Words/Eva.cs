@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Eva : MonoBehaviour
 {
-    Transform targetBlock;
+    public Transform targetBlock;
     public static Vector2 initialPosition, mousePosition;
     private float deltaX, deltaY;
     void Start()
     {
         initialPosition = transform.position;
-        targetBlock = GameObject.Find("TargetBlock2").transform;
     }
 
     private void OnMouseDown()

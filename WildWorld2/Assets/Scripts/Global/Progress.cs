@@ -6,6 +6,8 @@ public class Progress : MonoBehaviour
 {
     public static bool lettersExerciseComplete = false;
     public static bool nameExerciseComplete = false;
+
+    public static bool hello = false;
     public static bool bear = false;
     public static bool monkey = false;
     public static bool door = false;
@@ -18,14 +20,4 @@ public class Progress : MonoBehaviour
     public static string playerCharacter;
 
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
