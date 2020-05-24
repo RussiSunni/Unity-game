@@ -27,7 +27,6 @@ public class O : Block
         targetBlock[3] = GameObject.Find("target_block-4").transform;
         targetBlock[4] = GameObject.Find("target_block-5").transform;
 
-
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
         if (sceneName == "ArtemisExercise")
