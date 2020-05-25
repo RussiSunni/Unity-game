@@ -58,6 +58,7 @@ public class ChangeBlocks : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("tst");
         if (book)
         {
             book = false;

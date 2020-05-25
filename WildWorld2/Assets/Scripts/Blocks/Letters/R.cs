@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class R : Block
 {
-    Transform[] targetBlock = new Transform[5];
     public static bool reset;
     private GameObject fairy;
     Animator fairyAnimator;
@@ -19,12 +18,6 @@ public class R : Block
     protected override void Start()
     {
         base.Start();
-
-        targetBlock[0] = GameObject.Find("target_block-1").transform;
-        targetBlock[1] = GameObject.Find("target_block-2").transform;
-        targetBlock[2] = GameObject.Find("target_block-3").transform;
-        targetBlock[3] = GameObject.Find("target_block-4").transform;
-        targetBlock[4] = GameObject.Find("target_block-5").transform;
 
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
@@ -67,7 +60,7 @@ public class R : Block
         {
             transform.position = ReplaceBlocks(transform.position.x, transform.position.y, initialPosition.x, initialPosition.y, -0.6139998f, -4.379f);
         }
-        else
+        else if (sceneName == "ArtemisExercise")
         {
             if (TestExerciseNext.owlFlag && TestExerciseNext.bearFlag == false)
             {
@@ -81,10 +74,7 @@ public class R : Block
                     this.gameObject.SetActive(false);
                     destroyed = true;
                     SoundManagerScript.playErrorSound();
-                    if (sceneName == "ArtemisExercise")
-                    {
-                        fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
-                    }
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
                 }
                 else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
                      Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
@@ -114,10 +104,7 @@ public class R : Block
                     this.gameObject.SetActive(false);
                     destroyed = true;
                     SoundManagerScript.playErrorSound();
-                    if (sceneName == "ArtemisExercise")
-                    {
-                        fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
-                    }
+                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
                 }
                 else
                 {
@@ -125,16 +112,19 @@ public class R : Block
                     SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
                 }
             }
+        }
+        else
+        {
+            transform.position = new Vector2(initialPosition.x, initialPosition.y);
+        }
+        // doubleclick
+        if (Input.GetMouseButtonUp(0))
+            clickCounter += 1;
 
-            // doubleclick
-            if (Input.GetMouseButtonUp(0))
-                clickCounter += 1;
-
-            if (clickCounter == 1 && coroutineAllowed)
-            {
-                firstClickTime = Time.time;
-                StartCoroutine(DoubleClickDetection());
-            }
+        if (clickCounter == 1 && coroutineAllowed)
+        {
+            firstClickTime = Time.time;
+            StartCoroutine(DoubleClickDetection());
         }
     }
 

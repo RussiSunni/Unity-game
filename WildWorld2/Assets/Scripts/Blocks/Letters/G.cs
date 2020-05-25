@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class G : Block
 {
-    Transform[] targetBlock = new Transform[5];
     public static bool reset;
     private GameObject fairy;
     Animator fairyAnimator;
@@ -20,12 +19,6 @@ public class G : Block
         base.Start();
 
         locked = false;
-
-        targetBlock[0] = GameObject.Find("target_block-1").transform;
-        targetBlock[1] = GameObject.Find("target_block-2").transform;
-        targetBlock[2] = GameObject.Find("target_block-3").transform;
-        targetBlock[3] = GameObject.Find("target_block-4").transform;
-        targetBlock[4] = GameObject.Find("target_block-5").transform;
 
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
@@ -67,7 +60,7 @@ public class G : Block
         {
             transform.position = ReplaceBlocks(transform.position.x, transform.position.y, initialPosition.x, initialPosition.y, 4.391f, 4.376f);
         }
-        else
+        else if (sceneName == "ArtemisExercise")
         {
             if (TestExerciseNext.catFlag && TestExerciseNext.dogFlag == false)
             {
@@ -124,16 +117,19 @@ public class G : Block
                     SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
                 }
             }
+        }
+        else
+        {
+            transform.position = new Vector2(initialPosition.x, initialPosition.y);
+        }
+        // doubleclick
+        if (Input.GetMouseButtonUp(0))
+            clickCounter += 1;
 
-            // doubleclick
-            if (Input.GetMouseButtonUp(0))
-                clickCounter += 1;
-
-            if (clickCounter == 1 && coroutineAllowed)
-            {
-                firstClickTime = Time.time;
-                StartCoroutine(DoubleClickDetection());
-            }
+        if (clickCounter == 1 && coroutineAllowed)
+        {
+            firstClickTime = Time.time;
+            StartCoroutine(DoubleClickDetection());
         }
     }
 

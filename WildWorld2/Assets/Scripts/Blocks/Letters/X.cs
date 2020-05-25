@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class X : Block
 {
-    Transform[] targetBlock = new Transform[5];
     private GameObject fairy;
     Animator fairyAnimator;
 
@@ -19,12 +18,6 @@ public class X : Block
     protected override void Start()
     {
         base.Start();
-
-        targetBlock[0] = GameObject.Find("target_block-1").transform;
-        targetBlock[1] = GameObject.Find("target_block-2").transform;
-        targetBlock[2] = GameObject.Find("target_block-3").transform;
-        targetBlock[3] = GameObject.Find("target_block-4").transform;
-        targetBlock[4] = GameObject.Find("target_block-5").transform;
 
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
@@ -112,7 +105,7 @@ public class X : Block
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
             }
         }
-        else
+        else if (sceneName == "ArtemisExercise")
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
                                                   Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f ||
@@ -126,16 +119,17 @@ public class X : Block
                 this.gameObject.SetActive(false);
                 destroyed = true;
                 SoundManagerScript.playErrorSound();
-                if (sceneName == "ArtemisExercise")
-                {
-                    fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
-                }
+                fairyAnimator.runtimeAnimatorController = Resources.Load("fairy disappointed 1") as RuntimeAnimatorController;
             }
             else
             {
                 transform.position = new Vector2(initialPosition.x, initialPosition.y);
                 SpriteChangeTest.rend.sprite = SpriteChangeTest.fairy01;
             }
+        }
+        else
+        {
+            transform.position = new Vector2(initialPosition.x, initialPosition.y);
         }
         // doubleclick
         if (Input.GetMouseButtonUp(0))

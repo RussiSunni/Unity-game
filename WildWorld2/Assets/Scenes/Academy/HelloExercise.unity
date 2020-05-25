@@ -1651,6 +1651,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de13a1b4f682ccffe8bbfbea77714f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0}
+  mousePosition: {x: 0, y: 0}
+  deltaX: 0
+  deltaY: 0
+  targetBlock: []
+  firstClickTime: 0
+  timeBetweenClicks: 0
+  coroutineAllowed: 0
+  clickCounter: 0
+  RotateStep: {x: 0, y: 180, z: 0}
+  RotateSpeed: 5
+  _targetRot: {x: 0, y: 0, z: 0, w: 1}
 --- !u!61 &1204291125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1763,7 +1775,7 @@ GameObject:
   - component: {fileID: 1428779946}
   - component: {fileID: 1428779947}
   m_Layer: 0
-  m_Name: TargetBlock
+  m_Name: target_block-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

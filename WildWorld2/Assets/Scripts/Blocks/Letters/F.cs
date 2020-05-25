@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class F : Block
 {
-    Transform[] targetBlock = new Transform[5];
     public static bool reset;
     private GameObject fairy;
     Animator fairyAnimator;
@@ -19,12 +18,6 @@ public class F : Block
     protected override void Start()
     {
         base.Start();
-
-        targetBlock[0] = GameObject.Find("target_block-1").transform;
-        targetBlock[1] = GameObject.Find("target_block-2").transform;
-        targetBlock[2] = GameObject.Find("target_block-3").transform;
-        targetBlock[3] = GameObject.Find("target_block-4").transform;
-        targetBlock[4] = GameObject.Find("target_block-5").transform;
 
         Scene scene = SceneManager.GetActiveScene();
         sceneName = scene.name;

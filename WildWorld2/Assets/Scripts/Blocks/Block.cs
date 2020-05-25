@@ -8,6 +8,8 @@ public class Block : MonoBehaviour
     public float deltaX, deltaY;
     public static bool locked, pressed, destroyed;
 
+    public Transform[] targetBlock = new Transform[5];
+
 
     // doubleclick
     public float firstClickTime, timeBetweenClicks;
@@ -29,6 +31,13 @@ public class Block : MonoBehaviour
         timeBetweenClicks = 0.3f;
         clickCounter = 0;
         coroutineAllowed = true;
+
+        // target blocks
+        targetBlock[0] = GameObject.Find("target_block-1").transform;
+        targetBlock[1] = GameObject.Find("target_block-2").transform;
+        targetBlock[2] = GameObject.Find("target_block-3").transform;
+        targetBlock[3] = GameObject.Find("target_block-4").transform;
+        targetBlock[4] = GameObject.Find("target_block-5").transform;
     }
 
     protected virtual void OnMouseDown()

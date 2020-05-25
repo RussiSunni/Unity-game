@@ -26,7 +26,6 @@ public class PlayerScript : MonoBehaviour
             animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animation/Character4Animation", typeof(RuntimeAnimatorController));
     }
 
-
     // movement
     void Update()
     {
@@ -36,8 +35,6 @@ public class PlayerScript : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
-
     }
     void FixedUpdate()
     {
