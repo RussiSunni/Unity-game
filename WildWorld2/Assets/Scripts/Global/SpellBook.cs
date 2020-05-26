@@ -5,9 +5,8 @@ using UnityEngine;
 public class SpellBook : MonoBehaviour
 {
     public static bool CATAttained, DOGAttained;
-    public GameObject CAT, DOG;
     public static GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
-    public static GameObject bear, monkey;
+    public static GameObject bear, monkey, door;
 
     void Start()
     {
@@ -83,7 +82,11 @@ public class SpellBook : MonoBehaviour
             monkey = GameObject.Find("monkey");
             monkey.SetActive(false);
         }
+
+        if (Progress.door == false)
+        {
+            door = GameObject.Find("door");
+            door.SetActive(false);
+        }
     }
-
-
 }

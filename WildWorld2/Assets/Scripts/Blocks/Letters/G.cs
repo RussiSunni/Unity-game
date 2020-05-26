@@ -155,6 +155,7 @@ public class G : Block
 
     protected override void Update()
     {
+        base.Update();
         if (reset)
         {
             transform.position = new Vector2(initialPosition.x, initialPosition.y);

@@ -7,7 +7,7 @@ public class ChangeBlocks : MonoBehaviour
 {
     private Vector2 mousePosition;
     private float deltaX, deltaY;
-    GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, CAT, DOG, OWL, BEAR, MONKEY;
+    GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, CAT, DOG, OWL, BEAR, MONKEY, HELLO, RED, YELLOW, BLUE, GREEN, DOOR;
     private bool book;
     private string sceneName;
 
@@ -44,21 +44,39 @@ public class ChangeBlocks : MonoBehaviour
         y = GameObject.Find("y");
         z = GameObject.Find("z");
 
-        if (sceneName == "ArtemisExercise")
-        {
-            CAT = GameObject.Find("CAT");
-            DOG = GameObject.Find("DOG");
-            OWL = GameObject.Find("OWL");
-            BEAR = GameObject.Find("BEAR");
-            BEAR.SetActive(false);
-            MONKEY = GameObject.Find("MONKEY");
-            MONKEY.SetActive(false);
-        }
+        // if (sceneName == "ArtemisExercise")
+        // {
+        CAT = GameObject.Find("CAT");
+        CAT.SetActive(false);
+        DOG = GameObject.Find("DOG");
+        DOG.SetActive(false);
+        OWL = GameObject.Find("OWL");
+        OWL.SetActive(false);
+        BEAR = GameObject.Find("BEAR");
+        BEAR.SetActive(false);
+        MONKEY = GameObject.Find("MONKEY");
+        MONKEY.SetActive(false);
+        // }
+
+        // if (sceneName == "HelloExercise")
+        // {
+        HELLO = GameObject.Find("HELLO");
+        HELLO.SetActive(false);
+        DOOR = GameObject.Find("DOOR");
+        DOOR.SetActive(false);
+        // }
+        RED = GameObject.Find("RED");
+        RED.SetActive(false);
+        BLUE = GameObject.Find("BLUE");
+        BLUE.SetActive(false);
+        GREEN = GameObject.Find("GREEN");
+        GREEN.SetActive(false);
+        YELLOW = GameObject.Find("YELLOW");
+        YELLOW.SetActive(false);
     }
 
     private void OnMouseDown()
     {
-        Debug.Log("tst");
         if (book)
         {
             book = false;
@@ -168,154 +186,185 @@ public class ChangeBlocks : MonoBehaviour
                 z.SetActive(false);
             }
 
-            if (sceneName == "ArtemisExercise")
+            // if (sceneName == "ArtemisExercise")
+            // {
+            if (TestExerciseNext.catFlag)
             {
-                if (TestExerciseNext.catFlag)
-                {
-                    CAT.SetActive(true);
-                }
-
-                if (TestExerciseNext.dogFlag)
-                {
-                    DOG.SetActive(true);
-                }
-
-                if (TestExerciseNext.owlFlag)
-                {
-                    OWL.SetActive(true);
-                }
-
-                if (TestExerciseNext.bearFlag || Progress.bear)
-                {
-                    BEAR.SetActive(true);
-                }
-
-                if (Progress.monkey)
-                    MONKEY.SetActive(true);
+                CAT.SetActive(true);
             }
+
+            if (TestExerciseNext.dogFlag)
+            {
+                DOG.SetActive(true);
+            }
+
+            if (TestExerciseNext.owlFlag)
+            {
+                OWL.SetActive(true);
+            }
+
+            if (TestExerciseNext.bearFlag || Progress.bear)
+            {
+                BEAR.SetActive(true);
+            }
+
+            if (Progress.monkey)
+                MONKEY.SetActive(true);
+            // }
+
+            if (Progress.door)
+                DOOR.SetActive(true);
+
+            if (Progress.red)
+                RED.SetActive(true);
+
+            if (Progress.blue)
+                BLUE.SetActive(true);
+
+            if (Progress.green)
+                GREEN.SetActive(true);
+
+            if (Progress.yellow)
+                YELLOW.SetActive(true);
+
+            // if (sceneName == "HelloExercise")
+            // {
+            HELLO.SetActive(true);
+
+            // }
         }
         else
         {
             book = true;
-            if (Progress.lettersExerciseComplete)
+            //   if (Progress.lettersExerciseComplete)
+            //  {
+            if (A.destroyed == false)
             {
-                if (A.destroyed == false)
-                {
-                    a.SetActive(true);
-                }
-                if (A.destroyed == false)
-                {
-                    a.SetActive(true);
-                }
-                if (B.destroyed == false)
-                {
-                    b.SetActive(true);
-                }
-                if (C.destroyed == false)
-                {
-                    c.SetActive(true);
-                }
-                if (D.destroyed == false)
-                {
-                    d.SetActive(true);
-                }
-                if (E.destroyed == false)
-                {
-                    e.SetActive(true);
-                }
-                if (F.destroyed == false)
-                {
-                    f.SetActive(true);
-                }
-                if (G.destroyed == false)
-                {
-                    g.SetActive(true);
-                }
-                if (H.destroyed == false)
-                {
-                    h.SetActive(true);
-                }
-                if (I.destroyed == false)
-                {
-                    i.SetActive(true);
-                }
-                if (J.destroyed == false)
-                {
-                    j.SetActive(true);
-                }
-                if (K.destroyed == false)
-                {
-                    k.SetActive(true);
-                }
-                if (L.destroyed == false)
-                {
-                    l.SetActive(true);
-                }
-                if (M.destroyed == false)
-                {
-                    m.SetActive(true);
-                }
-                if (N.destroyed == false)
-                {
-                    n.SetActive(true);
-                }
-                if (O.destroyed == false)
-                {
-                    o.SetActive(true);
-                }
-                if (P.destroyed == false)
-                {
-                    p.SetActive(true);
-                }
-                if (Q.destroyed == false)
-                {
-                    q.SetActive(true);
-                }
-                if (R.destroyed == false)
-                {
-                    r.SetActive(true);
-                }
-                if (S.destroyed == false)
-                {
-                    s.SetActive(true);
-                }
-                if (T.destroyed == false)
-                {
-                    t.SetActive(true);
-                }
-                if (U.destroyed == false)
-                {
-                    u.SetActive(true);
-                }
-                if (V.destroyed == false)
-                {
-                    v.SetActive(true);
-                }
-                if (W.destroyed == false)
-                {
-                    w.SetActive(true);
-                }
-                if (X.destroyed == false)
-                {
-                    x.SetActive(true);
-                }
-                if (Y.destroyed == false)
-                {
-                    y.SetActive(true);
-                }
-                if (Z.destroyed == false)
-                {
-                    z.SetActive(true);
-                }
+                a.SetActive(true);
             }
-            if (sceneName == "ArtemisExercise")
+            if (A.destroyed == false)
             {
-                CAT.SetActive(false);
-                DOG.SetActive(false);
-                OWL.SetActive(false);
-                BEAR.SetActive(false);
-                MONKEY.SetActive(false);
+                a.SetActive(true);
             }
+            if (B.destroyed == false)
+            {
+                b.SetActive(true);
+            }
+            if (C.destroyed == false)
+            {
+                c.SetActive(true);
+            }
+            if (D.destroyed == false)
+            {
+                d.SetActive(true);
+            }
+            if (E.destroyed == false)
+            {
+                e.SetActive(true);
+            }
+            if (F.destroyed == false)
+            {
+                f.SetActive(true);
+            }
+            if (G.destroyed == false)
+            {
+                g.SetActive(true);
+            }
+            if (H.destroyed == false)
+            {
+                h.SetActive(true);
+            }
+            if (I.destroyed == false)
+            {
+                i.SetActive(true);
+            }
+            if (J.destroyed == false)
+            {
+                j.SetActive(true);
+            }
+            if (K.destroyed == false)
+            {
+                k.SetActive(true);
+            }
+            if (L.destroyed == false)
+            {
+                l.SetActive(true);
+            }
+            if (M.destroyed == false)
+            {
+                m.SetActive(true);
+            }
+            if (N.destroyed == false)
+            {
+                n.SetActive(true);
+            }
+            if (O.destroyed == false)
+            {
+                o.SetActive(true);
+            }
+            if (P.destroyed == false)
+            {
+                p.SetActive(true);
+            }
+            if (Q.destroyed == false)
+            {
+                q.SetActive(true);
+            }
+            if (R.destroyed == false)
+            {
+                r.SetActive(true);
+            }
+            if (S.destroyed == false)
+            {
+                s.SetActive(true);
+            }
+            if (T.destroyed == false)
+            {
+                t.SetActive(true);
+            }
+            if (U.destroyed == false)
+            {
+                u.SetActive(true);
+            }
+            if (V.destroyed == false)
+            {
+                v.SetActive(true);
+            }
+            if (W.destroyed == false)
+            {
+                w.SetActive(true);
+            }
+            if (X.destroyed == false)
+            {
+                x.SetActive(true);
+            }
+            if (Y.destroyed == false)
+            {
+                y.SetActive(true);
+            }
+            if (Z.destroyed == false)
+            {
+                z.SetActive(true);
+            }
+            //  }
+            // if (sceneName == "ArtemisExercise")
+            // {
+            CAT.SetActive(false);
+            DOG.SetActive(false);
+            OWL.SetActive(false);
+            BEAR.SetActive(false);
+            MONKEY.SetActive(false);
+            DOOR.SetActive(false);
+            RED.SetActive(false);
+            BLUE.SetActive(false);
+            GREEN.SetActive(false);
+            YELLOW.SetActive(false);
+            // }
+
+            // if (sceneName == "HelloExercise")
+            // {
+            HELLO.SetActive(false);
+            // }
         }
     }
 }
