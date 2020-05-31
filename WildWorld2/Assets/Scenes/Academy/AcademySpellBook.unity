@@ -132,8 +132,6 @@ GameObject:
   - component: {fileID: 18081115}
   - component: {fileID: 18081119}
   - component: {fileID: 18081118}
-  - component: {fileID: 18081117}
-  - component: {fileID: 18081116}
   m_Layer: 0
   m_Name: h
   m_TagString: Untagged
@@ -155,49 +153,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &18081116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18081114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4076d3129a7a7819dd8a285e3fc81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &18081117
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18081114}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -0.0000000013969839, y: -9.313226e-10, z: 0}
 --- !u!23 &18081118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -256,9 +211,6 @@ GameObject:
   - component: {fileID: 54910636}
   - component: {fileID: 54910641}
   - component: {fileID: 54910640}
-  - component: {fileID: 54910639}
-  - component: {fileID: 54910638}
-  - component: {fileID: 54910637}
   m_Layer: 0
   m_Name: a
   m_TagString: Untagged
@@ -280,65 +232,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54910637
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54910635}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &54910638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54910635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee1ff99bd0dc21391b36c84f7e37064f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &54910639
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54910635}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &54910640
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -397,8 +290,6 @@ GameObject:
   - component: {fileID: 116243866}
   - component: {fileID: 116243870}
   - component: {fileID: 116243869}
-  - component: {fileID: 116243868}
-  - component: {fileID: 116243867}
   m_Layer: 0
   m_Name: n
   m_TagString: Untagged
@@ -420,49 +311,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &116243867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116243865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8eac35d3c6788b25bd0d82978f5bf31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &116243868
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116243865}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &116243869
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -521,8 +369,6 @@ GameObject:
   - component: {fileID: 121876547}
   - component: {fileID: 121876551}
   - component: {fileID: 121876550}
-  - component: {fileID: 121876549}
-  - component: {fileID: 121876548}
   m_Layer: 0
   m_Name: g
   m_TagString: Untagged
@@ -544,49 +390,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &121876548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121876546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b80270670ce3651fa855c0d1aa20290f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &121876549
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121876546}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -0.0000000013969839, y: -9.313226e-10, z: 0}
 --- !u!23 &121876550
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -645,8 +448,6 @@ GameObject:
   - component: {fileID: 165122072}
   - component: {fileID: 165122077}
   - component: {fileID: 165122076}
-  - component: {fileID: 165122075}
-  - component: {fileID: 165122074}
   - component: {fileID: 165122073}
   m_Layer: 0
   m_Name: b
@@ -685,49 +486,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &165122074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165122071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 395b077574f1b1f59bd40d069c23f675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &165122075
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165122071}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &165122076
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -869,8 +627,6 @@ GameObject:
   - component: {fileID: 380339297}
   - component: {fileID: 380339301}
   - component: {fileID: 380339300}
-  - component: {fileID: 380339299}
-  - component: {fileID: 380339298}
   m_Layer: 0
   m_Name: y
   m_TagString: Untagged
@@ -892,49 +648,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &380339298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380339296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5140c648d9735b5af7beea53457156, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &380339299
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380339296}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &380339300
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -993,8 +706,6 @@ GameObject:
   - component: {fileID: 403715809}
   - component: {fileID: 403715813}
   - component: {fileID: 403715812}
-  - component: {fileID: 403715811}
-  - component: {fileID: 403715810}
   m_Layer: 0
   m_Name: j
   m_TagString: Untagged
@@ -1016,49 +727,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &403715810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403715808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b53931bde58f04ae8f6862cadb6ad86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &403715811
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403715808}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -0.000000003259629, y: -9.313226e-10, z: 0}
 --- !u!23 &403715812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1209,8 +877,6 @@ GameObject:
   - component: {fileID: 503075301}
   - component: {fileID: 503075305}
   - component: {fileID: 503075304}
-  - component: {fileID: 503075303}
-  - component: {fileID: 503075302}
   m_Layer: 0
   m_Name: s
   m_TagString: Untagged
@@ -1232,49 +898,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &503075302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503075300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aae4aa599e9207b78c51f64f9875d70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &503075303
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503075300}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &503075304
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1410,8 +1033,6 @@ GameObject:
   - component: {fileID: 560705264}
   - component: {fileID: 560705268}
   - component: {fileID: 560705267}
-  - component: {fileID: 560705266}
-  - component: {fileID: 560705265}
   m_Layer: 0
   m_Name: c
   m_TagString: Untagged
@@ -1433,49 +1054,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &560705265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560705263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea48046f7f73db917a5e12af74701813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &560705266
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560705263}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &560705267
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1534,8 +1112,6 @@ GameObject:
   - component: {fileID: 729052476}
   - component: {fileID: 729052480}
   - component: {fileID: 729052479}
-  - component: {fileID: 729052478}
-  - component: {fileID: 729052477}
   m_Layer: 0
   m_Name: x
   m_TagString: Untagged
@@ -1557,49 +1133,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &729052477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729052475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07fa86b2fb7975564b39e5fe4c929720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &729052478
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729052475}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &729052479
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1658,8 +1191,6 @@ GameObject:
   - component: {fileID: 762681498}
   - component: {fileID: 762681502}
   - component: {fileID: 762681501}
-  - component: {fileID: 762681500}
-  - component: {fileID: 762681499}
   m_Layer: 0
   m_Name: o
   m_TagString: Untagged
@@ -1681,49 +1212,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &762681499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762681497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e5ba266ad95b11ca1398a9d072fc1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &762681500
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762681497}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &762681501
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1782,8 +1270,6 @@ GameObject:
   - component: {fileID: 801375113}
   - component: {fileID: 801375117}
   - component: {fileID: 801375116}
-  - component: {fileID: 801375115}
-  - component: {fileID: 801375114}
   m_Layer: 0
   m_Name: t
   m_TagString: Untagged
@@ -1805,49 +1291,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &801375114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801375112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a4ff1f86bd08f5580b39d1402ff665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &801375115
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801375112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &801375116
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1906,8 +1349,6 @@ GameObject:
   - component: {fileID: 810012268}
   - component: {fileID: 810012272}
   - component: {fileID: 810012271}
-  - component: {fileID: 810012270}
-  - component: {fileID: 810012269}
   m_Layer: 0
   m_Name: k
   m_TagString: Untagged
@@ -1929,49 +1370,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &810012269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810012267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf46301bc08ec8c3869f594980a062f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &810012270
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810012267}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &810012271
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2030,7 +1428,6 @@ GameObject:
   - component: {fileID: 823610487}
   - component: {fileID: 823610492}
   - component: {fileID: 823610491}
-  - component: {fileID: 823610490}
   m_Layer: 0
   m_Name: monkey
   m_TagString: Untagged
@@ -2052,32 +1449,6 @@ Transform:
   m_Father: {fileID: 1460863807}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &823610490
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823610486}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.656613e-10, y: -9.313226e-10}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009}
-  m_EdgeRadius: 0
 --- !u!23 &823610491
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2136,8 +1507,6 @@ GameObject:
   - component: {fileID: 856750858}
   - component: {fileID: 856750862}
   - component: {fileID: 856750861}
-  - component: {fileID: 856750860}
-  - component: {fileID: 856750859}
   m_Layer: 0
   m_Name: q
   m_TagString: Untagged
@@ -2159,49 +1528,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &856750859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856750857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adf0e54b5ce922a8a691bd7fc13be81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &856750860
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856750857}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.000000003259629, y: -9.313226e-10, z: 0}
 --- !u!23 &856750861
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2326,8 +1652,6 @@ GameObject:
   - component: {fileID: 933570057}
   - component: {fileID: 933570061}
   - component: {fileID: 933570060}
-  - component: {fileID: 933570059}
-  - component: {fileID: 933570058}
   m_Layer: 0
   m_Name: r
   m_TagString: Untagged
@@ -2349,49 +1673,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &933570058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933570056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3680162eb5559864d81beca7d0574c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &933570059
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933570056}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.0000000069849193, y: -9.313226e-10, z: 0}
 --- !u!23 &933570060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2450,8 +1731,6 @@ GameObject:
   - component: {fileID: 996523943}
   - component: {fileID: 996523947}
   - component: {fileID: 996523946}
-  - component: {fileID: 996523945}
-  - component: {fileID: 996523944}
   m_Layer: 0
   m_Name: m
   m_TagString: Untagged
@@ -2473,49 +1752,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &996523944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996523942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae98438a2689982b58ae8eef4971b49d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &996523945
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996523942}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -0.0000000023283064, y: -9.313226e-10, z: 0}
 --- !u!23 &996523946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2574,7 +1810,6 @@ GameObject:
   - component: {fileID: 1062042548}
   - component: {fileID: 1062042551}
   - component: {fileID: 1062042550}
-  - component: {fileID: 1062042549}
   m_Layer: 0
   m_Name: bear
   m_TagString: Untagged
@@ -2596,32 +1831,6 @@ Transform:
   m_Father: {fileID: 1460863807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1062042549
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062042547}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.6566126e-10, y: -9.313225e-10}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.020000005, y: 0.020000007}
-  m_EdgeRadius: 0
 --- !u!23 &1062042550
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2680,8 +1889,6 @@ GameObject:
   - component: {fileID: 1113704596}
   - component: {fileID: 1113704600}
   - component: {fileID: 1113704599}
-  - component: {fileID: 1113704598}
-  - component: {fileID: 1113704597}
   m_Layer: 0
   m_Name: l
   m_TagString: Untagged
@@ -2703,49 +1910,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1113704597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113704595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21da805d2bcefcefb1b2a95aa6313ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1113704598
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113704595}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -0.0000000013969839, y: -9.313226e-10, z: 0}
 --- !u!23 &1113704599
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2933,7 +2097,6 @@ GameObject:
   - component: {fileID: 1139935632}
   - component: {fileID: 1139935635}
   - component: {fileID: 1139935634}
-  - component: {fileID: 1139935633}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -2955,32 +2118,6 @@ Transform:
   m_Father: {fileID: 1460863807}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1139935633
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139935631}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.656613e-10, y: -9.313226e-10}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009}
-  m_EdgeRadius: 0
 --- !u!23 &1139935634
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3116,8 +2253,6 @@ GameObject:
   - component: {fileID: 1209751683}
   - component: {fileID: 1209751687}
   - component: {fileID: 1209751686}
-  - component: {fileID: 1209751685}
-  - component: {fileID: 1209751684}
   m_Layer: 0
   m_Name: d
   m_TagString: Untagged
@@ -3139,49 +2274,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1209751684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209751682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82996359ccc2646468181d105720d4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1209751685
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209751682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.000000003259629, y: -9.313226e-10, z: 0}
 --- !u!23 &1209751686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3240,8 +2332,6 @@ GameObject:
   - component: {fileID: 1316531399}
   - component: {fileID: 1316531403}
   - component: {fileID: 1316531402}
-  - component: {fileID: 1316531401}
-  - component: {fileID: 1316531400}
   m_Layer: 0
   m_Name: w
   m_TagString: Untagged
@@ -3263,49 +2353,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1316531400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316531398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d878db42eec369ffaabde5c767dd123e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1316531401
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316531398}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.0000000144355, y: -9.313226e-10, z: 0}
 --- !u!23 &1316531402
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3364,8 +2411,6 @@ GameObject:
   - component: {fileID: 1390874852}
   - component: {fileID: 1390874856}
   - component: {fileID: 1390874855}
-  - component: {fileID: 1390874854}
-  - component: {fileID: 1390874853}
   m_Layer: 0
   m_Name: z
   m_TagString: Untagged
@@ -3387,49 +2432,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1390874853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390874851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f741f921f42320278564c5d6f53daa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1390874854
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390874851}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &1390874855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3521,8 +2523,6 @@ GameObject:
   - component: {fileID: 1545180967}
   - component: {fileID: 1545180971}
   - component: {fileID: 1545180970}
-  - component: {fileID: 1545180969}
-  - component: {fileID: 1545180968}
   m_Layer: 0
   m_Name: v
   m_TagString: Untagged
@@ -3544,49 +2544,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1545180968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545180966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51b6b180bb79d47b58b939f1eb91d27f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1545180969
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545180966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.0000000144355, y: -9.313226e-10, z: 0}
 --- !u!23 &1545180970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3645,8 +2602,6 @@ GameObject:
   - component: {fileID: 1629245587}
   - component: {fileID: 1629245591}
   - component: {fileID: 1629245590}
-  - component: {fileID: 1629245589}
-  - component: {fileID: 1629245588}
   m_Layer: 0
   m_Name: p
   m_TagString: Untagged
@@ -3668,49 +2623,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1629245588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629245586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8abc383257f95db4f91ddc1b687a3087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1629245589
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629245586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.000000003259629, y: -9.313226e-10, z: 0}
 --- !u!23 &1629245590
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3838,8 +2750,6 @@ GameObject:
   - component: {fileID: 1696231320}
   - component: {fileID: 1696231324}
   - component: {fileID: 1696231323}
-  - component: {fileID: 1696231322}
-  - component: {fileID: 1696231321}
   m_Layer: 0
   m_Name: i
   m_TagString: Untagged
@@ -3861,49 +2771,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1696231321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696231319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02df12992a2537c7e99062f16a738605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1696231322
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696231319}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &1696231323
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4097,8 +2964,6 @@ GameObject:
   - component: {fileID: 1759924801}
   - component: {fileID: 1759924805}
   - component: {fileID: 1759924804}
-  - component: {fileID: 1759924803}
-  - component: {fileID: 1759924802}
   m_Layer: 0
   m_Name: e
   m_TagString: Untagged
@@ -4120,49 +2985,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1759924802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759924800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b51c2266dc556d02bb9a96339aa4bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1759924803
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759924800}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.000000003259629, y: -9.313226e-10, z: 0}
 --- !u!23 &1759924804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4221,8 +3043,6 @@ GameObject:
   - component: {fileID: 1846140044}
   - component: {fileID: 1846140048}
   - component: {fileID: 1846140047}
-  - component: {fileID: 1846140046}
-  - component: {fileID: 1846140045}
   m_Layer: 0
   m_Name: u
   m_TagString: Untagged
@@ -4244,49 +3064,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1846140045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846140043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33795a79bcdc09dbb4b7d51e972a69b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1846140046
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846140043}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
 --- !u!23 &1846140047
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4345,8 +3122,6 @@ GameObject:
   - component: {fileID: 1997420356}
   - component: {fileID: 1997420360}
   - component: {fileID: 1997420359}
-  - component: {fileID: 1997420358}
-  - component: {fileID: 1997420357}
   m_Layer: 0
   m_Name: f
   m_TagString: Untagged
@@ -4368,49 +3143,6 @@ Transform:
   m_Father: {fileID: 1671913850}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1997420357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997420355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5631ebe225d293e1e80c01bb821b778b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  deltaX: 0
-  deltaY: 0
-  targetBlock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetBlockSingle: {fileID: 0}
-  firstClickTime: 0
-  timeBetweenClicks: 0
-  coroutineAllowed: 0
-  clickCounter: 0
-  RotateStep: {x: 0, y: 180, z: 0}
-  RotateSpeed: 5
-  _targetRot: {x: 0, y: 0, z: 0, w: 1}
---- !u!65 &1997420358
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997420355}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
-  m_Center: {x: 0.0000000013969839, y: -9.313226e-10, z: 0}
 --- !u!23 &1997420359
 MeshRenderer:
   m_ObjectHideFlags: 0

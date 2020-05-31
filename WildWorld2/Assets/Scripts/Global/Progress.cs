@@ -18,6 +18,6 @@ public class Progress : MonoBehaviour
     public static string[] nameArray = new string[5];
     public static string nameString;
     public static string playerCharacter;
-
+    public static string previousScene;
 
 }
