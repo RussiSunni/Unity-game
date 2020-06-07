@@ -11,10 +11,4 @@ public class RoomText : MonoBehaviour
         roomText = GetComponent<Text>();
         roomText.text = "Name: " + Progress.nameString;
     }
-
-
-    void Update()
-    {
-
-    }
 }

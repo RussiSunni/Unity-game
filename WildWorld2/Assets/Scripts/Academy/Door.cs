@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
 
     void Start()
     {
-        doorCard = GameObject.Find("Door Card");
+        doorCard = GameObject.Find("DOOR");
     }
     private void OnMouseDown()
     {

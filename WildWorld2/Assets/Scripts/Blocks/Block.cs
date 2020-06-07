@@ -13,7 +13,7 @@ public class Block : MonoBehaviour
     public Transform targetBlockSingle;
 
 
-    // doubleclick
+    // doubleclick 
     public float firstClickTime, timeBetweenClicks;
     public bool coroutineAllowed;
     public int clickCounter;
@@ -23,7 +23,7 @@ public class Block : MonoBehaviour
     public float RotateSpeed = 5f;
     public Quaternion _targetRot = Quaternion.identity;
 
-    private string sceneName;
+    public string sceneName;
 
 
     protected virtual void Start()

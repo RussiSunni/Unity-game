@@ -20,4 +20,8 @@ public class Progress : MonoBehaviour
     public static string playerCharacter;
     public static string previousScene;
 
+
+
+
+
 }

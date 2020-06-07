@@ -9,7 +9,6 @@ public class IntroducingQuestionChar2 : MonoBehaviour
     public static SpriteRenderer rend;
     public static Sprite question3;
 
-
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();

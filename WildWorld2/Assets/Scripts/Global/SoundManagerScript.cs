@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip errorSound, correctSound, newWordSound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, MONKEYWordSound, DOORWordSound, HELLOWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
+    public static AudioClip errorSound, correctSound, newWordSound, WHAT_IS_YOUR_NAME_Sound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, MONKEYWordSound, DOORWordSound, HELLOWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
     static AudioSource audioSrc;
 
 
@@ -14,6 +14,7 @@ public class SoundManagerScript : MonoBehaviour
     {
         errorSound = Resources.Load<AudioClip>("sounds/pop");
         correctSound = Resources.Load<AudioClip>("sounds/success");
+        WHAT_IS_YOUR_NAME_Sound = Resources.Load<AudioClip>("sounds/WHAT_IS_YOUR_NAME_Sound");
         CATWordSound = Resources.Load<AudioClip>("sounds/CATSound");
         DOGWordSound = Resources.Load<AudioClip>("sounds/DOGSound");
         OWLWordSound = Resources.Load<AudioClip>("sounds/OWLSound");
@@ -107,6 +108,13 @@ public class SoundManagerScript : MonoBehaviour
     {
         audioSrc.PlayOneShot(HELLOWordSound);
     }
+
+    public static void playWHAT_IS_YOUR_NAME_Sound()
+    {
+        audioSrc.PlayOneShot(WHAT_IS_YOUR_NAME_Sound);
+    }
+
+
 
     // letters
     public static void playALetterSound()

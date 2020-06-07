@@ -1,14 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class X : Block
 {
     private GameObject fairy;
     Animator fairyAnimator;
-
-    private string sceneName;
 
 
     // instantiate copy
@@ -18,9 +15,6 @@ public class X : Block
     protected override void Start()
     {
         base.Start();
-
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
         if (sceneName == "ArtemisExercise")
         {
             fairy = GameObject.Find("Fairy");
@@ -46,8 +40,7 @@ public class X : Block
     protected override void OnMouseUp()
     {
         pressed = false;
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
+
         // with instantiate copies
         if (sceneName == "SecretaryExercise")
         {

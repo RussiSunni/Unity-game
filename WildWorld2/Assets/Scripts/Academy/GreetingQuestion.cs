@@ -6,7 +6,6 @@ public class GreetingQuestion : MonoBehaviour
 {
     public static SpriteRenderer rend;
     public static Sprite question1, question2, question3, question4, question5, question6;
-
     GameObject hello, my1, name1, is1, may, hi, may2, my2, name2, is2, eva, targetblock1, targetblock2;
 
     private void Start()

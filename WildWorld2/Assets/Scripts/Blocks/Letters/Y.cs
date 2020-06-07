@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Y : Block
 {
     private GameObject fairy;
     Animator fairyAnimator;
-    private string sceneName;
 
 
     // instantiate copy
@@ -17,9 +15,6 @@ public class Y : Block
     protected override void Start()
     {
         base.Start();
-
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
         if (sceneName == "ArtemisExercise")
         {
             fairy = GameObject.Find("Fairy");
@@ -52,8 +47,6 @@ public class Y : Block
         base.OnMouseUp();
 
         pressed = false;
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
         if (sceneName == "SecretaryExercise")
         {
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f && Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)

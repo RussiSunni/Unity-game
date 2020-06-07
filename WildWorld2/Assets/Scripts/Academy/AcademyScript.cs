@@ -5,11 +5,16 @@ using UnityEngine;
 public class AcademyScript : MonoBehaviour
 {
     public static GameObject doorCard;
+    public static GameObject helloCard;
     public Transform player;
     void Start()
     {
-        doorCard = GameObject.Find("Door Card");
+        doorCard = GameObject.Find("DOOR");
         doorCard.SetActive(false);
+
+        helloCard = GameObject.Find("HELLO");
+        helloCard.SetActive(false);
+
 
         if (Progress.previousScene == "Hub")
         {
@@ -47,13 +52,17 @@ public class AcademyScript : MonoBehaviour
         {
             player.position = new Vector2(9f, 9f);
         }
-
-        Debug.Log(Progress.previousScene);
     }
 
 
     public static void DoorActive()
     {
-        doorCard.SetActive(true);
+        if (Progress.door == false)
+            doorCard.SetActive(true);
+    }
+    public static void HelloActive()
+    {
+        if (Progress.hello == false)
+            helloCard.SetActive(true);
     }
 }

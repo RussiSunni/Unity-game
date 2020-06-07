@@ -5,11 +5,8 @@ using UnityEngine;
 public class Wolf : MonoBehaviour
 {
     private Vector2 initialPosition;
-
     private Vector2 mousePosition;
-
     private float deltaX, deltaY;
-
     public static bool locked;
 
 

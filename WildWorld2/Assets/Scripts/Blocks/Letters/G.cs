@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class G : Block
 {
     public static bool reset;
     private GameObject fairy;
     Animator fairyAnimator;
-    private string sceneName;
 
     // instantiate copy
     GameObject letter;
@@ -20,8 +18,6 @@ public class G : Block
 
         locked = false;
 
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
         if (sceneName == "ArtemisExercise")
         {
             fairy = GameObject.Find("Fairy");
@@ -54,8 +50,7 @@ public class G : Block
     protected override void OnMouseUp()
     {
         pressed = false;
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
+
         if (sceneName == "SecretaryExercise")
         {
             transform.position = ReplaceBlocks(transform.position.x, transform.position.y, initialPosition.x, initialPosition.y, 4.391f, 4.376f);
@@ -164,8 +159,6 @@ public class G : Block
     }
     public Vector3 ReplaceBlocks(float transformPositionX, float transformPositionY, float initialX, float initialY, float localPosX, float localPosY)
     {
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
         if (sceneName == "SecretaryExercise")
         {
             if (Mathf.Abs(transformPositionX - targetBlock[0].position.x) <= 0.5f && Mathf.Abs(transformPositionY - targetBlock[0].position.y) <= 0.5f)
