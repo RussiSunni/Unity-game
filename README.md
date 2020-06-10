@@ -1,1 +1,1 @@
-# Educational game in Unity (C#)
+Educational game in Unity (C#)
