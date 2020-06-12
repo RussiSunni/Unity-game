@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Secretary : MonoBehaviour
 {
-    public GameObject helloCard;
+    private GameObject helloCard;
     void Start()
     {
         helloCard = GameObject.Find("HELLO");
     }
     private void OnMouseDown()
     {
-        SoundManagerScript.playDOORWordSound();
+        SoundManagerScript.playHELLOWordSound();
         AcademyScript.HelloActive();
     }
 }

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro/ChooseCharacter.unity
     guid: 308f870fe84a26b51bd62569fe086992
+  - enabled: 1
+    path: Assets/Scenes/Intro/Outside Academy.unity
+    guid: 768fdec274b10919dbc0f9f41b3ce9cf
   - enabled: 0
     path: Assets/Scenes/Intro/Rules.unity
     guid: 15c8844fd4fcb31e39b4d818a3f6e3de
@@ -89,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Academy/HelloExercise.unity
     guid: d0d10cd659e1891009861cd4651ef583
+  - enabled: 1
+    path: Assets/Scenes/Town/Town.unity
+    guid: a78a717c2358057d6ba0940748255a45
   m_configObjects: {}

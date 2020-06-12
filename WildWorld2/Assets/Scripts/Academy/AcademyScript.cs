@@ -18,7 +18,7 @@ public class AcademyScript : MonoBehaviour
 
         if (Progress.previousScene == "Hub")
         {
-            player.position = new Vector2(-5.859997f, -3.39125f);
+            player.position = new Vector2(-4.859997f, -3.39125f);
         }
         else if (Progress.previousScene == "SecretaryExercise")
         {

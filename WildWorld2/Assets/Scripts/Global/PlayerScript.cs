@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
         animator = this.GetComponent<Animator>();
 
         if (Progress.playerCharacter == "English")
-            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animation/Player", typeof(RuntimeAnimatorController));
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animation/Character1Animation", typeof(RuntimeAnimatorController));
 
         else if (Progress.playerCharacter == "Japanese")
             animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animation/Character2Animation", typeof(RuntimeAnimatorController));
