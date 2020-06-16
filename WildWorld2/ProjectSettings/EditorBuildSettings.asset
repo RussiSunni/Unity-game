@@ -33,6 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest/Forest.unity
     guid: 2e194303840cef026a0fd3767b85457c
   - enabled: 1
+    path: Assets/Scenes/Forest/ArtemisHello.unity
+    guid: 215531b80563c2800ab137a5cb08b8db
+  - enabled: 1
     path: Assets/Scenes/Forest/ArtemisIntro.unity
     guid: 01e4622053c6d96f68956907f1ac266d
   - enabled: 1
@@ -87,7 +90,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Temple/MageExercise.unity
     guid: da5cd2cbab8e01c21a37105efda3094b
   - enabled: 1
-    path: Assets/Scenes/Academy/GreetingExercise.unity
+    path: Assets/Scenes/Academy/MayandEvaExercise.unity
     guid: 9aba6e022c180383a893a09c1a1f016e
   - enabled: 1
     path: Assets/Scenes/Academy/HelloExercise.unity

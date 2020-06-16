@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class AcademyScript : MonoBehaviour
 {
-    public static GameObject doorCard;
-    public static GameObject helloCard;
+    public static GameObject doorCard, helloCard, evaCard, mayCard;
     public Transform player;
     void Start()
     {
@@ -14,6 +13,12 @@ public class AcademyScript : MonoBehaviour
 
         helloCard = GameObject.Find("HELLO");
         helloCard.SetActive(false);
+
+        evaCard = GameObject.Find("EVA");
+        evaCard.SetActive(false);
+
+        mayCard = GameObject.Find("MAY");
+        mayCard.SetActive(false);
 
 
         if (Progress.previousScene == "Hub")
@@ -64,5 +69,16 @@ public class AcademyScript : MonoBehaviour
     {
         if (Progress.hello == false)
             helloCard.SetActive(true);
+    }
+
+    public static void EvaActive()
+    {
+        if (Progress.eva == false)
+            evaCard.SetActive(true);
+    }
+    public static void MayActive()
+    {
+        if (Progress.may == false)
+            mayCard.SetActive(true);
     }
 }

@@ -513,7 +513,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 829979595}
-        m_MethodName: ChangeScene
+        m_MethodName: LoadAcademy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 829979594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e7f11dec810efd7b284c8277b47758, type: 3}
+  m_Script: {fileID: 11500000, guid: bd3104e12b4a88189be576f1e5bd7598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &829979596

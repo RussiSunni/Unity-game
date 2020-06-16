@@ -6,7 +6,7 @@ public class Hello : Block
 {
     protected override void OnMouseUp()
     {
-        if (sceneName == "HelloExercise")
+        if (sceneName == "HelloExercise" || sceneName == "ArtemisHello")
         {
             if (Mathf.Abs(transform.position.x - targetBlockSingle.position.x) <= 0.5f &&
                                  Mathf.Abs(transform.position.y - targetBlockSingle.position.y) <= 0.5f)

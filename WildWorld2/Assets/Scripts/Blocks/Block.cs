@@ -48,7 +48,7 @@ public class Block : MonoBehaviour
             targetBlock[3] = GameObject.Find("target_block-4").transform;
             targetBlock[4] = GameObject.Find("target_block-5").transform;
         }
-        else if (sceneName == "HelloExercise")
+        else if (sceneName == "HelloExercise" || sceneName == "ArtemisHello")
         {
             targetBlockSingle = GameObject.Find("target_block-1").transform;
         }

@@ -277,6 +277,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &201600816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -502,6 +503,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &337186728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -626,6 +628,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &360158014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -908,6 +911,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &475228261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1032,6 +1036,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &500242607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1156,6 +1161,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &534394587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1280,6 +1286,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &613184166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1404,6 +1411,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &662775539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1528,6 +1536,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &787813339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1652,6 +1661,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &809929606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1845,6 +1855,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &859426194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2075,6 +2086,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &983389114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2199,6 +2211,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1045224081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2406,6 +2419,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1068990293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2662,6 +2676,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1116477437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2803,6 +2818,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1180238108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2927,6 +2943,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1307102635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3234,6 +3251,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1382271403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3358,6 +3376,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1424189241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3482,6 +3501,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1440132845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3542,6 +3562,144 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440132842}
   m_Mesh: {fileID: -5495902117074765545, guid: e1be7e8141cc343d5aaad1e4d52090c9, type: 3}
+--- !u!1 &1654110406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654110407}
+  - component: {fileID: 1654110411}
+  - component: {fileID: 1654110410}
+  - component: {fileID: 1654110409}
+  - component: {fileID: 1654110408}
+  m_Layer: 0
+  m_Name: HELLO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654110407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654110406}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.73, y: -0.738, z: 0.41163158}
+  m_LocalScale: {x: 60, y: 60, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1710817115}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654110408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654110406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de13a1b4f682ccffe8bbfbea77714f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0}
+  mousePosition: {x: 0, y: 0}
+  deltaX: 0
+  deltaY: 0
+  targetBlock:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  targetBlockSingle: {fileID: 0}
+  firstClickTime: 0
+  timeBetweenClicks: 0
+  coroutineAllowed: 0
+  clickCounter: 0
+  RotateStep: {x: 0, y: 180, z: 0}
+  RotateSpeed: 5
+  _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
+--- !u!61 &1654110409
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654110406}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.656613e-10, y: -9.313226e-10}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.020000007, y: 0.020000009}
+  m_EdgeRadius: 0
+--- !u!23 &1654110410
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654110406}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 739540274cdba498ba4024735c3d72fd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1654110411
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654110406}
+  m_Mesh: {fileID: -5495902117074765545, guid: 0bccbce285d89d1f78975f86488d8937, type: 3}
 --- !u!1 &1710817114
 GameObject:
   m_ObjectHideFlags: 0
@@ -3572,6 +3730,7 @@ Transform:
   - {fileID: 935573329}
   - {fileID: 1087583928}
   - {fileID: 1309450024}
+  - {fileID: 1654110407}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3639,6 +3798,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1711750818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3840,6 +4000,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1796512580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3983,7 +4144,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2106565810}
-        m_MethodName: ChangeScene
+        m_MethodName: LoadTemple
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4093,6 +4254,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1919377480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4217,6 +4379,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &1995135550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4358,6 +4521,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &2046861868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4458,7 +4622,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2106565808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b06129cc07e3f8ba91fd12845a55206, type: 3}
+  m_Script: {fileID: 11500000, guid: bd3104e12b4a88189be576f1e5bd7598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2113605583
@@ -4525,6 +4689,7 @@ MonoBehaviour:
   RotateStep: {x: 0, y: 180, z: 0}
   RotateSpeed: 5
   _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
 --- !u!65 &2113605586
 BoxCollider:
   m_ObjectHideFlags: 0
