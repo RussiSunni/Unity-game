@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Next : MonoBehaviour
 {
-    public static int questionNumber;
+    public static int slideNumber;
 
-
+    public void nextSlide()
+    {
+        slideNumber++;
+    }
 
 
 }

@@ -2,34 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eva : MonoBehaviour
+public class Eva : Block
 {
-    public Transform targetBlock;
-    public static Vector2 initialPosition, mousePosition;
-    private float deltaX, deltaY;
-    void Start()
+    public static bool correctPosition = false;
+    protected override void OnMouseUp()
     {
-        initialPosition = transform.position;
-    }
-
-    private void OnMouseDown()
-    {
-        deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
-        deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
-    }
-
-    private void OnMouseDrag()
-    {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
-    }
-
-    private void OnMouseUp()
-    {
-        if (Mathf.Abs(transform.position.x - targetBlock.position.x) <= 0.5f &&
-                             Mathf.Abs(transform.position.y - targetBlock.position.y) <= 0.5f)
+        if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+                             Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
         {
-            transform.position = new Vector2(targetBlock.position.x, targetBlock.position.y);
+            transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
+            SoundManagerScript.playCorrectSound();
+            correctPosition = true;
         }
         else
         {

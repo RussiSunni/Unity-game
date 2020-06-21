@@ -6,10 +6,12 @@ public class Progress : MonoBehaviour
 {
     public static bool lettersExerciseComplete = false;
     public static bool nameExerciseComplete = false;
-
     public static bool hello = false;
+    public static bool cat = false;
+    public static bool dog = false;
     public static bool bear = false;
     public static bool monkey = false;
+    public static bool owl = false;
     public static bool door = false;
     public static bool blue = false;
     public static bool green = false;
@@ -22,8 +24,12 @@ public class Progress : MonoBehaviour
     public static string playerCharacter;
     public static string previousScene;
 
+    public static bool dictionaryEva;
+    public static bool dictionaryMay;
 
 
+    void Start()
+    {
 
-
+    }
 }

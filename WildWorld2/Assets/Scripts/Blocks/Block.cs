@@ -52,6 +52,11 @@ public class Block : MonoBehaviour
         {
             targetBlockSingle = GameObject.Find("target_block-1").transform;
         }
+        else if (sceneName == "MayandEvaExercise")
+        {
+            targetBlock[0] = GameObject.Find("target_block-1").transform;
+            targetBlock[1] = GameObject.Find("target_block-2").transform;
+        }
     }
 
     protected virtual void OnMouseDown()
@@ -75,7 +80,7 @@ public class Block : MonoBehaviour
 
     protected virtual void OnMouseUp()
     {
-
+        transform.position = new Vector2(initialPosition.x, initialPosition.y);
     }
 
     // doubleclick

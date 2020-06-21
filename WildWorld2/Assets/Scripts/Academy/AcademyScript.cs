@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AcademyScript : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class AcademyScript : MonoBehaviour
     void Start()
     {
         doorCard = GameObject.Find("DOOR");
-        doorCard.SetActive(false);
+        //doorCard.SetActive(false);
 
         helloCard = GameObject.Find("HELLO");
         helloCard.SetActive(false);
@@ -63,7 +64,7 @@ public class AcademyScript : MonoBehaviour
     public static void DoorActive()
     {
         if (Progress.door == false)
-            doorCard.SetActive(true);
+            doorCard.SetActive(false);
     }
     public static void HelloActive()
     {
@@ -80,5 +81,11 @@ public class AcademyScript : MonoBehaviour
     {
         if (Progress.may == false)
             mayCard.SetActive(true);
+    }
+
+    public void LoadDictionary()
+    {
+        //previousPlayerPosition = player;
+        SceneManager.LoadScene("AcademyDictionary");
     }
 }

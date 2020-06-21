@@ -6,14 +6,9 @@ public class SpellBook : MonoBehaviour
 {
     public static bool CATAttained, DOGAttained;
     public static GameObject a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
-    public static GameObject bear, monkey, door, hello;
-
+    public static GameObject bear, monkey, door, hello, may, eva;
     void Start()
     {
-        // CAT = GameObject.Find("CAT");
-        // DOG = GameObject.Find("DOG");
-        // CAT.SetActive(false);
-        // DOG.SetActive(false);
         if (Progress.lettersExerciseComplete == false)
         {
             a = GameObject.Find("a");
@@ -87,12 +82,24 @@ public class SpellBook : MonoBehaviour
         {
             door = GameObject.Find("door");
             door.SetActive(false);
-        }
+        }   
 
         if (Progress.hello == false)
         {
             hello = GameObject.Find("HELLO");
             hello.SetActive(false);
+        }
+
+        if (Progress.may == false)
+        {
+            may = GameObject.Find("MAY");
+            may.SetActive(false);
+        }
+
+        if (Progress.eva == false)
+        {
+            eva = GameObject.Find("EVA");
+            eva.SetActive(false);
         }
     }
 }

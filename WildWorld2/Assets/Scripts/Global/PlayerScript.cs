@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     Vector2 movement;
+    public static GameObject SpellBookUI;
 
     void Start()
     {
@@ -24,6 +25,9 @@ public class PlayerScript : MonoBehaviour
 
         else if (Progress.playerCharacter == "South African")
             animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animation/Character4Animation", typeof(RuntimeAnimatorController));
+
+        SpellBookUI = GameObject.Find("SpellBookUI");
+        SpellBookUI.SetActive(false);
     }
 
     // movement
@@ -40,4 +44,16 @@ public class PlayerScript : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+    public void LoadSpellBookUI()
+    {
+        if (SpellBookUI.activeSelf)
+        {
+            SpellBookUI.SetActive(false);
+        }
+        else
+        {
+            SpellBookUI.SetActive(true);
+        }
+    }
+
 }

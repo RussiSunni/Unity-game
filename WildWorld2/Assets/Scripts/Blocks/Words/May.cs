@@ -2,34 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class May : MonoBehaviour
+public class May : Block
 {
-    public Transform targetBlock;
-    public static Vector2 initialPosition, mousePosition;
-    private float deltaX, deltaY;
-    void Start()
-    {
-        initialPosition = transform.position;
-    }
+    public static bool correctPosition = false;
 
-    private void OnMouseDown()
+    protected override void OnMouseUp()
     {
-        deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
-        deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
-    }
-
-    private void OnMouseDrag()
-    {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
-    }
-
-    private void OnMouseUp()
-    {
-        if (Mathf.Abs(transform.position.x - targetBlock.position.x) <= 0.5f &&
-                             Mathf.Abs(transform.position.y - targetBlock.position.y) <= 0.5f)
+        if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                             Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
         {
-            transform.position = new Vector2(targetBlock.position.x, targetBlock.position.y);
+            transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+            SoundManagerScript.playCorrectSound();
+            correctPosition = true;
         }
         else
         {
