@@ -9,17 +9,7 @@ public class AcademyScript : MonoBehaviour
     public Transform player;
     void Start()
     {
-        doorCard = GameObject.Find("DOOR");
-        //doorCard.SetActive(false);
 
-        helloCard = GameObject.Find("HELLO");
-        helloCard.SetActive(false);
-
-        evaCard = GameObject.Find("EVA");
-        evaCard.SetActive(false);
-
-        mayCard = GameObject.Find("MAY");
-        mayCard.SetActive(false);
 
 
         if (Progress.previousScene == "Hub")
@@ -61,27 +51,7 @@ public class AcademyScript : MonoBehaviour
     }
 
 
-    public static void DoorActive()
-    {
-        if (Progress.door == false)
-            doorCard.SetActive(false);
-    }
-    public static void HelloActive()
-    {
-        if (Progress.hello == false)
-            helloCard.SetActive(true);
-    }
 
-    public static void EvaActive()
-    {
-        if (Progress.eva == false)
-            evaCard.SetActive(true);
-    }
-    public static void MayActive()
-    {
-        if (Progress.may == false)
-            mayCard.SetActive(true);
-    }
 
     public void LoadDictionary()
     {

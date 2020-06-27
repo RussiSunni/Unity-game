@@ -8,10 +8,13 @@ public class EvaSpawn : MonoBehaviour
     void Start()
     {
         evaCard = GameObject.Find("EVA");
+
+        evaCard.SetActive(false);
     }
     private void OnMouseDown()
     {
         SoundManagerScript.playEVAWordSound();
-        AcademyScript.EvaActive();
+        if (Progress.eva == false)
+            evaCard.SetActive(true);
     }
 }

@@ -11,7 +11,7 @@ public class LoadPlaces : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         Progress.previousScene = scene.name;
-        SceneManager.LoadScene("Academy");
+        SceneManager.LoadScene("Outside Academy");
     }
 
     public void LoadForest()

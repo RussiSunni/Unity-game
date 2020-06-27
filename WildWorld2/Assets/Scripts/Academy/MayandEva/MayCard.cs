@@ -9,5 +9,6 @@ public class MayCard : MonoBehaviour
         SoundManagerScript.playCorrectSound();
         this.gameObject.SetActive(false);
         Progress.may = true;
+        SpellBookUI.May();
     }
 }

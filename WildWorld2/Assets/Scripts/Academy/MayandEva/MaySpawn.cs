@@ -8,10 +8,12 @@ public class MaySpawn : MonoBehaviour
     void Start()
     {
         mayCard = GameObject.Find("MAY");
+        mayCard.SetActive(false);
     }
     private void OnMouseDown()
     {
         SoundManagerScript.playMAYWordSound();
-        AcademyScript.MayActive();
+        if (Progress.may == false)
+            mayCard.SetActive(true);
     }
 }

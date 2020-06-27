@@ -9,5 +9,6 @@ public class EvaCard : MonoBehaviour
         SoundManagerScript.playCorrectSound();
         this.gameObject.SetActive(false);
         Progress.eva = true;
+        SpellBookUI.Eva();
     }
 }
