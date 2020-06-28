@@ -9,5 +9,6 @@ public class HelloCard : MonoBehaviour
         SoundManagerScript.playCorrectSound();
         this.gameObject.SetActive(false);
         Progress.hello = true;
+        SpellBookUI.Hello();
     }
 }

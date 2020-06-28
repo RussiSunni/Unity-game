@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Intro/Outside Academy.unity
+- path: Assets/Scenes/Academy/Outside Academy.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

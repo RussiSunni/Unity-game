@@ -12,7 +12,8 @@ public class HelloSpawn : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        SoundManagerScript.playHELLOWordSound();
+        if (!helloCard.activeSelf & !Progress.hello)
+            SoundManagerScript.playHELLOWordSound();
         if (Progress.hello == false)
             helloCard.SetActive(true);
     }

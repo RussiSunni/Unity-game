@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class DoorSpawn : MonoBehaviour
 {
-    public GameObject doorCard;
+    public static GameObject doorCard;
     void Start()
     {
         doorCard = GameObject.Find("DOOR");
         doorCard.SetActive(false);
     }
-    private void OnMouseDown()
+    // private void OnMouseDown()
+    // {
+    //     if (!doorCard.activeSelf & !Progress.door)
+    //         SoundManagerScript.playDOORWordSound();
+    //     if (Progress.door == false)
+    //         doorCard.SetActive(true);
+    // }
+
+    public static void MakeActive()
     {
-        SoundManagerScript.playDOORWordSound();
         if (Progress.door == false)
             doorCard.SetActive(true);
     }
