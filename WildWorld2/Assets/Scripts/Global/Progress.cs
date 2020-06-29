@@ -7,6 +7,7 @@ public class Progress : MonoBehaviour
     public static bool lettersExerciseComplete = false;
     public static bool nameExerciseComplete = false;
     public static bool hello = false;
+    public static bool hi = false;
     public static bool cat = false;
     public static bool dog = false;
     public static bool bear = false;
@@ -19,6 +20,7 @@ public class Progress : MonoBehaviour
     public static bool yellow = false;
     public static bool may = false;
     public static bool eva = false;
+    public static bool sue = false;
     public static string[] nameArray = new string[5];
     public static string nameString;
     public static string playerCharacter;

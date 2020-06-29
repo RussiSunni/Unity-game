@@ -9,9 +9,6 @@ public class AcademyScript : MonoBehaviour
     public Transform player;
     void Start()
     {
-
-
-
         if (Progress.previousScene == "Hub")
         {
             player.position = new Vector2(-4.859997f, -3.39125f);
@@ -48,10 +45,13 @@ public class AcademyScript : MonoBehaviour
         {
             player.position = new Vector2(9f, 9f);
         }
+        else if (Progress.previousScene == "Outside Academy")
+        {
+            player.position = new Vector2(-4.859997f, -3.39125f);
+        }
+
+        Debug.Log(Progress.previousScene);
     }
-
-
-
 
     public void LoadDictionary()
     {

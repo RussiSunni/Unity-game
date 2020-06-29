@@ -21,6 +21,9 @@ public class DoorSpawn : MonoBehaviour
     public static void MakeActive()
     {
         if (Progress.door == false)
+        {
+            SoundManagerScript.playDOORWordSound();
             doorCard.SetActive(true);
+        }
     }
 }

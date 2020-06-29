@@ -22,7 +22,7 @@ public class FairyDialogue : MonoBehaviour
 
     public void OnMouseDown()
     {
-        PlayerDialogue.DisplayDialogue();
+        FairyPlayerDialogue.DisplayDialogue();
         FairyDialogueBox.SetActive(false);
     }
 }

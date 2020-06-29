@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Hello_UI : Block
 {
+    public static bool suelocked;
     public static Transform playerPosition, cardPosition;
-    GameObject thisGameObject;
     protected override void OnMouseUp()
     {
         playerPosition = GameObject.Find("Player").transform;
@@ -25,23 +25,31 @@ public class Hello_UI : Block
                         Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
-                SceneManager.LoadScene("MayandEvaExercise");
+                SueDialogue.DisplayDialogue();
+                suelocked = true;
             }
             else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                      Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+                       Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
-                SceneManager.LoadScene("FairyExercise");
+                SuePlayerDialogue.answer++;
+                suelocked = true;
             }
-            else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
-                     Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
-            {
-                transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
-                SceneManager.LoadScene("Greeting02Exercise");
-            }
+            // else if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
+            //           Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
+            // {
+            //     transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
+            //     SceneManager.LoadScene("FairyExercise");
+            // }
+            // else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+            //          Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+            // {
+            //     transform.position = new Vector2(targetBlock[3].position.x, targetBlock[3].position.y);
+            //     SceneManager.LoadScene("Greeting02Exercise");
+            // }
             else
             {
-                transform.position = new Vector2(playerPosition.position.x + initialPosition.x, playerPosition.position.y + initialPosition.y);
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
             }
         }
         // Ouside Academy --------------------------------------
@@ -57,7 +65,7 @@ public class Hello_UI : Block
                                            Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
-                PlayerDialogue.answer = true;
+                FairyPlayerDialogue.answer = true;
                 locked = true;
             }
             else
@@ -69,14 +77,30 @@ public class Hello_UI : Block
     public static void ReturnToInitialPosition()
     {
         locked = false;
+        suelocked = false;
         cardPosition.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
     }
 
     protected override void Update()
     {
-        if (locked)
+        if (sceneName == "Outside Academy")
         {
-            transform.position = new Vector2(-3.907827f, 3.307083f);
+            if (locked)
+            {
+                transform.position = new Vector2(-3.907827f, 3.307083f);
+            }
+        }
+        if (sceneName == "Academy")
+        {
+            if (suelocked & SuePlayerDialogue.answer == 0)
+            {
+                transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
+            }
+            else if (suelocked)
+            {
+
+                transform.position = new Vector2(targetBlock[2].position.x, targetBlock[2].position.y);
+            }
         }
     }
 }

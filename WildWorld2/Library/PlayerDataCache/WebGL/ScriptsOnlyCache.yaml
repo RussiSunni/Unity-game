@@ -4387,7 +4387,7 @@ ScriptsOnlyBuild:
     className: J
   - hash:
       serializedVersion: 2
-      Hash: 409548a1c1e9dc9b75863ad95b2c54c4
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorSpawn
