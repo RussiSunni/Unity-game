@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class SpellBookUI : MonoBehaviour
 {
-    public static GameObject door, hello, hi, may, eva, sue, bear, monkey, cat, dog, blue, red, yellow, green;
+    public static GameObject door, hello, hi, may, eva, sue, read, bear, monkey, cat, dog, blue, red, yellow, green;
     void Start()
     {
         if (Progress.bear == false)
@@ -76,6 +76,11 @@ public class SpellBookUI : MonoBehaviour
             green = GameObject.Find("GREEN_UI");
             green.SetActive(false);
         }
+        if (Progress.read == false)
+        {
+            read = GameObject.Find("READ_UI");
+            read.SetActive(false);
+        }
     }
 
     public static void Door()
@@ -98,9 +103,12 @@ public class SpellBookUI : MonoBehaviour
     {
         sue.SetActive(true);
     }
-
     public static void Hi()
     {
         hi.SetActive(true);
+    }
+    public static void Read()
+    {
+        read.SetActive(true);
     }
 }

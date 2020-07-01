@@ -18,6 +18,7 @@ public class Progress : MonoBehaviour
     public static bool green = false;
     public static bool red = false;
     public static bool yellow = false;
+    public static bool read = false;
     public static bool may = false;
     public static bool eva = false;
     public static bool sue = false;
