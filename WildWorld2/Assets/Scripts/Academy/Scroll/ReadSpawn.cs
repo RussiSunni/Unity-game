@@ -12,9 +12,11 @@ public class ReadSpawn : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        SoundManagerScript.playSUEWordSound();
         if (Progress.read == false)
+        {
+            SoundManagerScript.playREADWordSound();
             readCard.SetActive(true);
+        }
     }
 }
 

@@ -15,5 +15,10 @@ public class ScrollSpawn : MonoBehaviour
     {
         scroll.SetActive(true);
     }
+
+    public static void HideScroll()
+    {
+        scroll.SetActive(false);
+    }
 }
 

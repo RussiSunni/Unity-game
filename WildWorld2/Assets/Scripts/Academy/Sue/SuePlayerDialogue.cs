@@ -8,7 +8,7 @@ public class SuePlayerDialogue : MonoBehaviour
     public static GameObject PlayerDialogueBox;
     void Start()
     {
-        PlayerDialogueBox = GameObject.Find("Player Dialogue");
+        PlayerDialogueBox = GameObject.Find("Sue Player Dialogue");
         PlayerDialogueBox.SetActive(false);
     }
 

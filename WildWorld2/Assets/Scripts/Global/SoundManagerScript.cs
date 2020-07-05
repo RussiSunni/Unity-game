@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip errorSound, correctSound, newWordSound, WHAT_IS_YOUR_NAME_Sound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, MONKEYWordSound, DOORWordSound, HELLOWordSound, MAYWordSound, EVAWordSound, SUEWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
+    public static AudioClip errorSound, correctSound, newWordSound, WHAT_IS_YOUR_NAME_Sound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, MONKEYWordSound, DOORWordSound, HELLOWordSound, MAYWordSound, EVAWordSound, SUEWordSound, READWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
     static AudioSource audioSrc;
 
 
@@ -26,6 +26,7 @@ public class SoundManagerScript : MonoBehaviour
         MAYWordSound = Resources.Load<AudioClip>("sounds/MAYSound");
         EVAWordSound = Resources.Load<AudioClip>("sounds/EVASound");
         SUEWordSound = Resources.Load<AudioClip>("sounds/SUESound");
+        READWordSound = Resources.Load<AudioClip>("sounds/READSound");
         ALetterSound = Resources.Load<AudioClip>("sounds/ASound");
         BLetterSound = Resources.Load<AudioClip>("sounds/BSound");
         CLetterSound = Resources.Load<AudioClip>("sounds/CSound");
@@ -125,6 +126,11 @@ public class SoundManagerScript : MonoBehaviour
     public static void playSUEWordSound()
     {
         audioSrc.PlayOneShot(SUEWordSound);
+    }
+
+    public static void playREADWordSound()
+    {
+        audioSrc.PlayOneShot(READWordSound);
     }
 
     public static void playWHAT_IS_YOUR_NAME_Sound()
