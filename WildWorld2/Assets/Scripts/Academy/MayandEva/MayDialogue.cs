@@ -24,7 +24,8 @@ public class MayDialogue : MonoBehaviour
     {
         MayPlayerDialogue.DisplayDialogue();
         DisplayDialogueOff();
-        // Hello_UI.suelocked = false;
-        // Hello_UI.ReturnToInitialPosition();
+        Hi_UI.hiLocked01 = false;
+        Hi_UI.hiLocked02 = false;
+        Hi_UI.ReturnToInitialPosition();
     }
 }

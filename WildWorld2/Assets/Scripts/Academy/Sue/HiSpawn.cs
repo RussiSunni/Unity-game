@@ -11,7 +11,6 @@ public class HiSpawn : MonoBehaviour
         hiCard.SetActive(false);
     }
 
-
     public static void MakeActive()
     {
         if (Progress.hi == false)

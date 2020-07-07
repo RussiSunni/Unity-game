@@ -9,7 +9,7 @@ public class EvaPlayerDialogueBackButton : MonoBehaviour
         EvaPlayerDialogue.DisplayDialogueOff();
         EvaDialogue.DisplayDialogue();
 
-        // Hello_UI.ReturnToInitialPosition();
-        // Sue_UI.ReturnToInitialPosition();
+        Hi_UI.ReturnToInitialPosition();
+        Eva_UI.ReturnToInitialPosition();
     }
 }

@@ -24,7 +24,7 @@ public class EvaDialogue : MonoBehaviour
     {
         EvaPlayerDialogue.DisplayDialogue();
         DisplayDialogueOff();
-        // Hello_UI.suelocked = false;
-        // Hello_UI.ReturnToInitialPosition();
+        Hi_UI.hiLocked03 = false;
+        Hi_UI.ReturnToInitialPosition();
     }
 }

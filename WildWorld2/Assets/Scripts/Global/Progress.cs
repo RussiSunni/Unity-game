@@ -8,6 +8,7 @@ public class Progress : MonoBehaviour
     public static bool nameExerciseComplete = false;
     public static bool hello = false;
     public static bool hi = false;
+    public static bool goodbye = false;
     public static bool cat = false;
     public static bool dog = false;
     public static bool bear = false;

@@ -28,10 +28,10 @@ public class EvaPlayerDialogue : MonoBehaviour
         {
             PlayerDialogueBox.SetActive(false);
             EvaDialogue.DisplayDialogueOff();
-            SoundManagerScript.playCorrectSound();
 
-            // Hello_UI.ReturnToInitialPosition();
-            // Sue_UI.ReturnToInitialPosition();
+            Hi_UI.ReturnToInitialPosition();
+            Eva_UI.ReturnToInitialPosition();
+            EvaDialogue2.DisplayDialogue();
         }
     }
 }
