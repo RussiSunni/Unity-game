@@ -30,10 +30,11 @@ public class Progress : MonoBehaviour
 
     public static bool dictionaryEva;
     public static bool dictionaryMay;
+    public static int emotion;
 
 
     void Start()
     {
-
+        emotion = 2;
     }
 }

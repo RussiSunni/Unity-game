@@ -24,6 +24,5 @@ public class MayDialogue2 : MonoBehaviour
     {
         DisplayDialogueOff();
         MayPlayerDialogue.DisplayDialogue2();
-        //SoundManagerScript.playCorrectSound();
     }
 }

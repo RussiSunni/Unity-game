@@ -15,12 +15,28 @@ public class Goodbye_UI : Block
                                             Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
         {
             transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+            goodbyeLocked = true;
+            MayPlayerDialogue2.answer = true;
         }
         else
         {
-            transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + -3.132f);
+            transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + -4.378f);
         }
     }
 
+    protected override void Update()
+    {
+        if (goodbyeLocked)
+        {
+            transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+        }
+    }
+
+    public static void ReturnToInitialPosition()
+    {
+        locked = false;
+        goodbyeLocked = false;
+        cardPosition.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + -4.378f);
+    }
 }
 

@@ -8,8 +8,5 @@ public class MayPlayerDialogueBackButton : MonoBehaviour
     {
         MayPlayerDialogue.DisplayDialogueOff();
         MayDialogue.DisplayDialogue();
-
-        // Hello_UI.ReturnToInitialPosition();
-        // Sue_UI.ReturnToInitialPosition();
     }
 }
