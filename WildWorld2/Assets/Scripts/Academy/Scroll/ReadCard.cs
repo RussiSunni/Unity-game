@@ -10,5 +10,4 @@ public class ReadCard : MonoBehaviour
         Progress.read = true;
         SpellBookUI.Read();
     }
-
 }

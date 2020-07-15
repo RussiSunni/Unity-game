@@ -7,6 +7,9 @@ public class EmotionSystem : MonoBehaviour
 {
     private Sprite image1, image2, image3, image4;
     private Image imageComponent;
+    GameObject panel;
+
+    public float targetTime = 5.0f;
 
     void Start()
     {
@@ -16,6 +19,45 @@ public class EmotionSystem : MonoBehaviour
         image4 = Resources.Load<Sprite>("Global/EmotionSystem/North African sad");
 
         imageComponent = this.GetComponent<Image>();
-        imageComponent.sprite = image2;
+
+        panel = GameObject.FindWithTag("gameOver");
+        panel.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (Progress.emotion == 1)
+            imageComponent.sprite = image1;
+
+        else if (Progress.emotion == 2)
+            imageComponent.sprite = image2;
+
+        else if (Progress.emotion == 3)
+            imageComponent.sprite = image3;
+
+        else if (Progress.emotion == 4)
+            imageComponent.sprite = image4;
+
+        else if (Progress.emotion > 4)
+        {
+            panel.SetActive(true);
+            targetTime -= Time.deltaTime;
+            if (targetTime <= 0.0f)
+            {
+                timerEnded();
+            }
+        }
+    }
+
+    void timerEnded()
+    {
+        Application.Quit();
     }
 }
+
+
+
+
+
+
+

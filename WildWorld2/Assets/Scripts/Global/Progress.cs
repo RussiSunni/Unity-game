@@ -33,8 +33,5 @@ public class Progress : MonoBehaviour
     public static int emotion;
 
 
-    void Start()
-    {
-        emotion = 2;
-    }
+
 }

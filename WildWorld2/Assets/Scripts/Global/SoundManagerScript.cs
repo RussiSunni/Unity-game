@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip errorSound, correctSound, newWordSound, WHAT_IS_YOUR_NAME_Sound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, MONKEYWordSound, DOORWordSound, HELLOWordSound, MAYWordSound, EVAWordSound, SUEWordSound, READWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
+    public static AudioClip errorSound, correctSound, newWordSound, WHAT_IS_YOUR_NAME_Sound, CATWordSound, DOGWordSound, OWLWordSound, BEARWordSound, WOLFWordSound, MONKEYWordSound, DOORWordSound, HELLOWordSound, HIWordSound, GOODBYEWordSound, MAYWordSound, EVAWordSound, SUEWordSound, READWordSound, ALetterSound, BLetterSound, CLetterSound, DLetterSound, ELetterSound, FLetterSound, GLetterSound, HLetterSound, ILetterSound, JLetterSound, KLetterSound, LLetterSound, MLetterSound, NLetterSound, OLetterSound, PLetterSound, QLetterSound, RLetterSound, SLetterSound, TLetterSound, ULetterSound, VLetterSound, WLetterSound, XLetterSound, YLetterSound, ZLetterSound;
     static AudioSource audioSrc;
 
 
@@ -27,6 +27,8 @@ public class SoundManagerScript : MonoBehaviour
         EVAWordSound = Resources.Load<AudioClip>("sounds/EVASound");
         SUEWordSound = Resources.Load<AudioClip>("sounds/SUESound");
         READWordSound = Resources.Load<AudioClip>("sounds/READSound");
+        HIWordSound = Resources.Load<AudioClip>("sounds/HISound");
+        GOODBYEWordSound = Resources.Load<AudioClip>("sounds/GOODBYESound");
         ALetterSound = Resources.Load<AudioClip>("sounds/ASound");
         BLetterSound = Resources.Load<AudioClip>("sounds/BSound");
         CLetterSound = Resources.Load<AudioClip>("sounds/CSound");
@@ -111,6 +113,15 @@ public class SoundManagerScript : MonoBehaviour
     public static void playHELLOWordSound()
     {
         audioSrc.PlayOneShot(HELLOWordSound);
+    }
+
+    public static void playHIWordSound()
+    {
+        audioSrc.PlayOneShot(HIWordSound);
+    }
+    public static void playGOODBYEWordSound()
+    {
+        audioSrc.PlayOneShot(GOODBYEWordSound);
     }
 
     public static void playMAYWordSound()

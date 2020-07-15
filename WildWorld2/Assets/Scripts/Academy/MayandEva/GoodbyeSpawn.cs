@@ -14,7 +14,7 @@ public class GoodbyeSpawn : MonoBehaviour
     {
         if (Progress.goodbye == false)
         {
-            SoundManagerScript.playDOORWordSound();
+            SoundManagerScript.playGOODBYEWordSound();
             goodbyeCard.SetActive(true);
         }
     }

@@ -13,22 +13,29 @@ public class Door_UI : Block
         // Academy
         if (sceneName == "Academy")
         {
-            // if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
-            //                      Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
-            // {
-            //     transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
-            //     SceneManager.LoadScene("PlayerRoom");
-            // }
-            //else 
-            if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
-                         Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
+            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+                SceneManager.LoadScene("Outside Academy");
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+              Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);
-                SceneManager.LoadScene("Outside Academy");
+                DoorOpen.OpenDoor();
+                transform.position = new Vector2(playerPosition.position.x + initialPosition.x, playerPosition.position.y + initialPosition.y);
             }
             else
             {
-                transform.position = new Vector2(playerPosition.position.x + initialPosition.x, playerPosition.position.y + initialPosition.y);
+                for (int i = 0; i < targetBlocks.Length; i++)
+                {
+                    if (Mathf.Abs(transform.position.x - targetBlocks[i].transform.position.x) <= 0.5f &&
+                              Mathf.Abs(transform.position.y - targetBlocks[i].transform.position.y) <= 0.5f)
+                        Progress.emotion++;
+                }
+
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
             }
         }
         // Outside Academy
@@ -41,9 +48,17 @@ public class Door_UI : Block
                 SceneManager.LoadScene("Academy");
                 Progress.previousScene = "Outside Academy";
             }
+
             else
             {
-                transform.position = new Vector2(playerPosition.position.x + initialPosition.x, playerPosition.position.y + initialPosition.y + 2);
+                for (int i = 0; i < targetBlocks.Length; i++)
+                {
+                    if (Mathf.Abs(transform.position.x - targetBlocks[i].transform.position.x) <= 0.5f &&
+                              Mathf.Abs(transform.position.y - targetBlocks[i].transform.position.y) <= 0.5f)
+                        Progress.emotion++;
+                }
+
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
             }
         }
     }

@@ -15,7 +15,7 @@ public class HiSpawn : MonoBehaviour
     {
         if (Progress.hi == false)
         {
-            SoundManagerScript.playDOORWordSound();
+            SoundManagerScript.playHIWordSound();
             hiCard.SetActive(true);
         }
     }

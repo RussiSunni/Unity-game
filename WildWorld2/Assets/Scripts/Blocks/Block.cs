@@ -25,6 +25,8 @@ public class Block : MonoBehaviour
 
     public string sceneName;
 
+    public GameObject[] targetBlocks;
+
 
     protected virtual void Start()
     {
@@ -61,6 +63,8 @@ public class Block : MonoBehaviour
         {
 
         }
+
+        targetBlocks = GameObject.FindGameObjectsWithTag("target");
     }
 
     protected virtual void OnMouseDown()
