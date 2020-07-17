@@ -8,22 +8,25 @@ public class Read_UI : Block
     public static Transform playerPosition;
     bool readLocked;
 
+
     protected override void OnMouseUp()
     {
         playerPosition = GameObject.Find("Player").transform;
+
         if (Mathf.Abs(transform.position.x - targetBlockSingle.position.x) <= 0.5f &&
                                      Mathf.Abs(transform.position.y - targetBlockSingle.position.y) <= 0.5f)
         {
             transform.position = new Vector2(targetBlockSingle.position.x, targetBlockSingle.position.y);
 
-            if (ScrollSpawn.scroll.activeSelf)
+            if (ScrollSpawn.scrollDisplaying)
             {
+                Debug.Log("test");
                 readLocked = false;
                 transform.position = new Vector2(playerPosition.position.x + -4.371f, playerPosition.position.y + -3.132f);
                 ScrollSpawn.HideScroll();
             }
 
-            else if (readLocked == false)
+            if (!ScrollSpawn.scrollDisplaying)
             {
                 readLocked = true;
                 ScrollSpawn.DisplayScroll();
@@ -31,6 +34,13 @@ public class Read_UI : Block
         }
         else
         {
+            for (int i = 0; i < targetBlocks.Length; i++)
+            {
+                if (Mathf.Abs(transform.position.x - targetBlocks[i].transform.position.x) <= 0.5f &&
+                          Mathf.Abs(transform.position.y - targetBlocks[i].transform.position.y) <= 0.5f)
+                    Progress.emotion++;
+            }
+
             transform.position = new Vector2(playerPosition.position.x + -4.371f, playerPosition.position.y + -3.132f);
         }
     }
@@ -41,6 +51,17 @@ public class Read_UI : Block
         {
             transform.position = new Vector2(targetBlockSingle.position.x, targetBlockSingle.position.y);
         }
+    }
+
+    protected override void OnMouseDown()
+    {
+        if (!locked)
+        {
+            deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
+            deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
+        }
+
+        Debug.Log("test");
     }
 }
 

@@ -49,8 +49,6 @@ public class AcademyScript : MonoBehaviour
         {
             player.position = new Vector2(-4.859997f, -3.39125f);
         }
-
-        Debug.Log(Progress.previousScene);
     }
 
     public void LoadDictionary()

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro/Intro02.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/Intro/GoalDescription.unity
+    path: Assets/Scenes/Intro/old scenes/GoalDescription.unity
     guid: 8dc515e402a18797e9739de8a1506da3
   - enabled: 1
     path: Assets/Scenes/Intro/ChooseCharacter.unity
@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Academy/Outside Academy.unity
     guid: 768fdec274b10919dbc0f9f41b3ce9cf
   - enabled: 0
-    path: Assets/Scenes/Intro/Rules.unity
+    path: Assets/Scenes/Intro/old scenes/Rules.unity
     guid: 15c8844fd4fcb31e39b4d818a3f6e3de
   - enabled: 1
     path: Assets/Scenes/Academy/Academy.unity

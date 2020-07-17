@@ -22,6 +22,13 @@ public class Sue_UI : Block
         }
         else
         {
+            for (int i = 0; i < targetBlocks.Length; i++)
+            {
+                if (Mathf.Abs(transform.position.x - targetBlocks[i].transform.position.x) <= 0.5f &&
+                          Mathf.Abs(transform.position.y - targetBlocks[i].transform.position.y) <= 0.5f)
+                    Progress.emotion++;
+            }
+
             transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + -1.874f);
         }
     }

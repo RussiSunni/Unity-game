@@ -35,7 +35,7 @@ public class Door_UI : Block
                         Progress.emotion++;
                 }
 
-                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 3.119f);
             }
         }
         // Outside Academy
@@ -58,7 +58,7 @@ public class Door_UI : Block
                         Progress.emotion++;
                 }
 
-                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 3.119f);
             }
         }
     }

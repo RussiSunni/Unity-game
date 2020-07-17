@@ -70,12 +70,6 @@ public class Hello_UI : Block
                 FairyPlayerDialogue.answer = true;
                 locked = true;
             }
-            if (Mathf.Abs(transform.position.x - targetBlock[2].position.x) <= 0.5f &&
-                                           Mathf.Abs(transform.position.y - targetBlock[2].position.y) <= 0.5f)
-            {
-                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
-                Progress.emotion++;
-            }
             else
             {
                 for (int i = 0; i < targetBlocks.Length; i++)
