@@ -11,6 +11,8 @@ public class FairyDialogue : MonoBehaviour
 
         FairyDialogueBox2 = GameObject.Find("Fairy Dialogue 2");
         FairyDialogueBox2.SetActive(false);
+
+
     }
 
     public static void DisplayDialogue()
@@ -27,6 +29,7 @@ public class FairyDialogue : MonoBehaviour
     {
         FairyDialogueBox2.SetActive(true);
     }
+
 
     public void OnMouseDown()
     {

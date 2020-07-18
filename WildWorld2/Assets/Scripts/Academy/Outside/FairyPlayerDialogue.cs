@@ -39,11 +39,14 @@ public class FairyPlayerDialogue : MonoBehaviour
         {
             PlayerDialogueBox.SetActive(false);
             FairyDialogue.DisplayDialogueOff();
-            SoundManagerScript.playCorrectSound();
+
+
+            //  SoundManagerScript.playCorrectSound();
 
             Hello_UI.ReturnToInitialPosition();
 
-            DoorSpawn.MakeActive();
+            FairyDialogue04.DisplayDialogue();
+
         }
     }
 }

@@ -33,7 +33,7 @@ public class SuePlayerDialogue : MonoBehaviour
             Hello_UI.ReturnToInitialPosition();
             Sue_UI.ReturnToInitialPosition();
 
-            HiSpawn.MakeActive();
+            //     HiSpawn.MakeActive();
         }
     }
 }

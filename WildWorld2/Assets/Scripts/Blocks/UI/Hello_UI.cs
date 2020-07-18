@@ -37,6 +37,18 @@ public class Hello_UI : Block
                 SuePlayerDialogue.answer++;
                 suelocked = true;
             }
+            else if (Mathf.Abs(transform.position.x - targetBlock[3].position.x) <= 0.5f &&
+                       Mathf.Abs(transform.position.y - targetBlock[3].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
+                EvaDialogue_Hello.DisplayDialogue();
+            }
+            else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
+                      Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
+                MayDialogue_Hello.DisplayDialogue();
+            }
             else
             {
                 for (int i = 0; i < targetBlocks.Length; i++)
@@ -56,14 +68,19 @@ public class Hello_UI : Block
             if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
                                             Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
             {
-                transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
                 if (!Progress.door)
+                {
                     FairyDialogue.DisplayDialogue();
+                    transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+                }
                 else
+                {
                     FairyDialogue.DisplayDialogue2();
+                    transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
+                }
 
             }
-            if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
+            else if (Mathf.Abs(transform.position.x - targetBlock[1].position.x) <= 0.5f &&
                                            Mathf.Abs(transform.position.y - targetBlock[1].position.y) <= 0.5f)
             {
                 transform.position = new Vector2(targetBlock[1].position.x, targetBlock[1].position.y);

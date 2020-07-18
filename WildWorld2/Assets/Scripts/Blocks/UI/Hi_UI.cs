@@ -39,6 +39,13 @@ public class Hi_UI : Block
             EvaPlayerDialogue.answer++;
             hiLocked04 = true;
         }
+        else if (Mathf.Abs(transform.position.x - targetBlock[4].position.x) <= 0.5f &&
+                                         Mathf.Abs(transform.position.y - targetBlock[4].position.y) <= 0.5f)
+        {
+            transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + -3.132f);
+            SueDialogue_Hi.DisplayDialogue();
+
+        }
 
         else
         {
