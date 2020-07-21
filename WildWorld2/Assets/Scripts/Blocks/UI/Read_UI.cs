@@ -20,16 +20,16 @@ public class Read_UI : Block
 
             if (ScrollSpawn.scrollDisplaying)
             {
-                Debug.Log("test");
                 readLocked = false;
                 transform.position = new Vector2(playerPosition.position.x + -4.371f, playerPosition.position.y + -3.132f);
                 ScrollSpawn.HideScroll();
             }
 
-            if (!ScrollSpawn.scrollDisplaying)
+            else if (!ScrollSpawn.scrollDisplaying)
             {
                 readLocked = true;
                 ScrollSpawn.DisplayScroll();
+                Progress.exp++;
             }
         }
         else
@@ -49,7 +49,7 @@ public class Read_UI : Block
     {
         if (readLocked)
         {
-            transform.position = new Vector2(targetBlockSingle.position.x, targetBlockSingle.position.y);
+            transform.position = new Vector3(targetBlockSingle.position.x, targetBlockSingle.position.y, -1f);
         }
     }
 
@@ -60,8 +60,6 @@ public class Read_UI : Block
             deltaX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
             deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
         }
-
-        Debug.Log("test");
     }
 }
 

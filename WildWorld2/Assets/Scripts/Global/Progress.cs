@@ -23,6 +23,8 @@ public class Progress : MonoBehaviour
     public static bool may = false;
     public static bool eva = false;
     public static bool sue = false;
+    public static bool no = false;
+    public static bool yes = false;
     public static string[] nameArray = new string[5];
     public static string nameString;
     public static string playerCharacter;
@@ -31,6 +33,9 @@ public class Progress : MonoBehaviour
     public static bool dictionaryEva;
     public static bool dictionaryMay;
     public static int emotion;
+
+    public static int exp = 0;
+    public static int level = 1;
 
 
 

@@ -12,5 +12,6 @@ public class FairyDialogue2 : MonoBehaviour
     public void OnMouseDown()
     {
         FairyDialogueBox2.SetActive(false);
+        HiSpawn.MakeActive();
     }
 }

@@ -6,9 +6,11 @@ public class HelloCard : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D col)
     {
-        SoundManagerScript.playCorrectSound();
+        SoundManagerScript.playSpell01Sound();
         this.gameObject.SetActive(false);
         Progress.hello = true;
         SpellBookUI.Hello();
+
+        FirstSpellEffect.Display();
     }
 }

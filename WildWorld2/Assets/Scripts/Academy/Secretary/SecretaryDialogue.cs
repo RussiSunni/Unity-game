@@ -23,6 +23,7 @@ public class SecretaryDialogue : MonoBehaviour
     public void OnMouseDown()
     {
         DisplayDialogueOff();
+        SecretaryDialogue2.DisplayDialogue();
         Hello_UI.ReturnToInitialPosition();
     }
 }

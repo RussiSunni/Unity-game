@@ -9,7 +9,7 @@ public class Block : MonoBehaviour
     public float deltaX, deltaY;
     public static bool locked, pressed, destroyed;
 
-    public Transform[] targetBlock = new Transform[5];
+    public Transform[] targetBlock = new Transform[6];
     public Transform targetBlockSingle;
 
 

@@ -19,6 +19,7 @@ public class Sue_UI : Block
             transform.position = new Vector2(targetBlockSingle.position.x, targetBlockSingle.position.y);
             suelocked = true;
             SuePlayerDialogue.answer++;
+            Progress.exp++;
         }
         else
         {

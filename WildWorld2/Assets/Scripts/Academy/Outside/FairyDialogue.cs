@@ -35,5 +35,7 @@ public class FairyDialogue : MonoBehaviour
     {
         FairyPlayerDialogue.DisplayDialogue();
         FairyDialogueBox.SetActive(false);
+        Hello_UI.fairyLocked = false;
+        Hello_UI.ReturnToInitialPosition();
     }
 }

@@ -47,8 +47,8 @@ public class Door_UI : Block
                 transform.position = new Vector2(targetBlockSingle.position.x, targetBlockSingle.position.y);
                 SceneManager.LoadScene("Academy");
                 Progress.previousScene = "Outside Academy";
+                Progress.exp++;
             }
-
             else
             {
                 for (int i = 0; i < targetBlocks.Length; i++)
