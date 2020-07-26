@@ -23,6 +23,7 @@ public class TeacherDialogue2 : MonoBehaviour
     public void OnMouseDown()
     {
         DisplayDialogueOff();
+        YesNoSpawn.DisplayBlocks();
         TeacherDialogue3.DisplayDialogue();
     }
 }

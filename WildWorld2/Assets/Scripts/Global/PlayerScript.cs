@@ -29,24 +29,31 @@ public class PlayerScript : MonoBehaviour
 
         SpellBookUI = GameObject.Find("SpellBookUI");
         SpellBookUI.SetActive(false);
+
+
+
     }
 
     // movement
     void Update()
     {
-        //  movement.x = Input.GetAxisRaw("Horizontal");
-        //  movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        movement.x = CrossPlatformInputManager.GetAxisRaw("Horizontal");
-        movement.y = CrossPlatformInputManager.GetAxisRaw("Vertical");
+        //    movement.x = CrossPlatformInputManager.GetAxisRaw("Horizontal");
+        //   movement.y = CrossPlatformInputManager.GetAxisRaw("Vertical");
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+
+
     }
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
     }
     public void LoadSpellBookUI()
     {
@@ -60,4 +67,7 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+
 }
+
+

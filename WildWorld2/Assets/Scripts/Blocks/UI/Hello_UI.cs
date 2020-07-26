@@ -108,6 +108,21 @@ public class Hello_UI : Block
                 transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
             }
         }
+
+        // Ouside Academy --------------------------------------
+        if (sceneName == "Forest")
+        {
+            if (Mathf.Abs(transform.position.x - targetBlock[0].position.x) <= 0.5f &&
+                                                       Mathf.Abs(transform.position.y - targetBlock[0].position.y) <= 0.5f)
+            {
+                transform.position = new Vector2(targetBlock[0].position.x, targetBlock[0].position.y);
+                SceneManager.LoadScene("ArtemisIntro");
+            }
+            else
+            {
+                transform.position = new Vector2(playerPosition.position.x + 4.382f, playerPosition.position.y + 1.875f);
+            }
+        }
     }
     public static void ReturnToInitialPosition()
     {

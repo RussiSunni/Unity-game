@@ -23,7 +23,7 @@ public class TeacherDialogue3 : MonoBehaviour
     public void OnMouseDown()
     {
         DisplayDialogueOff();
-        YesNoSpawn.DisplayBlocks();
+
         //SecretaryDialogue2.DisplayDialogue();
         //Hello_UI.ReturnToInitialPosition();
     }

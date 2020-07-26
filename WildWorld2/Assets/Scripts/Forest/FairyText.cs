@@ -89,8 +89,5 @@ public class FairyText : MonoBehaviour
         {
             fairyText.text = "Wait, isnt it 'dog'?";
         }
-
-
-
     }
 }

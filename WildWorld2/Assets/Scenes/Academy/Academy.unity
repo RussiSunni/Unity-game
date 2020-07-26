@@ -212,7 +212,6 @@ GameObject:
   m_Component:
   - component: {fileID: 61541308}
   - component: {fileID: 61541310}
-  - component: {fileID: 61541309}
   m_Layer: 0
   m_Name: TeacherDialogueTarget
   m_TagString: target
@@ -228,24 +227,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61541307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.381, y: -1.458, z: -1}
-  m_LocalScale: {x: 0.69326544, y: 0.88345224, z: 0.3019501}
+  m_LocalPosition: {x: 0.254, y: -0.307, z: -1}
+  m_LocalScale: {x: 0.61164534, y: 0.59279794, z: 0.19496918}
   m_Children: []
   m_Father: {fileID: 407419541}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &61541309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61541307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716f14fe7f2d7f6488e15ca32826c84e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &61541310
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -286,7 +273,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0934f4e98ca3fdd1191a8efb852dd133, type: 3}
-  m_Color: {r: 0.5660378, g: 0.14684944, b: 0.14684944, a: 0.9372549}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -704,6 +691,7 @@ GameObject:
   - component: {fileID: 114066150}
   - component: {fileID: 114066149}
   - component: {fileID: 114066151}
+  - component: {fileID: 114066152}
   m_Layer: 0
   m_Name: Teacher
   m_TagString: Untagged
@@ -805,6 +793,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.5, y: 6}
   m_EdgeRadius: 0
+--- !u!114 &114066152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114066148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716f14fe7f2d7f6488e15ca32826c84e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &136459856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,7 +2248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &406650437
 Transform:
   m_ObjectHideFlags: 0
@@ -3265,6 +3265,7 @@ GameObject:
   - component: {fileID: 556653989}
   - component: {fileID: 556653988}
   - component: {fileID: 556653990}
+  - component: {fileID: 556653991}
   m_Layer: 0
   m_Name: YES_UI
   m_TagString: Untagged
@@ -3346,6 +3347,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
   m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
+--- !u!114 &556653991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556653986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a05a6ec22447fc1b92808a428a95fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0}
+  mousePosition: {x: 0, y: 0}
+  deltaX: 0
+  deltaY: 0
+  targetBlock:
+  - {fileID: 61541308}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  targetBlockSingle: {fileID: 0}
+  firstClickTime: 0
+  timeBetweenClicks: 0
+  coroutineAllowed: 0
+  clickCounter: 0
+  RotateStep: {x: 0, y: 180, z: 0}
+  RotateSpeed: 5
+  _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
+  targetBlocks: []
 --- !u!1 &561058005
 GameObject:
   m_ObjectHideFlags: 0
@@ -9714,7 +9748,6 @@ GameObject:
   m_Component:
   - component: {fileID: 803198582}
   - component: {fileID: 803198583}
-  - component: {fileID: 803198584}
   m_Layer: 0
   m_Name: TeacherTarget
   m_TagString: target
@@ -9786,18 +9819,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &803198584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803198581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716f14fe7f2d7f6488e15ca32826c84e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &843110133
 GameObject:
   m_ObjectHideFlags: 0
@@ -10567,7 +10588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1046053008
 Transform:
   m_ObjectHideFlags: 0
@@ -12737,6 +12758,7 @@ GameObject:
   - component: {fileID: 1503102873}
   - component: {fileID: 1503102872}
   - component: {fileID: 1503102874}
+  - component: {fileID: 1503102875}
   m_Layer: 0
   m_Name: NO_UI
   m_TagString: Untagged
@@ -12818,6 +12840,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
   m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
+--- !u!114 &1503102875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503102870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8e9d6525c3a18fa99b7dad6b213af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0}
+  mousePosition: {x: 0, y: 0}
+  deltaX: 0
+  deltaY: 0
+  targetBlock:
+  - {fileID: 61541308}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  targetBlockSingle: {fileID: 0}
+  firstClickTime: 0
+  timeBetweenClicks: 0
+  coroutineAllowed: 0
+  clickCounter: 0
+  RotateStep: {x: 0, y: 180, z: 0}
+  RotateSpeed: 5
+  _targetRot: {x: 0, y: 0, z: 0, w: 1}
+  sceneName: 
+  targetBlocks: []
 --- !u!1 &1557114814
 GameObject:
   m_ObjectHideFlags: 0
