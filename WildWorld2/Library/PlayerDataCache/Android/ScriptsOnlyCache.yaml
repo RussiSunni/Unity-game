@@ -2090,4 +2090,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SimpleApp/Base Scene.unity
-  playerPath: /run/user/1000/gvfs/mtp:host=MediaTek_Zoom_0123456789ABCDEF/SD card/DCIM/build.apk
+  playerPath: /home/jonathan/Work/Ecomap/Builds/AMdroid.apk

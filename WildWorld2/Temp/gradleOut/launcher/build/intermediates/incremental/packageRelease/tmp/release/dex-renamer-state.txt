@@ -1,4 +1,0 @@
-#Sun Aug 02 14:05:29 SAST 2020
-base.0=/home/jonathan/Work/Ecomap/App/Unity/Projects/WildWorld2/WW/WildWorld2/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
