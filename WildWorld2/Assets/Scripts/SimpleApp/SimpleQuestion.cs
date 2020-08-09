@@ -10,4 +10,6 @@ public class SimpleQuestion : MonoBehaviour
     public List<string> answerOptions = new List<string>();
     public List<string> tags = new List<string>();
     public bool knownByLearner;
+    public int size;
+
 }

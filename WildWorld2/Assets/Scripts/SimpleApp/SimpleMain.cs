@@ -107,7 +107,6 @@ public class SimpleMain : MonoBehaviour
             answerText2.text = QuestionBank.questions[questionNumber - 1].answerOptions[1];
             answerText3.text = QuestionBank.questions[questionNumber - 1].answerOptions[2];
             answerText4.text = QuestionBank.questions[questionNumber - 1].answerOptions[3];
-
         }
     }
 
@@ -126,6 +125,16 @@ public class SimpleMain : MonoBehaviour
             fairyImage.sprite = fairyNeutral;
             ChangeQuestion();
             timerReady = false;
+        }
+        if (QuestionBank.questions[questionNumber - 1].size == 2)
+        {
+            RectTransform questionRT = questionImage.GetComponent(typeof(RectTransform)) as RectTransform;
+            questionRT.sizeDelta = new Vector2(800, 712);
+            questionRT.anchoredPosition = new Vector2(400, -356);
+
+            RectTransform fairyRT = fairyImage.GetComponent(typeof(RectTransform)) as RectTransform;
+            fairyRT.sizeDelta = new Vector2(250.7f, 446.4f);
+            fairyRT.anchoredPosition = new Vector2(274.7f, 223.2f);
         }
     }
 

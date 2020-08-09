@@ -1239,7 +1239,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1437186967}
+  - component: {fileID: 1437186969}
   - component: {fileID: 1437186966}
+  - component: {fileID: 1437186970}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1273,6 +1275,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1437186969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437186965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337f5ee3a4231c7439bbde978c1b3077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 0
+  questionName: 
+  sprite: {fileID: 0}
+  answerOptions: []
+  tags: []
+  knownByLearner: 0
+--- !u!114 &1437186970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437186965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e435b8d22ccb1851a87b513bbfd744d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 0
+  questionName: 
+  sprite: {fileID: 0}
+  answerOptions: []
+  tags: []
+  knownByLearner: 0
 --- !u!1 &1447925888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,9 +1322,7 @@ GameObject:
   - component: {fileID: 1447925889}
   - component: {fileID: 1447925891}
   - component: {fileID: 1447925890}
-  - component: {fileID: 1447925894}
   - component: {fileID: 1447925892}
-  - component: {fileID: 1447925893}
   m_Layer: 5
   m_Name: Question
   m_TagString: Untagged
@@ -1363,42 +1399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 0
---- !u!114 &1447925893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447925888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c039a24a770495ed8b5186eb04abecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  number: 0
-  questionName: 
-  sprite: {fileID: 0}
-  answerOptions: []
-  tags: []
-  knownByLearner: 0
---- !u!114 &1447925894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447925888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 337f5ee3a4231c7439bbde978c1b3077, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  number: 0
-  questionName: 
-  sprite: {fileID: 0}
-  answerOptions: []
-  tags: []
-  knownByLearner: 0
 --- !u!1 &1750750391
 GameObject:
   m_ObjectHideFlags: 0
