@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheNaturalWorldQuestion : QuestionBase
+public class TheNaturalWorldQuestion : SimpleQuestion
 {
-    public static List<QuestionBase> questions = new List<QuestionBase>();
-    public static QuestionBase question001 = new QuestionBase();
-    public static QuestionBase question002 = new QuestionBase();
-    public static QuestionBase question003 = new QuestionBase();
-    public static QuestionBase question004 = new QuestionBase();
-    public static QuestionBase question005 = new QuestionBase();
-    public static QuestionBase question006 = new QuestionBase();
-    public static QuestionBase question007 = new QuestionBase();
-    public static QuestionBase question008 = new QuestionBase();
-    public static QuestionBase question009 = new QuestionBase();
-    public static QuestionBase question010 = new QuestionBase();
-    public static QuestionBase question011 = new QuestionBase();
-    public static QuestionBase question012 = new QuestionBase();
-    public static QuestionBase question013 = new QuestionBase();
-    public static QuestionBase question014 = new QuestionBase();
-    public static QuestionBase question015 = new QuestionBase();
-    public static QuestionBase question016 = new QuestionBase();
-    public static QuestionBase question017 = new QuestionBase();
-    public static QuestionBase question018 = new QuestionBase();
-    public static QuestionBase question019 = new QuestionBase();
-    public static QuestionBase question020 = new QuestionBase();
-    public static QuestionBase question021 = new QuestionBase();
-    public static QuestionBase question022 = new QuestionBase();
+    public static List<SimpleQuestion> questions = new List<SimpleQuestion>();
+    public static SimpleQuestion question001 = new SimpleQuestion();
+    public static SimpleQuestion question002 = new SimpleQuestion();
+    public static SimpleQuestion question003 = new SimpleQuestion();
+    public static SimpleQuestion question004 = new SimpleQuestion();
+    public static SimpleQuestion question005 = new SimpleQuestion();
+    public static SimpleQuestion question006 = new SimpleQuestion();
+    public static SimpleQuestion question007 = new SimpleQuestion();
+    public static SimpleQuestion question008 = new SimpleQuestion();
+    public static SimpleQuestion question009 = new SimpleQuestion();
+    public static SimpleQuestion question010 = new SimpleQuestion();
+    public static SimpleQuestion question011 = new SimpleQuestion();
+    public static SimpleQuestion question012 = new SimpleQuestion();
+    public static SimpleQuestion question013 = new SimpleQuestion();
+    public static SimpleQuestion question014 = new SimpleQuestion();
+    public static SimpleQuestion question015 = new SimpleQuestion();
+    public static SimpleQuestion question016 = new SimpleQuestion();
+    public static SimpleQuestion question017 = new SimpleQuestion();
+    public static SimpleQuestion question018 = new SimpleQuestion();
+    public static SimpleQuestion question019 = new SimpleQuestion();
+    public static SimpleQuestion question020 = new SimpleQuestion();
+    public static SimpleQuestion question021 = new SimpleQuestion();
+    public static SimpleQuestion question022 = new SimpleQuestion();
 
     void Start()
     {

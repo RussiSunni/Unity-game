@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OtherQuestions : QuestionBase
+public class OtherQuestions : SimpleQuestion
 {
-    public static List<QuestionBase> questions = new List<QuestionBase>();
-    public static QuestionBase question001 = new QuestionBase();
-    public static QuestionBase question002 = new QuestionBase();
-    public static QuestionBase question003 = new QuestionBase();
-    public static QuestionBase question004 = new QuestionBase();
-    public static QuestionBase question005 = new QuestionBase();
-    public static QuestionBase question006 = new QuestionBase();
-    public static QuestionBase question007 = new QuestionBase();
-    public static QuestionBase question008 = new QuestionBase();
-    public static QuestionBase question009 = new QuestionBase();
+    public static List<SimpleQuestion> questions = new List<SimpleQuestion>();
+    public static SimpleQuestion question001 = new SimpleQuestion();
+    public static SimpleQuestion question002 = new SimpleQuestion();
+    public static SimpleQuestion question003 = new SimpleQuestion();
+    public static SimpleQuestion question004 = new SimpleQuestion();
+    public static SimpleQuestion question005 = new SimpleQuestion();
+    public static SimpleQuestion question006 = new SimpleQuestion();
+    public static SimpleQuestion question007 = new SimpleQuestion();
+    public static SimpleQuestion question008 = new SimpleQuestion();
+    public static SimpleQuestion question009 = new SimpleQuestion();
 
     void Start()
     {
