@@ -9,8 +9,8 @@ public class SimpleMain : MonoBehaviour
     private Sprite fairyIncorrect,
                    fairyNeutral,
                    fairyCorrect;
-    int questionNumber, score;
-    Text answerText1, answerText2, answerText3, answerText4, results;
+    int questionNumber;
+    Text answerText1, answerText2, answerText3, answerText4;
     public float timeRemaining = 0;
     bool timerReady, correctAnswer = false;
 
@@ -22,7 +22,6 @@ public class SimpleMain : MonoBehaviour
         answerText2 = GameObject.Find("Answer2Text").GetComponent<Text>();
         answerText3 = GameObject.Find("Answer3Text").GetComponent<Text>();
         answerText4 = GameObject.Find("Answer4Text").GetComponent<Text>();
-        results = GameObject.Find("Results").GetComponent<Text>();
 
         questionImage = GetComponent<Image>();
 
@@ -137,13 +136,4 @@ public class SimpleMain : MonoBehaviour
             fairyRT.anchoredPosition = new Vector2(274.7f, 223.2f);
         }
     }
-
-    void printPlayerPrefs()
-    {
-        score = PlayerPrefs.GetInt("cat") + PlayerPrefs.GetInt("dog") + PlayerPrefs.GetInt("horse") + PlayerPrefs.GetInt("bear") + PlayerPrefs.GetInt("wolf") + PlayerPrefs.GetInt("zebra")
-        + PlayerPrefs.GetInt("owl") + PlayerPrefs.GetInt("monkey") + PlayerPrefs.GetInt("squirrel") + PlayerPrefs.GetInt("giraffe") + PlayerPrefs.GetInt("lion")
-        + PlayerPrefs.GetInt("alligator") + PlayerPrefs.GetInt("rhinoceros") + PlayerPrefs.GetInt("duck") + PlayerPrefs.GetInt("pig") + PlayerPrefs.GetInt("donkey")
-        + PlayerPrefs.GetInt("rabbit") + PlayerPrefs.GetInt("frog") + PlayerPrefs.GetInt("tiger") + PlayerPrefs.GetInt("goat") + PlayerPrefs.GetInt("chicken") + PlayerPrefs.GetInt("Elephant");
-    }
-
 }

@@ -7,6 +7,8 @@ public class SimpleProgress : MonoBehaviour
 {
     void Start()
     {
+        //animals
+
         PlayerPrefs.SetInt("cat", 0);
         PlayerPrefs.SetInt("dog", 0);
         PlayerPrefs.SetInt("horse", 0);
@@ -22,7 +24,6 @@ public class SimpleProgress : MonoBehaviour
         PlayerPrefs.SetInt("rhinoceros", 0);
         PlayerPrefs.SetInt("duck", 0);
         PlayerPrefs.SetInt("pig", 0);
-
         PlayerPrefs.SetInt("donkey", 0);
         PlayerPrefs.SetInt("rabbit", 0);
         PlayerPrefs.SetInt("frog", 0);
@@ -30,5 +31,8 @@ public class SimpleProgress : MonoBehaviour
         PlayerPrefs.SetInt("goat", 0);
         PlayerPrefs.SetInt("chicken", 0);
         PlayerPrefs.SetInt("elephant", 0);
+
+
+
     }
 }
