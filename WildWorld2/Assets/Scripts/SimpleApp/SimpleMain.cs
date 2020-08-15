@@ -43,9 +43,6 @@ public class SimpleMain : MonoBehaviour
         timerReady = false;
 
         fairyTalk = GameObject.Find("FairyTalk").GetComponent<Text>();
-
-
-
     }
 
     public void Answer1()
@@ -57,9 +54,13 @@ public class SimpleMain : MonoBehaviour
         if (QuestionBank.questions[questionNumber - 1].questionName == answerText1.text)
         {
             correctAnswer = true;
-            PlayerPrefs.SetInt(QuestionBank.questions[questionNumber - 1].questionName, 1);
-            QuestionBank.questions[questionNumber - 1].known = true;
+            // old code
 
+            // PlayerPrefs.SetInt(QuestionBank.questions[questionNumber - 1].questionName, 1);
+            // QuestionBank.questions[questionNumber - 1].known = true;
+
+            // new code
+            MarkAsKnown();
         }
         else
             correctAnswer = false;
@@ -75,9 +76,7 @@ public class SimpleMain : MonoBehaviour
         if (QuestionBank.questions[questionNumber - 1].questionName == answerText2.text)
         {
             correctAnswer = true;
-            PlayerPrefs.SetInt(QuestionBank.questions[questionNumber - 1].questionName, 1);
-            QuestionBank.questions[questionNumber - 1].known = true;
-
+            MarkAsKnown();
         }
         else
             correctAnswer = false;
@@ -93,9 +92,7 @@ public class SimpleMain : MonoBehaviour
         if (QuestionBank.questions[questionNumber - 1].questionName == answerText3.text)
         {
             correctAnswer = true;
-            PlayerPrefs.SetInt(QuestionBank.questions[questionNumber - 1].questionName, 1);
-            QuestionBank.questions[questionNumber - 1].known = true;
-
+            MarkAsKnown();
         }
         else
             correctAnswer = false;
@@ -111,9 +108,7 @@ public class SimpleMain : MonoBehaviour
         if (QuestionBank.questions[questionNumber - 1].questionName == answerText4.text)
         {
             correctAnswer = true;
-            PlayerPrefs.SetInt(QuestionBank.questions[questionNumber - 1].questionName, 1);
-            QuestionBank.questions[questionNumber - 1].known = true;
-
+            MarkAsKnown();
         }
         else
             correctAnswer = false;
@@ -149,6 +144,103 @@ public class SimpleMain : MonoBehaviour
             fairyTalk.text = "Wow, you really know this content";
         }
     }
+
+    public void MarkAsKnown()
+    {
+        if (QuestionBank.questions[questionNumber - 1].number == 1)
+        {
+            GameControl.animal001known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 2)
+        {
+            GameControl.animal002known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 3)
+        {
+            GameControl.animal003known = true;
+        }
+        if (QuestionBank.questions[questionNumber - 1].number == 4)
+        {
+            GameControl.animal004known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 5)
+        {
+            GameControl.animal005known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 6)
+        {
+            GameControl.animal006known = true;
+        }
+        if (QuestionBank.questions[questionNumber - 1].number == 7)
+        {
+            GameControl.animal007known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 8)
+        {
+            GameControl.animal008known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 9)
+        {
+            GameControl.animal009known = true;
+        }
+        if (QuestionBank.questions[questionNumber - 1].number == 10)
+        {
+            GameControl.animal010known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 11)
+        {
+            GameControl.animal011known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 12)
+        {
+            GameControl.animal012known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 13)
+        {
+            GameControl.animal013known = true;
+        }
+        if (QuestionBank.questions[questionNumber - 1].number == 14)
+        {
+            GameControl.animal014known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 15)
+        {
+            GameControl.animal015known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 16)
+        {
+            GameControl.animal016known = true;
+        }
+        if (QuestionBank.questions[questionNumber - 1].number == 17)
+        {
+            GameControl.animal017known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 18)
+        {
+            GameControl.animal018known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 19)
+        {
+            GameControl.animal019known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 20)
+        {
+            GameControl.animal020known = true;
+        }
+        if (QuestionBank.questions[questionNumber - 1].number == 21)
+        {
+            GameControl.animal021known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 22)
+        {
+            GameControl.animal022known = true;
+        }
+        else if (QuestionBank.questions[questionNumber - 1].number == 23)
+        {
+            GameControl.animal023known = true;
+        }
+    }
+
 
     void Update()
     {
