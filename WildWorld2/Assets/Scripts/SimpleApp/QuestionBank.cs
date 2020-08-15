@@ -7,6 +7,7 @@ public class QuestionBank : SimpleQuestion
 {
     public static List<SimpleQuestion> questions = new List<SimpleQuestion>();
 
+
     void Start()
     {
         SimpleQuestion animal001 = new SimpleQuestion()
@@ -24,7 +25,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal002 = new SimpleQuestion()
@@ -42,7 +44,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal003 = new SimpleQuestion()
@@ -60,7 +63,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal004 = new SimpleQuestion()
@@ -78,7 +82,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal005 = new SimpleQuestion()
@@ -96,7 +101,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal006 = new SimpleQuestion()
@@ -114,7 +120,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal007 = new SimpleQuestion()
@@ -132,7 +139,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal008 = new SimpleQuestion()
@@ -150,7 +158,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal009 = new SimpleQuestion()
@@ -168,7 +177,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal010 = new SimpleQuestion()
@@ -186,7 +196,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal011 = new SimpleQuestion()
@@ -204,7 +215,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal012 = new SimpleQuestion()
@@ -222,7 +234,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal013 = new SimpleQuestion()
@@ -240,7 +253,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal014 = new SimpleQuestion()
@@ -258,7 +272,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal015 = new SimpleQuestion()
@@ -276,7 +291,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal016 = new SimpleQuestion()
@@ -294,7 +310,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal017 = new SimpleQuestion()
@@ -312,7 +329,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal018 = new SimpleQuestion()
@@ -330,7 +348,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal019 = new SimpleQuestion()
@@ -348,7 +367,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal020 = new SimpleQuestion()
@@ -366,7 +386,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal021 = new SimpleQuestion()
@@ -384,7 +405,8 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
         };
 
         SimpleQuestion animal022 = new SimpleQuestion()
@@ -402,7 +424,27 @@ public class QuestionBank : SimpleQuestion
             tags = new List<string>()
         {
             "animals"
-        }
+        },
+            size = 1
+        };
+
+        SimpleQuestion animal023 = new SimpleQuestion()
+        {
+            number = 23,
+            questionName = "iguana",
+            sprite = Resources.Load<Sprite>("SimpleApp/Questions/Iguana"),
+            answerOptions = new List<string>()
+        {
+            "tiger",
+            "elephant",
+            "goat",
+            "iguana"
+        },
+            tags = new List<string>()
+        {
+            "animals"
+        },
+            size = 1
         };
 
         questions.Add(animal001);
@@ -427,6 +469,7 @@ public class QuestionBank : SimpleQuestion
         questions.Add(animal020);
         questions.Add(animal021);
         questions.Add(animal022);
+        questions.Add(animal023);
 
         questions = questions.OrderBy(x => System.Guid.NewGuid()).ToList();
 
@@ -619,6 +662,7 @@ public class QuestionBank : SimpleQuestion
         };
 
         questions.Add(communicationsAndTechnology001);
+
 
     }
 }

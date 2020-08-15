@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Menu : MonoBehaviour, IPointerClickHandler
+public class Menu : MonoBehaviour
 {
     Text results;
-    int score;
+    int score, questionsCompleted;
     void Start()
     {
         score = PlayerPrefs.GetInt("cat") + PlayerPrefs.GetInt("dog") + PlayerPrefs.GetInt("horse") + PlayerPrefs.GetInt("bear") + PlayerPrefs.GetInt("wolf") + PlayerPrefs.GetInt("zebra")
@@ -18,14 +17,19 @@ public class Menu : MonoBehaviour, IPointerClickHandler
 
         results = GameObject.Find("Results").GetComponent<Text>();
 
-        results.text = "Animals = " + score + "/ 22";
+        questionsCompleted = 0;
+
+        for (int i = 0; i < QuestionBank.questions.Count; i++)
+        {
+            if (QuestionBank.questions[i].answered)
+            {
+                questionsCompleted++;
+            }
+        }
+
+        results.text = score + " / " + questionsCompleted;
     }
 
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        SceneManager.LoadScene("Menu");
-    }
     public void Resume()
     {
         SceneManager.LoadScene("Base");

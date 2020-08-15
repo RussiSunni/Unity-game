@@ -198,6 +198,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195391160}
   m_CullTransparentMesh: 0
+--- !u!1 &213199873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 213199874}
+  - component: {fileID: 213199876}
+  - component: {fileID: 213199875}
+  m_Layer: 5
+  m_Name: FairyTalk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &213199874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213199873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 317656305}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0025177, y: -291}
+  m_SizeDelta: {x: 400, y: 130.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &213199875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213199873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 48
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 48
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &213199876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213199873}
+  m_CullTransparentMesh: 0
 --- !u!1 &242079449
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +467,8 @@ GameObject:
   - component: {fileID: 317656305}
   - component: {fileID: 317656307}
   - component: {fileID: 317656306}
-  - component: {fileID: 317656308}
   - component: {fileID: 317656309}
+  - component: {fileID: 317656308}
   m_Layer: 5
   m_Name: Fairy
   m_TagString: Untagged
@@ -409,7 +486,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 213199874}
   m_Father: {fileID: 243424764}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -463,7 +541,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 317656304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8015b023167a0ffabbab1f9b329ffd3f, type: 3}
+  m_Script: {fileID: 11500000, guid: f4ada4e05ccaf5fa2ab5f7a0b601af25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &317656309
@@ -1243,8 +1321,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1437186967}
-  - component: {fileID: 1437186969}
-  - component: {fileID: 1437186970}
   m_Layer: 0
   m_Name: Code
   m_TagString: Untagged
@@ -1266,44 +1342,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1437186969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437186965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 337f5ee3a4231c7439bbde978c1b3077, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  number: 0
-  questionName: 
-  sprite: {fileID: 0}
-  answerOptions: []
-  tags: []
-  knownByLearner: 0
-  size: 0
---- !u!114 &1437186970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437186965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e435b8d22ccb1851a87b513bbfd744d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  number: 0
-  questionName: 
-  sprite: {fileID: 0}
-  answerOptions: []
-  tags: []
-  knownByLearner: 0
-  size: 0
 --- !u!1 &1447925888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 0
+  fairyTalk: {fileID: 0}
 --- !u!1 &1750750391
 GameObject:
   m_ObjectHideFlags: 0
