@@ -117,6 +117,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SimpleApp/Menu.unity
     guid: e63074b96b02bd399b999a50d819211a
   - enabled: 1
-    path: Assets/Scenes/SimpleApp/Intro.unity
+    path: Assets/Scenes/SimpleApp/Start Menu.unity
     guid: 67562aff118c5a9bdb46770d911c8b37
   m_configObjects: {}

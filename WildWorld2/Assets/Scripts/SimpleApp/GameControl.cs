@@ -46,26 +46,6 @@ public class GameControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnGUI()
-    {
-        GUI.Label(new Rect(10, 40, 100, 30), "Name: " + playerName);
-        GUI.Label(new Rect(10, 70, 200, 30), "animal q1 known: " + animal001known);
-        GUI.Label(new Rect(10, 100, 200, 30), "animal q1 known: " + animal002known);
-        GUI.Label(new Rect(10, 130, 200, 30), "animal q1 known: " + animal003known);
-        GUI.Label(new Rect(10, 160, 200, 30), "animal q1 known: " + animal004known);
-        GUI.Label(new Rect(10, 190, 200, 30), "animal q1 known: " + animal005known);
-        GUI.Label(new Rect(10, 220, 200, 30), "animal q1 known: " + animal006known);
-        GUI.Label(new Rect(10, 250, 200, 30), "animal q1 known: " + animal007known);
-        GUI.Label(new Rect(10, 280, 200, 30), "animal q1 known: " + animal008known);
-        GUI.Label(new Rect(10, 310, 200, 30), "animal q1 known: " + animal009known);
-        GUI.Label(new Rect(10, 340, 200, 30), "animal q1 known: " + animal010known);
-
-
-        if (GUI.Button(new Rect(10, 10, 100, 30), "Save"))
-        {
-            control.Save();
-        }
-    }
 
     public void Save()
     {
