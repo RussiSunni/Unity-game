@@ -531,6 +531,7 @@
 "Assets/Scripts/SimpleApp/Question banks/AnimalNamesQuestionBank.cs"
 "Assets/Scripts/SimpleApp/Question banks/CommunicationsAndTechnologyQuestionBank.cs"
 "Assets/Scripts/SimpleApp/Question banks/FamilyQuestionBank.cs"
+"Assets/Scripts/SimpleApp/Question banks/SimpleSoundManager.cs"
 "Assets/Scripts/SimpleApp/Question banks/VerbsQuestionBank.cs"
 "Assets/Scripts/SimpleApp/SimpleLoadMenu.cs"
 "Assets/Scripts/SimpleApp/SimpleMain.cs"

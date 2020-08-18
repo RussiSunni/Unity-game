@@ -111,12 +111,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest/Forest.unity
     guid: 104b0d14871d44f4881963af94f49350
   - enabled: 1
+    path: Assets/Scenes/SimpleApp/Start Menu.unity
+    guid: 67562aff118c5a9bdb46770d911c8b37
+  - enabled: 1
     path: Assets/Scenes/SimpleApp/Base.unity
     guid: efec13f543cc7d22da0c18afcae0a35f
   - enabled: 1
     path: Assets/Scenes/SimpleApp/Menu.unity
     guid: e63074b96b02bd399b999a50d819211a
-  - enabled: 1
-    path: Assets/Scenes/SimpleApp/Start Menu.unity
-    guid: 67562aff118c5a9bdb46770d911c8b37
   m_configObjects: {}

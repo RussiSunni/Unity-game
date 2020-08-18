@@ -15,11 +15,10 @@ public class SimpleMain : MonoBehaviour
     bool timerReady, correctAnswer = false;
     int score;
     public Text fairyTalk;
-    bool questionsFinished;
 
     void Start()
     {
-        questionNumber = 1;
+        questionNumber = 0;
 
         answerText1 = GameObject.Find("Answer1Text").GetComponent<Text>();
         answerText2 = GameObject.Find("Answer2Text").GetComponent<Text>();
@@ -33,100 +32,130 @@ public class SimpleMain : MonoBehaviour
         fairyNeutral = Resources.Load<Sprite>("SimpleApp/FairyNeutral");
         fairyCorrect = Resources.Load<Sprite>("SimpleApp/FairyCorrect");
 
-        questionImage.sprite = AnimalNamesQuestionBank.questions[0].sprite;
-        answerText1.text = AnimalNamesQuestionBank.questions[0].answerOptions[0];
-        answerText2.text = AnimalNamesQuestionBank.questions[0].answerOptions[1];
-        answerText3.text = AnimalNamesQuestionBank.questions[0].answerOptions[2];
-        answerText4.text = AnimalNamesQuestionBank.questions[0].answerOptions[3];
-
         timerReady = false;
 
         fairyTalk = GameObject.Find("FairyTalk").GetComponent<Text>();
+
+        fairyTalk.text = "Hi, learner. Let’s help the animals find their names.";
+        answerText1.text = "Start";
+
+        // questionImage.sprite = AnimalNamesQuestionBank.questions[0].sprite;
+        // answerText1.text = AnimalNamesQuestionBank.questions[0].answerOptions[0];
+        // answerText2.text = AnimalNamesQuestionBank.questions[0].answerOptions[1];
+        // answerText3.text = AnimalNamesQuestionBank.questions[0].answerOptions[2];
+        // answerText4.text = AnimalNamesQuestionBank.questions[0].answerOptions[3];
+        // questionNumber++;
     }
 
     public void Answer1()
     {
-        timeRemaining = 1;
-
-        timerReady = true;
-
-        if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText1.text)
+        if (questionNumber == 0)
         {
-            correctAnswer = true;
-            // old code
-
-            // PlayerPrefs.SetInt(AnimalNamesQuestionBank.questions[questionNumber - 1].questionName, 1);
-            // AnimalNamesQuestionBank.questions[questionNumber - 1].known = true;
-
-            // new code
-            MarkAsKnown();
+            questionImage.sprite = AnimalNamesQuestionBank.questions[0].sprite;
+            answerText1.text = AnimalNamesQuestionBank.questions[0].answerOptions[0];
+            answerText2.text = AnimalNamesQuestionBank.questions[0].answerOptions[1];
+            answerText3.text = AnimalNamesQuestionBank.questions[0].answerOptions[2];
+            answerText4.text = AnimalNamesQuestionBank.questions[0].answerOptions[3];
+            fairyTalk.text = null;
+            questionNumber++;
         }
         else
-            correctAnswer = false;
+        {
+            timeRemaining = 1;
 
-        AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+            timerReady = true;
+
+            if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText1.text)
+            {
+                correctAnswer = true;
+                MarkAsKnown();
+            }
+            else
+            {
+                correctAnswer = false;
+                SimpleSoundManager.playIncorrectSound();
+            }
+
+            AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+        }
     }
     public void Answer2()
     {
-        timeRemaining = 1;
-
-        timerReady = true;
-
-        if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText2.text)
+        if (questionNumber != 0)
         {
-            correctAnswer = true;
-            MarkAsKnown();
-        }
-        else
-            correctAnswer = false;
+            timeRemaining = 1;
 
-        AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+            timerReady = true;
+
+            if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText2.text)
+            {
+                correctAnswer = true;
+                MarkAsKnown();
+            }
+            else
+            {
+                correctAnswer = false;
+                SimpleSoundManager.playIncorrectSound();
+            }
+
+            AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+        }
     }
     public void Answer3()
     {
-        timeRemaining = 1;
-
-        timerReady = true;
-
-        if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText3.text)
+        if (questionNumber != 0)
         {
-            correctAnswer = true;
-            MarkAsKnown();
-        }
-        else
-            correctAnswer = false;
+            timeRemaining = 1;
 
-        AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+            timerReady = true;
+
+            if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText3.text)
+            {
+                correctAnswer = true;
+                MarkAsKnown();
+            }
+            else
+            {
+                correctAnswer = false;
+                SimpleSoundManager.playIncorrectSound();
+            }
+
+            AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+        }
     }
     public void Answer4()
     {
-        timeRemaining = 1;
-
-        timerReady = true;
-
-        if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText4.text)
+        if (questionNumber != 0)
         {
-            correctAnswer = true;
-            MarkAsKnown();
-        }
-        else
-            correctAnswer = false;
+            timeRemaining = 1;
 
-        AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+            timerReady = true;
+
+            if (AnimalNamesQuestionBank.questions[questionNumber - 1].questionName == answerText4.text)
+            {
+                correctAnswer = true;
+                MarkAsKnown();
+            }
+            else
+            {
+                correctAnswer = false;
+                SimpleSoundManager.playIncorrectSound();
+            }
+
+            AnimalNamesQuestionBank.questions[questionNumber - 1].answered = true;
+        }
     }
     void ChangeQuestion()
     {
         if (timerReady == true)
         {
-            for (int i = 0; i < AnimalNamesQuestionBank.questions.Count; i++)
-            {
-                questionsFinished = true;
 
-                if (AnimalNamesQuestionBank.questions[i].known == false)
-                {
-                    questionsFinished = false;
-                }
+            if (correctAnswer == true)
+            {
+                AnimalNamesQuestionBank.questions.RemoveAt(questionNumber - 1);
             }
+
+            Debug.Log(AnimalNamesQuestionBank.questions.Count);
 
             if (questionNumber < AnimalNamesQuestionBank.questions.Count)
             {
@@ -136,7 +165,7 @@ public class SimpleMain : MonoBehaviour
                 questionNumber = 1;
 
 
-            if (questionsFinished == false)
+            if (AnimalNamesQuestionBank.questions.Count > 0)
             {
                 questionImage.sprite = AnimalNamesQuestionBank.questions[questionNumber - 1].sprite;
                 answerText1.text = AnimalNamesQuestionBank.questions[questionNumber - 1].answerOptions[0];
@@ -274,25 +303,28 @@ public class SimpleMain : MonoBehaviour
             ChangeQuestion();
             timerReady = false;
         }
-        if (AnimalNamesQuestionBank.questions[questionNumber - 1].size == 2)
+        if (AnimalNamesQuestionBank.questions.Count > 0 && questionNumber != 0)
         {
-            RectTransform questionRT = questionImage.GetComponent(typeof(RectTransform)) as RectTransform;
-            questionRT.sizeDelta = new Vector2(800, 712);
-            questionRT.anchoredPosition = new Vector2(400, -356);
+            if (AnimalNamesQuestionBank.questions[questionNumber - 1].size == 2)
+            {
+                RectTransform questionRT = questionImage.GetComponent(typeof(RectTransform)) as RectTransform;
+                questionRT.sizeDelta = new Vector2(800, 712);
+                questionRT.anchoredPosition = new Vector2(400, -356);
 
-            RectTransform fairyRT = fairyImage.GetComponent(typeof(RectTransform)) as RectTransform;
-            fairyRT.sizeDelta = new Vector2(250.7f, 446.4f);
-            fairyRT.anchoredPosition = new Vector2(274.7f, 223.2f);
-        }
-        else if (AnimalNamesQuestionBank.questions[questionNumber - 1].size == 1)
-        {
-            RectTransform questionRT = questionImage.GetComponent(typeof(RectTransform)) as RectTransform;
-            questionRT.sizeDelta = new Vector2(400, 712);
-            questionRT.anchoredPosition = new Vector2(200, -356);
+                RectTransform fairyRT = fairyImage.GetComponent(typeof(RectTransform)) as RectTransform;
+                fairyRT.sizeDelta = new Vector2(250.7f, 446.4f);
+                fairyRT.anchoredPosition = new Vector2(274.7f, 223.2f);
+            }
+            else if (AnimalNamesQuestionBank.questions[questionNumber - 1].size == 1)
+            {
+                RectTransform questionRT = questionImage.GetComponent(typeof(RectTransform)) as RectTransform;
+                questionRT.sizeDelta = new Vector2(400, 712);
+                questionRT.anchoredPosition = new Vector2(200, -356);
 
-            RectTransform fairyRT = fairyImage.GetComponent(typeof(RectTransform)) as RectTransform;
-            fairyRT.sizeDelta = new Vector2(400f, 712f);
-            fairyRT.anchoredPosition = new Vector2(200f, 356.1402f);
+                RectTransform fairyRT = fairyImage.GetComponent(typeof(RectTransform)) as RectTransform;
+                fairyRT.sizeDelta = new Vector2(400f, 712f);
+                fairyRT.anchoredPosition = new Vector2(200f, 356.1402f);
+            }
         }
     }
 }

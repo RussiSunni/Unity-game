@@ -115,7 +115,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             sprite = Resources.Load<Sprite>("SimpleApp/Questions/Wolf"),
             answerOptions = new List<string>()
         {
-            "dog",
+            "cat",
             "wolf",
             "mouse",
             "ant"
