@@ -10,29 +10,30 @@ public class GameControl : MonoBehaviour
     public static GameControl control;
 
     public string playerName;
-    public static bool animal001known,
-                        animal002known,
-                        animal003known,
-                        animal004known,
-                        animal005known,
-                        animal006known,
-                        animal007known,
-                        animal008known,
-                        animal009known,
-                        animal010known,
-                        animal011known,
-                        animal012known,
-                        animal013known,
-                        animal014known,
-                        animal015known,
-                        animal016known,
-                        animal017known,
-                        animal018known,
-                        animal019known,
-                        animal020known,
-                        animal021known,
-                        animal022known,
-                        animal023known;
+    public static bool animalName001known,
+                        animalName002known,
+                        animalName003known,
+                        animalName004known,
+                        animalName005known,
+                        animalName006known,
+                        animalName007known,
+                        animalName008known,
+                        animalName009known,
+                        animalName010known,
+                        animalName011known,
+                        animalName012known,
+                        animalName013known,
+                        animalName014known,
+                        animalName015known,
+                        animalName016known,
+                        animalName017known,
+                        animalName018known,
+                        animalName019known,
+                        animalName020known,
+                        animalName021known,
+                        animalName022known,
+                        animalName023known;
+
 
     void Awake()
     {
@@ -56,29 +57,29 @@ public class GameControl : MonoBehaviour
 
         PlayerData data = new PlayerData();
         data.playerName = playerName;
-        data.animal001known = animal001known;
-        data.animal002known = animal002known;
-        data.animal003known = animal003known;
-        data.animal004known = animal004known;
-        data.animal005known = animal005known;
-        data.animal006known = animal006known;
-        data.animal007known = animal007known;
-        data.animal008known = animal008known;
-        data.animal009known = animal009known;
-        data.animal010known = animal010known;
-        data.animal011known = animal011known;
-        data.animal012known = animal012known;
-        data.animal013known = animal013known;
-        data.animal014known = animal014known;
-        data.animal015known = animal015known;
-        data.animal016known = animal016known;
-        data.animal017known = animal017known;
-        data.animal018known = animal018known;
-        data.animal019known = animal019known;
-        data.animal020known = animal020known;
-        data.animal021known = animal021known;
-        data.animal022known = animal022known;
-        data.animal023known = animal023known;
+        data.animalName001known = animalName001known;
+        data.animalName002known = animalName002known;
+        data.animalName003known = animalName003known;
+        data.animalName004known = animalName004known;
+        data.animalName005known = animalName005known;
+        data.animalName006known = animalName006known;
+        data.animalName007known = animalName007known;
+        data.animalName008known = animalName008known;
+        data.animalName009known = animalName009known;
+        data.animalName010known = animalName010known;
+        data.animalName011known = animalName011known;
+        data.animalName012known = animalName012known;
+        data.animalName013known = animalName013known;
+        data.animalName014known = animalName014known;
+        data.animalName015known = animalName015known;
+        data.animalName016known = animalName016known;
+        data.animalName017known = animalName017known;
+        data.animalName018known = animalName018known;
+        data.animalName019known = animalName019known;
+        data.animalName020known = animalName020known;
+        data.animalName021known = animalName021known;
+        data.animalName022known = animalName022known;
+        data.animalName023known = animalName023known;
 
         bf.Serialize(file, data);
         file.Close();
@@ -95,29 +96,29 @@ public class GameControl : MonoBehaviour
 
             playerName = data.playerName;
 
-            animal001known = data.animal001known;
-            animal002known = data.animal002known;
-            animal003known = data.animal003known;
-            animal004known = data.animal004known;
-            animal005known = data.animal005known;
-            animal006known = data.animal006known;
-            animal007known = data.animal007known;
-            animal008known = data.animal008known;
-            animal009known = data.animal009known;
-            animal010known = data.animal010known;
-            animal011known = data.animal011known;
-            animal012known = data.animal012known;
-            animal013known = data.animal013known;
-            animal014known = data.animal014known;
-            animal015known = data.animal015known;
-            animal016known = data.animal016known;
-            animal017known = data.animal017known;
-            animal018known = data.animal018known;
-            animal019known = data.animal019known;
-            animal020known = data.animal020known;
-            animal021known = data.animal021known;
-            animal022known = data.animal022known;
-            animal023known = data.animal023known;
+            animalName001known = data.animalName001known;
+            animalName002known = data.animalName002known;
+            animalName003known = data.animalName003known;
+            animalName004known = data.animalName004known;
+            animalName005known = data.animalName005known;
+            animalName006known = data.animalName006known;
+            animalName007known = data.animalName007known;
+            animalName008known = data.animalName008known;
+            animalName009known = data.animalName009known;
+            animalName010known = data.animalName010known;
+            animalName011known = data.animalName011known;
+            animalName012known = data.animalName012known;
+            animalName013known = data.animalName013known;
+            animalName014known = data.animalName014known;
+            animalName015known = data.animalName015known;
+            animalName016known = data.animalName016known;
+            animalName017known = data.animalName017known;
+            animalName018known = data.animalName018known;
+            animalName019known = data.animalName019known;
+            animalName020known = data.animalName020known;
+            animalName021known = data.animalName021known;
+            animalName022known = data.animalName022known;
+            animalName023known = data.animalName023known;
         }
     }
 }
@@ -126,28 +127,28 @@ public class GameControl : MonoBehaviour
 class PlayerData
 {
     public string playerName;
-    public bool animal001known;
-    public bool animal002known;
-    public bool animal003known;
-    public bool animal004known;
-    public bool animal005known;
-    public bool animal006known;
-    public bool animal007known;
-    public bool animal008known;
-    public bool animal009known;
-    public bool animal010known;
-    public bool animal011known;
-    public bool animal012known;
-    public bool animal013known;
-    public bool animal014known;
-    public bool animal015known;
-    public bool animal016known;
-    public bool animal017known;
-    public bool animal018known;
-    public bool animal019known;
-    public bool animal020known;
-    public bool animal021known;
-    public bool animal022known;
-    public bool animal023known;
+    public bool animalName001known;
+    public bool animalName002known;
+    public bool animalName003known;
+    public bool animalName004known;
+    public bool animalName005known;
+    public bool animalName006known;
+    public bool animalName007known;
+    public bool animalName008known;
+    public bool animalName009known;
+    public bool animalName010known;
+    public bool animalName011known;
+    public bool animalName012known;
+    public bool animalName013known;
+    public bool animalName014known;
+    public bool animalName015known;
+    public bool animalName016known;
+    public bool animalName017known;
+    public bool animalName018known;
+    public bool animalName019known;
+    public bool animalName020known;
+    public bool animalName021known;
+    public bool animalName022known;
+    public bool animalName023known;
 }
 

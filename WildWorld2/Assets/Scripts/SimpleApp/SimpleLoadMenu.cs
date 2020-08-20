@@ -6,10 +6,8 @@ using UnityEngine.EventSystems;
 
 public class SimpleLoadMenu : MonoBehaviour, IPointerClickHandler
 {
-
     public void OnPointerClick(PointerEventData eventData)
     {
         SceneManager.LoadScene("Menu");
     }
-
 }

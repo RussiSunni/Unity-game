@@ -15,17 +15,17 @@ public class Menu : MonoBehaviour
         //        + PlayerPrefs.GetInt("alligator") + PlayerPrefs.GetInt("rhinoceros") + PlayerPrefs.GetInt("duck") + PlayerPrefs.GetInt("pig") + PlayerPrefs.GetInt("donkey")
         //        + PlayerPrefs.GetInt("rabbit") + PlayerPrefs.GetInt("frog") + PlayerPrefs.GetInt("tiger") + PlayerPrefs.GetInt("goat") + PlayerPrefs.GetInt("chicken") + PlayerPrefs.GetInt("Elephant");
 
-        results = GameObject.Find("Results").GetComponent<Text>();
+        // results = GameObject.Find("Results").GetComponent<Text>();
 
-        questionsCompleted = 0;
+        // questionsCompleted = 0;
 
-        for (int i = 0; i < AnimalNamesQuestionBank.questions.Count; i++)
-        {
-            if (AnimalNamesQuestionBank.questions[i].answered)
-            {
-                questionsCompleted++;
-            }
-        }
+        // for (int i = 0; i < AnimalNamesQuestionBank.questions.Count; i++)
+        // {
+        //     if (AnimalNamesQuestionBank.questions[i].answered)
+        //     {
+        //         questionsCompleted++;
+        //     }
+        // }
 
         // results.text = score + " / " + questionsCompleted;
     }
@@ -36,7 +36,7 @@ public class Menu : MonoBehaviour
     }
     public void Resume()
     {
-        SceneManager.LoadScene("Base");
+        SceneManager.LoadScene("Scene001");
     }
     public void Quit()
     {

@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 1810823598}
   - component: {fileID: 1810823600}
   - component: {fileID: 1810823601}
+  - component: {fileID: 1810823602}
   m_Layer: 0
   m_Name: Code
   m_TagString: Untagged
@@ -849,6 +850,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bd35deb10585436eb12933369a9c7ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 0
+  questionName: 
+  sprite: {fileID: 0}
+  answerOptions: []
+  tags: []
+  size: 0
+  answered: 0
+  known: 0
+--- !u!114 &1810823602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810823597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6cf043c828951139c1ac008e765a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   number: 0

@@ -6,33 +6,33 @@ using System.Linq;
 public class AnimalNamesQuestionBank : SimpleQuestion
 {
     public static List<SimpleQuestion> questions = new List<SimpleQuestion>();
-    public static SimpleQuestion animal001 = new SimpleQuestion();
-    public static SimpleQuestion animal002 = new SimpleQuestion();
-    public static SimpleQuestion animal003 = new SimpleQuestion();
-    public static SimpleQuestion animal004 = new SimpleQuestion();
-    public static SimpleQuestion animal005 = new SimpleQuestion();
-    public static SimpleQuestion animal006 = new SimpleQuestion();
-    public static SimpleQuestion animal007 = new SimpleQuestion();
-    public static SimpleQuestion animal008 = new SimpleQuestion();
-    public static SimpleQuestion animal009 = new SimpleQuestion();
-    public static SimpleQuestion animal010 = new SimpleQuestion();
-    public static SimpleQuestion animal011 = new SimpleQuestion();
-    public static SimpleQuestion animal012 = new SimpleQuestion();
-    public static SimpleQuestion animal013 = new SimpleQuestion();
-    public static SimpleQuestion animal014 = new SimpleQuestion();
-    public static SimpleQuestion animal015 = new SimpleQuestion();
-    public static SimpleQuestion animal016 = new SimpleQuestion();
-    public static SimpleQuestion animal017 = new SimpleQuestion();
-    public static SimpleQuestion animal018 = new SimpleQuestion();
-    public static SimpleQuestion animal019 = new SimpleQuestion();
-    public static SimpleQuestion animal020 = new SimpleQuestion();
-    public static SimpleQuestion animal021 = new SimpleQuestion();
-    public static SimpleQuestion animal022 = new SimpleQuestion();
-    public static SimpleQuestion animal023 = new SimpleQuestion();
+    public static SimpleQuestion animalName001 = new SimpleQuestion();
+    public static SimpleQuestion animalName002 = new SimpleQuestion();
+    public static SimpleQuestion animalName003 = new SimpleQuestion();
+    public static SimpleQuestion animalName004 = new SimpleQuestion();
+    public static SimpleQuestion animalName005 = new SimpleQuestion();
+    public static SimpleQuestion animalName006 = new SimpleQuestion();
+    public static SimpleQuestion animalName007 = new SimpleQuestion();
+    public static SimpleQuestion animalName008 = new SimpleQuestion();
+    public static SimpleQuestion animalName009 = new SimpleQuestion();
+    public static SimpleQuestion animalName010 = new SimpleQuestion();
+    public static SimpleQuestion animalName011 = new SimpleQuestion();
+    public static SimpleQuestion animalName012 = new SimpleQuestion();
+    public static SimpleQuestion animalName013 = new SimpleQuestion();
+    public static SimpleQuestion animalName014 = new SimpleQuestion();
+    public static SimpleQuestion animalName015 = new SimpleQuestion();
+    public static SimpleQuestion animalName016 = new SimpleQuestion();
+    public static SimpleQuestion animalName017 = new SimpleQuestion();
+    public static SimpleQuestion animalName018 = new SimpleQuestion();
+    public static SimpleQuestion animalName019 = new SimpleQuestion();
+    public static SimpleQuestion animalName020 = new SimpleQuestion();
+    public static SimpleQuestion animalName021 = new SimpleQuestion();
+    public static SimpleQuestion animalName022 = new SimpleQuestion();
+    public static SimpleQuestion animalName023 = new SimpleQuestion();
 
     void Start()
     {
-        animal001 = new SimpleQuestion()
+        animalName001 = new SimpleQuestion()
         {
             number = 1,
             questionName = "cat",
@@ -51,7 +51,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal002 = new SimpleQuestion()
+        animalName002 = new SimpleQuestion()
         {
             number = 2,
             questionName = "dog",
@@ -70,7 +70,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal003 = new SimpleQuestion()
+        animalName003 = new SimpleQuestion()
         {
             number = 3,
             questionName = "horse",
@@ -89,7 +89,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal004 = new SimpleQuestion()
+        animalName004 = new SimpleQuestion()
         {
             number = 4,
             questionName = "bear",
@@ -108,7 +108,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal005 = new SimpleQuestion()
+        animalName005 = new SimpleQuestion()
         {
             number = 5,
             questionName = "wolf",
@@ -127,7 +127,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal006 = new SimpleQuestion()
+        animalName006 = new SimpleQuestion()
         {
             number = 6,
             questionName = "zebra",
@@ -146,7 +146,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal007 = new SimpleQuestion()
+        animalName007 = new SimpleQuestion()
         {
             number = 7,
             questionName = "owl",
@@ -165,7 +165,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal008 = new SimpleQuestion()
+        animalName008 = new SimpleQuestion()
         {
             number = 8,
             questionName = "monkey",
@@ -184,7 +184,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal009 = new SimpleQuestion()
+        animalName009 = new SimpleQuestion()
         {
             number = 9,
             questionName = "squirrel",
@@ -203,7 +203,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal010 = new SimpleQuestion()
+        animalName010 = new SimpleQuestion()
         {
             number = 10,
             questionName = "giraffe",
@@ -222,7 +222,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal011 = new SimpleQuestion()
+        animalName011 = new SimpleQuestion()
         {
             number = 11,
             questionName = "lion",
@@ -241,7 +241,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal012 = new SimpleQuestion()
+        animalName012 = new SimpleQuestion()
         {
             number = 12,
             questionName = "alligator",
@@ -260,7 +260,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal013 = new SimpleQuestion()
+        animalName013 = new SimpleQuestion()
         {
             number = 13,
             questionName = "rhinoceros",
@@ -279,7 +279,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal014 = new SimpleQuestion()
+        animalName014 = new SimpleQuestion()
         {
             number = 14,
             questionName = "duck",
@@ -298,7 +298,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal015 = new SimpleQuestion()
+        animalName015 = new SimpleQuestion()
         {
             number = 15,
             questionName = "pig",
@@ -317,7 +317,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal016 = new SimpleQuestion()
+        animalName016 = new SimpleQuestion()
         {
             number = 16,
             questionName = "donkey",
@@ -336,7 +336,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal017 = new SimpleQuestion()
+        animalName017 = new SimpleQuestion()
         {
             number = 17,
             questionName = "rabbit",
@@ -355,7 +355,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal018 = new SimpleQuestion()
+        animalName018 = new SimpleQuestion()
         {
             number = 18,
             questionName = "frog",
@@ -374,7 +374,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal019 = new SimpleQuestion()
+        animalName019 = new SimpleQuestion()
         {
             number = 19,
             questionName = "tiger",
@@ -393,7 +393,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal020 = new SimpleQuestion()
+        animalName020 = new SimpleQuestion()
         {
             number = 20,
             questionName = "goat",
@@ -412,7 +412,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal021 = new SimpleQuestion()
+        animalName021 = new SimpleQuestion()
         {
             number = 21,
             questionName = "chicken",
@@ -431,7 +431,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal022 = new SimpleQuestion()
+        animalName022 = new SimpleQuestion()
         {
             number = 22,
             questionName = "elephant",
@@ -450,7 +450,7 @@ public class AnimalNamesQuestionBank : SimpleQuestion
             size = 1
         };
 
-        animal023 = new SimpleQuestion()
+        animalName023 = new SimpleQuestion()
         {
             number = 23,
             questionName = "iguana",
@@ -472,74 +472,74 @@ public class AnimalNamesQuestionBank : SimpleQuestion
 
     public static void LoadQuestionList()
     {
-        if (GameControl.animal001known == false)
-            questions.Add(animal001);
+        if (GameControl.animalName001known == false)
+            questions.Add(animalName001);
 
-        if (!GameControl.animal002known)
-            questions.Add(animal002);
+        if (!GameControl.animalName002known)
+            questions.Add(animalName002);
 
-        if (!GameControl.animal003known)
-            questions.Add(animal003);
+        if (!GameControl.animalName003known)
+            questions.Add(animalName003);
 
-        if (!GameControl.animal004known)
-            questions.Add(animal004);
+        if (!GameControl.animalName004known)
+            questions.Add(animalName004);
 
-        if (!GameControl.animal005known)
-            questions.Add(animal005);
+        if (!GameControl.animalName005known)
+            questions.Add(animalName005);
 
-        if (!GameControl.animal006known)
-            questions.Add(animal006);
+        if (!GameControl.animalName006known)
+            questions.Add(animalName006);
 
-        if (!GameControl.animal007known)
-            questions.Add(animal007);
+        if (!GameControl.animalName007known)
+            questions.Add(animalName007);
 
-        if (!GameControl.animal008known)
-            questions.Add(animal008);
+        if (!GameControl.animalName008known)
+            questions.Add(animalName008);
 
-        if (!GameControl.animal009known)
-            questions.Add(animal009);
+        if (!GameControl.animalName009known)
+            questions.Add(animalName009);
 
-        if (!GameControl.animal010known)
-            questions.Add(animal010);
+        if (!GameControl.animalName010known)
+            questions.Add(animalName010);
 
-        if (!GameControl.animal011known)
-            questions.Add(animal011);
+        if (!GameControl.animalName011known)
+            questions.Add(animalName011);
 
-        if (!GameControl.animal012known)
-            questions.Add(animal012);
+        if (!GameControl.animalName012known)
+            questions.Add(animalName012);
 
-        if (!GameControl.animal013known)
-            questions.Add(animal013);
+        if (!GameControl.animalName013known)
+            questions.Add(animalName013);
 
-        if (!GameControl.animal014known)
-            questions.Add(animal014);
+        if (!GameControl.animalName014known)
+            questions.Add(animalName014);
 
-        if (!GameControl.animal015known)
-            questions.Add(animal015);
+        if (!GameControl.animalName015known)
+            questions.Add(animalName015);
 
-        if (!GameControl.animal016known)
-            questions.Add(animal016);
+        if (!GameControl.animalName016known)
+            questions.Add(animalName016);
 
-        if (!GameControl.animal017known)
-            questions.Add(animal017);
+        if (!GameControl.animalName017known)
+            questions.Add(animalName017);
 
-        if (!GameControl.animal018known)
-            questions.Add(animal018);
+        if (!GameControl.animalName018known)
+            questions.Add(animalName018);
 
-        if (!GameControl.animal019known)
-            questions.Add(animal019);
+        if (!GameControl.animalName019known)
+            questions.Add(animalName019);
 
-        if (!GameControl.animal020known)
-            questions.Add(animal020);
+        if (!GameControl.animalName020known)
+            questions.Add(animalName020);
 
-        if (!GameControl.animal021known)
-            questions.Add(animal021);
+        if (!GameControl.animalName021known)
+            questions.Add(animalName021);
 
-        if (!GameControl.animal022known)
-            questions.Add(animal022);
+        if (!GameControl.animalName022known)
+            questions.Add(animalName022);
 
-        if (!GameControl.animal023known)
-            questions.Add(animal023);
+        if (!GameControl.animalName023known)
+            questions.Add(animalName023);
 
         questions = questions.OrderBy(x => System.Guid.NewGuid()).ToList();
 
